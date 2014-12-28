@@ -1,58 +1,8 @@
 #!/bin/bash
 
-#push homework to guthub
+#commit and push to guthub
 
-from="homework"
-to="fedyafed.github.io"
-
-echo '
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Homework Navigation</title>
-</head>
-<body>
-<div style="text-align: center">
-    <h1> Modern Web Development</h1>
-    <h3>Index</h3>
-</div>
-<ul>
-    ' > "${to}/index.html"
-
-cd "${from}"
-
-for i in homework*
-do
-  if [[ -d  "${i}" ]]
-  then
-    if [[ -e "../${to}/${i}" ]]
-    then
-      rm -r "../${to}/${i}"
-    fi  
-    
-    echo "<li><a href='${i}/index.html'>${i}</a></li>" >> "../${to}/index.html"
-    echo "${i}"
-    
-    if [[ -e "${i}/dist" ]]
-    then
-      cp -r "${i}/dist" "../${to}/${i}"
-    else
-      cp -r "${i}" "../${to}/${i}"
-    fi
-  fi
-done
-
-cd ..
-
-echo "
-    </ul>
-</body>
-</html>" >> "${to}/index.html"
-
-cd "${to}"
-
-git add -A *
+git add -a -A *
 git commit -m "`date -Ru`"
 git push origin master
 echo "done"
