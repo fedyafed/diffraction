@@ -292,15 +292,18 @@ $\si_{ij}$ --- компоненты тензора напряжений неод
 Используя связь компонентов тензора напряжений с компонентами тензора деформаций (обобщенный закон Гука), а также выражения компонентов тензора деформаций через компоненты вектора смещения~\cite{Nowacki}, получаем в сферической системе координат следующие соотношения:
 \begin{equation}\label{tensor comp}
     \begin{gathered}
+    \begin{split}
+        {\si\l}_{rr} &= \biggl(\la\l+2\mu\l\biggr)\fr{\de {u\l}_r}{\de r\s} +\\
+        &+ \fr{\la\l} {r\s} \biggl(2{u\l}_r+\fr{\de {u\l}_\Q}{\de\Q\s}+\ctg\Q\s\;{u\l}_\Q + \fr{1}{\sin\Q\s}\fr{\de {u\l}_\f}{\de\f\s}\biggr);\\        
+        {\si\l}_{\Q\Q} &= \la\l\fr{\de {u\l}_r}{\de r\s} + \fr{2(\la\l+\mu\l)}{r\s} {u\l}_r + \fr{\la\l+2\mu\l}{r\s} \fr{\de {u\l}_\Q}{\de\Q\s} +\\
+         &+ \fr{\la\l}{r\s} \biggl(\ctg\Q\s \;{u\l}_\Q + \fr{1}{\sin\Q\s}\fr{\de {u\l}_\f}{\de\f\s}\biggr);\\
+        {\si\l}_{\f\f} &= \la\l\fr{\de {u\l}_r}{\de r\s} + \fr{2(\la\l+\mu\l)}{r\s} {u\l}_r + \fr{\la\l}{r\s} \fr{\de {u\l}_\Q}{\de\Q\s} +\\
+        &+ \fr{\la\l+2\mu\l}{r\s}\biggl(\ctg\Q\s \;{u\l}_\Q + \fr{1}{\sin\Q\s}\fr{\de {u\l}_\f}{\de\f\s}\biggr);\\
+    \end{split}\\
     \begin{aligned}
-        \si_{rr} &= \biggl(\la_1+2\mu_1\biggr)\fr{\de u_r}{\de r} + \fr{\la_1} r \biggl(2u_r+\fr{\de u_\Q}{\de\Q}+\ctg\Q\;u_\Q + \fr{1}{\sin\Q}\fr{\de u_\f}{\de\f}\biggr);\\
-        \si_{\Q\Q} &= \la_1\fr{\de u_r}{\de r} + \fr{2(\la_1+\mu_1)}r u_r + \fr{\la_1+2\mu_1}r \fr{\de u_\Q}{\de\Q} + \fr{\la_1} r \biggl(\ctg\Q \;u_\Q + \fr{1}{\sin\Q}\fr{\de u_\f}{\de\f}\biggr);\\
-        \si_{\f\f} &= \la_1\fr{\de u_r}{\de r} + \fr{2(\la_1+\mu_1)}r u_r + \fr{\la_1} r \fr{\de u_\Q}{\de\Q} + \fr{\la_1+2\mu_1}r\biggl(\ctg\Q \;u_\Q + \fr{1}{\sin\Q}\fr{\de u_\f}{\de\f}\biggr);\\
-    \end{aligned}\\
-    \begin{aligned}
-        \si_{r\Q}=\mu_1&\left(\fr1r \fr{\de u_r}{\de\Q} - \fr{u_\Q}{r} + \fr{\de u_\Q}{\de r}\right);\\
-        \si_{r\f}=\mu_1&\left(\fr1{r\sin\Q} \fr{\de u_r}{\de\f} - \fr{u_\f}{r} + \fr{\de u_\f}{\de r}\right);\\
-        \si_{\Q\f}=\fr{\mu_1} r&\left(\fr1{\sin\Q} \fr{\de u_\Q}{\de\f} + \fr{\de u_\f}{\de\Q} - \ctg\Q \;u_\f \right).\\
+        {\si\l}_{r\Q}=\mu\l&\left(\fr1{r\s} \fr{\de {u\l}_r}{\de\Q\s} - \fr{{u\l}_\Q}{r\s} + \fr{\de {u\l}_\Q}{\de r}\right);\\
+        {\si\l}_{r\f}=\mu\l&\left(\fr1{r\s\sin\Q\s} \fr{\de {u\l}_r}{\de\f} - \fr{{u\l}_\f}{r\s} + \fr{\de {u\l}_\f}{\de r\s}\right);\\
+        {\si\l}_{\Q\f}=\fr{\mu\l} {r\s}&\left(\fr1{\sin\Q\s} \fr{\de {u\l}_\Q}{\de\f\s} + \fr{\de {u\l}_\f}{\de\Q\s} - \ctg\Q\s \;{u\l}_\f \right).\\
     \end{aligned}
     \end{gathered}
 \end{equation}
