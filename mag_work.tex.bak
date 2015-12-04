@@ -281,25 +281,28 @@ W = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n {E\s}_{nm} h_n({k\s}_lr\c)P_n^
 где ${v\c}_r=\de\P\c/\de r, \q {v\en}_r=\de\P\en/\de r$~--- радиальная компонента скорости частиц в жидкости внутри полости и в окружающем пространстве соответственно.
 
 Распространение упругих волн в неоднородном слое описывается общими уравнениями движения упругой среды, которые для установившегося режима движения в сферической системе координат имеют следующий вид~\cite{Nowacki}:
-\begin{align}
-\fr{\de\si_{rr}}{\de r} + \fr1r \fr{\de\si_{r\Q}}{\de\Q} + \fr{1}{r\sin\Q}\fr{\de\si_{r\f}}{\de\f} &+ \fr1r\biggl(2\si_{rr}-\si_{\Q\Q}-\si_{\f\f}+\si_{r\Q}\ctg\Q\biggr)=-\rho_1\om^2u_r;\notag\\
-\fr{\de\si_{r\Q}}{\de r} + \fr1r \fr{\de\si_{\Q\Q}}{\de\Q} + \fr{1}{r\sin\Q}\fr{\de\si_{\Q\f}}{\de\f} &+ \fr1r\biggl(\left(\si_{\Q\Q}-\si_{\f\f}\right)\ctg\Q+3\si_{r\Q}\biggr)\!=\!-\rho_1\om^2u_\Q;\label{eq_moving}\\
-\fr{\de\si_{r\f}}{\de r} + \fr1r \fr{\de\si_{\Q\f}}{\de\Q} + \fr{1}{r\sin\Q}\fr{\de\si_{\f\f}}{\de\f} &+ \fr1r\biggl(3\si_{r\f}+2\si_{\Q\f}\ctg\Q\biggr)=-\rho_1\om^2u_\f,\notag
-\end{align}
+\begin{equation}\label{eq_moving}
+\begin{split}
+\fr{\de{\si\l}_{rr}}{\de r\s} &+ \fr1{r\s} \fr{\de{\si\l}_{r\Q}}{\de\Q\s} + \fr{1}{r\s\sin\Q\s}\fr{\de\si_{r\f}}{\de\f} +\\
+&+ \fr1{r\s}\biggl(2{\si\l}_{rr}-{\si\l}_{\Q\Q}-{\si\l}_{\f\f}+{\si\l}_{r\Q}\ctg\Q\s\biggr)=-p_1\om^2{u\l}_r;\\
+\fr{\de{\si\l}_{r\Q}}{\de r\s} + \fr1{r\s} \fr{\de{\si\l}_{\Q\Q}}{\de\Q\s} + \fr{1}{r\s\sin\Q\s}\fr{\de{\si\l}_{\Q\f}}{\de\f\s} &+ \fr1{r}\biggl(\left(\si_{\Q\Q}-\si_{\f\f}\right)\ctg\Q+3\si_{r\Q}\biggr)\!=\!-\rho_1\om^2u_\Q;\\
+\fr{\de\si_{r\f}}{\de r} + \fr1r \fr{\de\si_{\Q\f}}{\de\Q} + \fr{1}{r\sin\Q}\fr{\de\si_{\f\f}}{\de\f} &+ \fr1r\biggl(3\si_{r\f}+2\si_{\Q\f}\ctg\Q\biggr)=-\rho_1\om^2u_\f,
+\end{split}
+\end{equation}
 где $u_r, u_\Q, u_\f$ --- компоненты вектора смещения $\mathbf{u}$;\\
 $\si_{ij}$ --- компоненты тензора напряжений неоднородной среды в сферической системе координат.
 
 Используя связь компонентов тензора напряжений с компонентами тензора деформаций (обобщенный закон Гука), а также выражения компонентов тензора деформаций через компоненты вектора смещения~\cite{Nowacki}, получаем в сферической системе координат следующие соотношения:
 \begin{equation}\label{tensor comp}
     \begin{gathered}
-    \begin{split}
+    \begin{aligned}
         {\si\l}_{rr} &= \biggl(\la\l+2\mu\l\biggr)\fr{\de {u\l}_r}{\de r\s} +\\
         &+ \fr{\la\l} {r\s} \biggl(2{u\l}_r+\fr{\de {u\l}_\Q}{\de\Q\s}+\ctg\Q\s\;{u\l}_\Q + \fr{1}{\sin\Q\s}\fr{\de {u\l}_\f}{\de\f\s}\biggr);\\        
         {\si\l}_{\Q\Q} &= \la\l\fr{\de {u\l}_r}{\de r\s} + \fr{2(\la\l+\mu\l)}{r\s} {u\l}_r + \fr{\la\l+2\mu\l}{r\s} \fr{\de {u\l}_\Q}{\de\Q\s} +\\
          &+ \fr{\la\l}{r\s} \biggl(\ctg\Q\s \;{u\l}_\Q + \fr{1}{\sin\Q\s}\fr{\de {u\l}_\f}{\de\f\s}\biggr);\\
         {\si\l}_{\f\f} &= \la\l\fr{\de {u\l}_r}{\de r\s} + \fr{2(\la\l+\mu\l)}{r\s} {u\l}_r + \fr{\la\l}{r\s} \fr{\de {u\l}_\Q}{\de\Q\s} +\\
         &+ \fr{\la\l+2\mu\l}{r\s}\biggl(\ctg\Q\s \;{u\l}_\Q + \fr{1}{\sin\Q\s}\fr{\de {u\l}_\f}{\de\f\s}\biggr);\\
-    \end{split}\\
+    \end{aligned}\\
     \begin{aligned}
         {\si\l}_{r\Q}=\mu\l&\left(\fr1{r\s} \fr{\de {u\l}_r}{\de\Q\s} - \fr{{u\l}_\Q}{r\s} + \fr{\de {u\l}_\Q}{\de r}\right);\\
         {\si\l}_{r\f}=\mu\l&\left(\fr1{r\s\sin\Q\s} \fr{\de {u\l}_r}{\de\f} - \fr{{u\l}_\f}{r\s} + \fr{\de {u\l}_\f}{\de r\s}\right);\\
