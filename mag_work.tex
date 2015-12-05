@@ -316,7 +316,16 @@ ${\si\l}_{ij}$ --- компоненты тензора напряжений не
 Соотношения \eqref{tensor comp5} справедливы как для однородной упругой среды, так и для неоднородного слоя. В первом случае в выражениях \eqref{tensor comp5} компоненты вектора смещения и тензора напряжений, а также величины $\la\l$ и $\mu\l$ следует заменить на $\la\s$ и $\mu\s$ соответственно.
 
 Используя эти соотношения, запишем уравнения~\eqref{eq_moving} через компоненты вектора смещения $\mathbf{u\l}$:
-\todo{EQUATIONS}
+\begin{equation*}
+\begin{split}
+\biggl(\la\l+2\mu\l\biggr)\fr{\de^2 {u\l}_r}{\de r\s^2} + \fr{\mu\l}{r\s^2}\fr{\de^2 {u\l}_r}{\de\Q\s^2} +\fr{\mu\l}{r\s\sin\Q\s}\fr{\de^2 {u\l}_r}{\de\f\s^2} + \fr{\mu\l\ctg\Q\s}{r\s^2}\fr{\de {u\l}_r}{\de \Q\s} + \\
++ \left(\la\l'+2\mu\l'+\fr{2\la\l+4\mu\l}{r\s}\right)\fr{\de{u\l}_r}{\de r\s} + \left(\fr{2\la\l'}{r\s} - \fr{2\la\l+4\mu\l}{r\s^2}\right){u\l}_r + \\
++ \fr{\la\l+\mu\l}{r\s}\fr{\de^2 {u\l}_\Q}{\de r\s\de\Q\s} + \fr{(\la\l+\mu\l)\ctg\Q\s}{r\s}\fr{\de {u\l}_\Q}{\de r\s} + \\ 
++ \left(\fr{\la\l'}{r\s} - \fr{\la\l+3\mu\l}{r\s^2}\right)\fr{\de {u\l}_\Q}{\de \Q\s} +\left(\fr{\la\l'\ctg\Q\s}{r\s} - \fr{(\la\l+3\mu\l)\ctg\Q\s}{r\s^2}\right){u\l}_\Q + \\
++\fr{\la\l+\mu\l}{r\s\sin\Q\s}\fr{\de^2 {u\l}_\f}{\de r\s\de\f\s}
++ \left(\fr{\la\l'}{r\s\sin\Q\s} - \fr{\la\s+3\mu\s}{r\s^2\sin\Q\s}\right)\fr{\de {u\l}_\f}{\de \f\s} = -p\l\om^2{u\l}_r
+\end{split}
+\end{equation*}
 
 Введем новые функции $u_2$ и $u_3$, связанные с $u_\Q$ И $u_\f$ следующими соотношениями:
 $$

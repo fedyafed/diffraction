@@ -284,13 +284,15 @@ W = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n {E\s}_{nm} h_n({k\s}_lr\c)P_n^
 \begin{equation}\label{eq_moving}
 \begin{split}
 \fr{\de{\si\l}_{rr}}{\de r\s} &+ \fr1{r\s} \fr{\de{\si\l}_{r\Q}}{\de\Q\s} + \fr{1}{r\s\sin\Q\s}\fr{\de\si_{r\f}}{\de\f} +\\
-&+ \fr1{r\s}\biggl(2{\si\l}_{rr}-{\si\l}_{\Q\Q}-{\si\l}_{\f\f}+{\si\l}_{r\Q}\ctg\Q\s\biggr)=-p_1\om^2{u\l}_r;\\
-\fr{\de{\si\l}_{r\Q}}{\de r\s} + \fr1{r\s} \fr{\de{\si\l}_{\Q\Q}}{\de\Q\s} + \fr{1}{r\s\sin\Q\s}\fr{\de{\si\l}_{\Q\f}}{\de\f\s} &+ \fr1{r}\biggl(\left(\si_{\Q\Q}-\si_{\f\f}\right)\ctg\Q+3\si_{r\Q}\biggr)\!=\!-\rho_1\om^2u_\Q;\\
-\fr{\de\si_{r\f}}{\de r} + \fr1r \fr{\de\si_{\Q\f}}{\de\Q} + \fr{1}{r\sin\Q}\fr{\de\si_{\f\f}}{\de\f} &+ \fr1r\biggl(3\si_{r\f}+2\si_{\Q\f}\ctg\Q\biggr)=-\rho_1\om^2u_\f,
+&+ \fr1{r\s}\biggl(2{\si\l}_{rr}-{\si\l}_{\Q\Q}-{\si\l}_{\f\f}+{\si\l}_{r\Q}\ctg\Q\s\biggr)=-p\l\om^2{u\l}_r;\\
+\fr{\de{\si\l}_{r\Q}}{\de r\s} &+ \fr1{r\s} \fr{\de{\si\l}_{\Q\Q}}{\de\Q\s} + \fr{1}{r\s\sin\Q\s}\fr{\de{\si\l}_{\Q\f}}{\de\f\s} +\\
+&+ \fr1{r\s}\biggl(\left({\si\l}_{\Q\Q}-{\si\l}_{\f\f}\right)\ctg\Q\s+3{\si\l}_{r\Q}\biggr)\!=\!-p\l\om^2{u\l}_\Q;\\
+\fr{\de{\si\l}_{r\f}}{\de r\s} &+ \fr1{r\s} \fr{\de{\si\l}_{\Q\f}}{\de\Q\s} + \fr{1}{r\s\sin\Q\s}\fr{\de{\si\l}_{\f\f}}{\de\f\s} +\\
+&+ \fr1{r\s}\biggl(3{\si\l}_{r\f}+2{\si\l}_{\Q\f}\ctg\Q\s\biggr)=-p\l\om^2{u\l}_\f,
 \end{split}
 \end{equation}
-где $u_r, u_\Q, u_\f$ --- компоненты вектора смещения $\mathbf{u}$;\\
-$\si_{ij}$ --- компоненты тензора напряжений неоднородной среды в сферической системе координат.
+где ${u\l}_r, {u\l}_\Q, {u\l}_\f$ --- компоненты вектора смещения $\mathbf{u\l}$;\\
+${\si\l}_{ij}$ --- компоненты тензора напряжений неоднородной среды в сферической системе координат.
 
 Используя связь компонентов тензора напряжений с компонентами тензора деформаций (обобщенный закон Гука), а также выражения компонентов тензора деформаций через компоненты вектора смещения~\cite{Nowacki}, получаем в сферической системе координат следующие соотношения:
 \begin{equation}\label{tensor comp}
@@ -313,8 +315,17 @@ $\si_{ij}$ --- компоненты тензора напряжений неод
 
 Соотношения \eqref{tensor comp5} справедливы как для однородной упругой среды, так и для неоднородного слоя. В первом случае в выражениях \eqref{tensor comp5} компоненты вектора смещения и тензора напряжений, а также величины $\la\l$ и $\mu\l$ следует заменить на $\la\s$ и $\mu\s$ соответственно.
 
-Используя эти соотношения, запишем уравнения~\eqref{eq_moving} через компоненты вектора смещения $\mathbf{u}$:
-\todo{EQUATIONS}
+Используя эти соотношения, запишем уравнения~\eqref{eq_moving} через компоненты вектора смещения $\mathbf{u\l}$:
+\begin{equation*}
+\begin{split}
+\biggl(\la\l+2\mu\l\biggr)\fr{\de^2 {u\l}_r}{\de r\s^2} + \fr{\mu\l}{r\s^2}\fr{\de^2 {u\l}_r}{\de\Q\s^2} +\fr{\mu\l}{r\s\sin\Q\s}\fr{\de^2 {u\l}_r}{\de\f\s^2} + \fr{\mu\l\ctg\Q\s}{r\s^2}\fr{\de {u\l}_r}{\de \Q\s} + \\
++ \left(\la\l'+2\mu\l'+\fr{2\la\l+4\mu\l}{r\s}\right)\fr{\de{u\l}_r}{\de r\s} + \left(\fr{2\la\l'}{r\s} - \fr{2\la\l+4\mu\l}{r\s^2}\right){u\l}_r + \\
++ \fr{\la\l+\mu\l}{r\s}\fr{\de^2 {u\l}_\Q}{\de r\s\de\Q\s} + \fr{(\la\l+\mu\l)\ctg\Q\s}{r\s}\fr{\de {u\l}_\Q}{\de r\s} + \\ 
++ \left(\fr{\la\l'}{r\s} - \fr{\la\l+3\mu\l}{r\s^2}\right)\fr{\de {u\l}_\Q}{\de \Q\s} +\left(\fr{\la\l'\ctg\Q\s}{r\s} - \fr{(\la\l+3\mu\l)\ctg\Q\s}{r\s^2}\right){u\l}_\Q + \\
++\fr{\la\l+\mu\l}{r\s\sin\Q\s}\fr{\de^2 {u\l}_\f}{\de r\s\de\f\s}
++ \left(\fr{\la\l'}{r\s\sin\Q\s} - \fr{\la\s+3\mu\s}{r\s^2\sin\Q\s}\right)\fr{\de {u\l}_\f}{\de \f\s} = -p\l\om^2{u\l}_r
+\end{split}
+\end{equation*}
 
 Введем новые функции $u_2$ и $u_3$, связанные с $u_\Q$ И $u_\f$ следующими соотношениями:
 $$
