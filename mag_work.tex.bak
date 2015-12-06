@@ -327,6 +327,15 @@ ${\si\l}_{ij}$ --- компоненты тензора напряжений не
 \end{split}
 \end{equation*}
 
+\begin{equation*}
+\begin{split}
+\fr{\la\l+\mu\l}{r\s}\fr{\de^2 {u\l}_r}{\de r\s \de \Q\s} + \left(\fr{\mu\l'}{r\s}+\fr{2\la\l+4\mu\l}{r\s^2}\right)\fr{\de {u\l}_r}{\de \Q\s} + \\
++ \mu\l \fr{\de^2 {u\l}_\Q}{\de r\s^2} + \fr{\la\l+2\mu\l}{r\s^2}\fr{\de^2 {u\l}_\Q}{\de \Q\s^2} + \fr{\mu\l}{r\s^2\sin^2\Q\s} \fr{\de^2 {u\l}_\Q}{\de \f^2} + \\
++ \left(\mu\l'+ \fr{2\mu\l}{r\s}\right)\fr{\de {u\l}_\Q}{\de r\s} + \fr{(\la\l+2\mu\l)\ctg\Q\s}{r\s^2}\fr{\de{u\l}_\Q}{\de \Q\s}-\left(\fr{\la\l'}{r\s} + \fr{\la\l+2\mu\l}{r\s^2\sin^2\Q\s}\right){u\l}_\Q + \\
++ \fr{\la\l+\mu\l}{r\s^2\sin\Q\s}\fr{\de^2{u\l}_\f}{\de \Q\s \de \f\s} - \fr{(\la\l+3\mu\l)\ctg\Q\s}{r\s^2\sin\Q\s}\fr{\de {u\l}_\f}{\de \f\s}  = -p\l\om^2{u\l}_\Q
+\end{split}
+\end{equation*}
+
 Введем новые функции $u_2$ и $u_3$, связанные с $u_\Q$ И $u_\f$ следующими соотношениями:
 $$
 u_\Q = \df{\de u_2}{\de\Q} + \fr1{\sin\Q}\fr{\de u_3}{\de\f}, \qq u_\f = \df1{\sin\Q}\df{\de u_2}{\de\f} - \df{\de u_3}{\de\Q}
