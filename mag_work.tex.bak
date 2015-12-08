@@ -193,6 +193,8 @@ $\om$~--- круговая частота.
 \end{equation}
 В~дальнейшем временной множитель~$\exp(-i\om t)$ будем опускать.
 
+\todo{Добавить разложение в ряд}
+
 Задача определения акустических полей вне~упругого тела и внутри его~полости в~установившемся режиме колебаний заключается в~нахождении решений уравнения Гельмгольца:
 \begin{align}
 \Lap\P\en &+ k\en^2\P\en = 0;\label{Helmholtz_ambient}\\
@@ -336,7 +338,15 @@ ${\si\l}_{ij}$ --- компоненты тензора напряжений не
 \end{split}
 \end{equation*}
 
-Введем новые функции $u_2$ и $u_3$, связанные с $u_\Q$ И $u_\f$ следующими соотношениями:
+\begin{equation*}
+\begin{split}
+\fr{\la\l+\mu\l}{r\s\sin\Q\s} \fr{\de^2{u\l}_r}{\de r\s \de \f\s} + \left(\fr{\mu\l'}{r\s\sin\Q\s} + \fr{2\la\l+4\mu\l}{r\s^2\sin\Q\s} \right)\fr{\de {u\l}_r}{\de \f\s} +\\
++ \fr{\la\l+\mu\l}{r\s^2\sin\Q\s}\fr{\de^2 {u\l}_\Q}{\de \Q\s \de \f\s} + \fr{(\la\l+3\mu\l)\ctg\Q\s}{r\s^2\sin\Q\s}\fr{\de {u\l}_\Q}{\de \f\s} +\\
++ \mu\l \fr{\de^2 {u\l}_\f}{\de r\s^2} + \fr{\mu\l}{r\s^2}\fr{\de^2 {u\l}_\f}{\de \Q\s^2} + \fr{\la\l+2\mu\l}{r\s^2\sin^2\Q\s} \fr{\de^2 {u\l}_\f}{\de \f\s^2} + \\
++ \left(\mu\l'+\fr{2\mu\l}{r\s}\right)\fr{\de {u\l}_\f}{\de r\s} + \fr{\mu\l\ctg\Q\s}{r\s^2}\fr{\de {u\l}_\f}{\de \Q\s} - \left(\fr{\mu\l'}{r\s} + \fr{\mu\l}{r\s^2\sin^2\Q\s}\right){u\l}_\f = - p\l\om^2{u\l}_\f
+\end{split}
+\end{equation*}
+Введем новые функции $u_2$ и $u_3$, связанные с $u_\Q$ и $u_\f$ следующими соотношениями:
 $$
 u_\Q = \df{\de u_2}{\de\Q} + \fr1{\sin\Q}\fr{\de u_3}{\de\f}, \qq u_\f = \df1{\sin\Q}\df{\de u_2}{\de\f} - \df{\de u_3}{\de\Q}
 $$
