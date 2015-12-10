@@ -163,13 +163,25 @@ $$
 
 \newpage
 \subsection{Постановка задачи}
-\todo{рисунок, рассмотрим..., пусть ..., требуется найти волновые поля в ...}
+\begin{figure}[h]
+\begin{center}
+\begin{minipage}[h]{0.47\linewidth}
+\includegraphics[width=1\linewidth]{sphere_edited.png}
+\caption{<<Сфера со сферическим слоем и произвольно расположенной сферической полостью>>}\label{pic_1}
+\end{minipage}
+%\hfill
+%\begin{minipage}[h]{0.47\linewidth}
+%\includegraphics[width=1\linewidth]{2a}
+%\caption{<<при $ka=3.2$>>}
+%\end{minipage}
+\end{center}
+\end{figure}
 
-Рассмотрим изотропный однородный упругий шар радиуса~$R\s$, плотность материала которого~$p\s$, упругие постоянные~$\la\s$ и~$\mu\s$, содержащий произвольно расположенную сферическую полость с~радиусом~$R\c$. Шар имеет покрытие в~виде неоднородного изотропного упругого слоя, внешний радиус которого равен~$R\l$.
+Рассмотрим изотропный однородный упругий шар радиуса~$R\s$, плотность материала которого~$p\s$, упругие постоянные~$\la\s$ и~$\mu\s$, содержащий произвольно расположенную сферическую полость с~радиусом~$R\c$. Шар имеет покрытие в~виде неоднородного изотропного упругого слоя, внешний радиус которого равен~$R\l$ (рис. \cref{pic_1}).
  
 Свяжем с полостью тела и с~самим телом прямоугольные системы координат $x\c, y\c, z\c$ и $x\s, y\s, z\s$ соответственно так, чтобы соответствующие оси обеих систем координат были параллельны. С~декартовыми системами координат $x\c, y\c, z\c$ и $x\s, y\s, z\s$ свяжем сферические координаты $r\c, \Q\c, \f\c$ и $r\s, \Q\s, \f\s$.
 
-Полагаем, что модули упругости~$\la\l$ и~$\mu\l$ материала слоя описываются дифференцируемыми функциями радиальной координаты~$r\s$ сферической системы координат~$(r\s, \Q\s, \f\s)$, а плотность $p\l$~--- непрерывной функцией координаты~$r\s$.  Окружающая тело и находящаяся в его полости жидкости~--- идеальные и однородные, имеющие плотности~$p\en, p\c$ и скорости звука~$c\en, c\c$ соответственно. 
+Пусть модули упругости~$\la\l$ и~$\mu\l$ материала слоя описываются дифференцируемыми функциями радиальной координаты~$r\s$ сферической системы координат~$(r\s, \Q\s, \f\s)$, а плотность $p\l$~--- непрерывной функцией координаты~$r\s$.  Окружающая тело и находящаяся в его полости жидкости~--- идеальные и однородные, имеющие плотности~$p\en, p\c$ и скорости звука~$c\en, c\c$ соответственно. 
 
 Определим отраженные от~тела и возбужденные в~его~полости волны, а также найдем поля смещений в~упругом материале шара и неоднородном слое.
 
@@ -315,7 +327,7 @@ ${\si\l}_{ij}$ --- компоненты тензора напряжений не
     \end{gathered}
 \end{equation}
 
-Соотношения \eqref{tensor comp5} справедливы как для однородной упругой среды, так и для неоднородного слоя. В первом случае в выражениях \eqref{tensor comp5} компоненты вектора смещения и тензора напряжений, а также величины $\la\l$ и $\mu\l$ следует заменить на $\la\s$ и $\mu\s$ соответственно.
+Соотношения \eqref{tensor comp} справедливы как для однородной упругой среды, так и для неоднородного слоя. В первом случае в выражениях \eqref{tensor comp} компоненты вектора смещения и тензора напряжений, а также величины $\la\l$ и $\mu\l$ следует заменить на $\la\s$ и $\mu\s$ соответственно.
 
 Используя эти соотношения, запишем уравнения~\eqref{eq_moving} через компоненты вектора смещения $\mathbf{u\l}$:
 \begin{equation*}
@@ -325,7 +337,7 @@ ${\si\l}_{ij}$ --- компоненты тензора напряжений не
 + \fr{\la\l+\mu\l}{r\s}\fr{\de^2 {u\l}_\Q}{\de r\s\de\Q\s} + \fr{(\la\l+\mu\l)\ctg\Q\s}{r\s}\fr{\de {u\l}_\Q}{\de r\s} + \\ 
 + \left(\fr{\la\l'}{r\s} - \fr{\la\l+3\mu\l}{r\s^2}\right)\fr{\de {u\l}_\Q}{\de \Q\s} +\left(\fr{\la\l'\ctg\Q\s}{r\s} - \fr{(\la\l+3\mu\l)\ctg\Q\s}{r\s^2}\right){u\l}_\Q + \\
 +\fr{\la\l+\mu\l}{r\s\sin\Q\s}\fr{\de^2 {u\l}_\f}{\de r\s\de\f\s}
-+ \left(\fr{\la\l'}{r\s\sin\Q\s} - \fr{\la\s+3\mu\s}{r\s^2\sin\Q\s}\right)\fr{\de {u\l}_\f}{\de \f\s} = -p\l\om^2{u\l}_r
++ \left(\fr{\la\l'}{r\s\sin\Q\s} - \fr{\la\s+3\mu\s}{r\s^2\sin\Q\s}\right)\fr{\de {u\l}_\f}{\de \f\s} = -p\l\om^2{u\l}_r;
 \end{split}
 \end{equation*}
 
@@ -333,8 +345,8 @@ ${\si\l}_{ij}$ --- компоненты тензора напряжений не
 \begin{split}
 \fr{\la\l+\mu\l}{r\s}\fr{\de^2 {u\l}_r}{\de r\s \de \Q\s} + \left(\fr{\mu\l'}{r\s}+\fr{2\la\l+4\mu\l}{r\s^2}\right)\fr{\de {u\l}_r}{\de \Q\s} + \\
 + \mu\l \fr{\de^2 {u\l}_\Q}{\de r\s^2} + \fr{\la\l+2\mu\l}{r\s^2}\fr{\de^2 {u\l}_\Q}{\de \Q\s^2} + \fr{\mu\l}{r\s^2\sin^2\Q\s} \fr{\de^2 {u\l}_\Q}{\de \f^2} + \\
-+ \left(\mu\l'+ \fr{2\mu\l}{r\s}\right)\fr{\de {u\l}_\Q}{\de r\s} + \fr{(\la\l+2\mu\l)\ctg\Q\s}{r\s^2}\fr{\de{u\l}_\Q}{\de \Q\s}-\left(\fr{\la\l'}{r\s} + \fr{\la\l+2\mu\l}{r\s^2\sin^2\Q\s}\right){u\l}_\Q + \\
-+ \fr{\la\l+\mu\l}{r\s^2\sin\Q\s}\fr{\de^2{u\l}_\f}{\de \Q\s \de \f\s} - \fr{(\la\l+3\mu\l)\ctg\Q\s}{r\s^2\sin\Q\s}\fr{\de {u\l}_\f}{\de \f\s}  = -p\l\om^2{u\l}_\Q
++ \left(\mu\l'+ \fr{2\mu\l}{r\s}\right)\fr{\de {u\l}_\Q}{\de r\s} + \fr{(\la\l+2\mu\l)\ctg\Q\s}{r\s^2}\fr{\de{u\l}_\Q}{\de \Q\s}-\left(\fr{\mu\l'}{r\s} + \fr{\la\l+2\mu\l}{r\s^2\sin^2\Q\s}\right){u\l}_\Q + \\
++ \fr{\la\l+\mu\l}{r\s^2\sin\Q\s}\fr{\de^2{u\l}_\f}{\de \Q\s \de \f\s} - \fr{(\la\l+3\mu\l)\ctg\Q\s}{r\s^2\sin\Q\s}\fr{\de {u\l}_\f}{\de \f\s}  = -p\l\om^2{u\l}_\Q;
 \end{split}
 \end{equation*}
 
@@ -343,15 +355,37 @@ ${\si\l}_{ij}$ --- компоненты тензора напряжений не
 \fr{\la\l+\mu\l}{r\s\sin\Q\s} \fr{\de^2{u\l}_r}{\de r\s \de \f\s} + \left(\fr{\mu\l'}{r\s\sin\Q\s} + \fr{2\la\l+4\mu\l}{r\s^2\sin\Q\s} \right)\fr{\de {u\l}_r}{\de \f\s} +\\
 + \fr{\la\l+\mu\l}{r\s^2\sin\Q\s}\fr{\de^2 {u\l}_\Q}{\de \Q\s \de \f\s} + \fr{(\la\l+3\mu\l)\ctg\Q\s}{r\s^2\sin\Q\s}\fr{\de {u\l}_\Q}{\de \f\s} +\\
 + \mu\l \fr{\de^2 {u\l}_\f}{\de r\s^2} + \fr{\mu\l}{r\s^2}\fr{\de^2 {u\l}_\f}{\de \Q\s^2} + \fr{\la\l+2\mu\l}{r\s^2\sin^2\Q\s} \fr{\de^2 {u\l}_\f}{\de \f\s^2} + \\
-+ \left(\mu\l'+\fr{2\mu\l}{r\s}\right)\fr{\de {u\l}_\f}{\de r\s} + \fr{\mu\l\ctg\Q\s}{r\s^2}\fr{\de {u\l}_\f}{\de \Q\s} - \left(\fr{\mu\l'}{r\s} + \fr{\mu\l}{r\s^2\sin^2\Q\s}\right){u\l}_\f = - p\l\om^2{u\l}_\f
++ \left(\mu\l'+\fr{2\mu\l}{r\s}\right)\fr{\de {u\l}_\f}{\de r\s} + \fr{\mu\l\ctg\Q\s}{r\s^2}\fr{\de {u\l}_\f}{\de \Q\s} - \left(\fr{\mu\l'}{r\s} + \fr{\mu\l}{r\s^2\sin^2\Q\s}\right){u\l}_\f = - p\l\om^2{u\l}_\f.
 \end{split}
 \end{equation*}
-Введем новые функции $u_2$ и $u_3$, связанные с $u_\Q$ и $u_\f$ следующими соотношениями:
+Введем новые функции ${u\l}_2$ и ${u\l}_3$, связанные с ${u\l}_\Q$ и ${u\l}_\f$ следующими соотношениями:
 $$
-u_\Q = \df{\de u_2}{\de\Q} + \fr1{\sin\Q}\fr{\de u_3}{\de\f}, \qq u_\f = \df1{\sin\Q}\df{\de u_2}{\de\f} - \df{\de u_3}{\de\Q}
+{u\l}_\Q = \df{\de {u\l}_2}{\de\Q\s} + \fr1{\sin\Q\s}\fr{\de {u\l}_3}{\de\f\s}, \qq {u\l}_\f = \df1{\sin\Q\s}\df{\de {u\l}_2}{\de\f\s} - \df{\de {u\l}_3}{\de\Q\s}
 $$
-и запишем уравнения движения через функции $u_r, u_2$ и $u_3:$
+и запишем уравнения движения через функции ${u\l}_r, {u\l}_2$ и ${u\l}_3:$
 
+\begin{equation}
+\begin{split}
+\biggl(\la\l+2\mu\l\biggr)\fr{\de^2 {u\l}_r}{\de r\s^2} + \left(\la\l'+2\mu\l'+\fr{2\la\l+4\mu\l}{r\s}\right)\fr{\de {u\l}_r}{\de r\s} + \fr{\mu\l}{r\s^2}L({u\l}_r) +\\
++ \left(\fr{2\la\l'}{r\s} - \fr{2\la\l+4\mu\l}{r\s^2} + p\l\om^2\right){u\l}_r +\\
++ \left[\fr{\la\l+\mu\l}{r\s}\fr{\de}{\de r\s} + \fr{\la\l'}{r\s} - \fr{\la\l+3\mu\l}{r\s}\right]L({u\l}_3) = 0;
+\end{split}
+\end{equation}
+\begin{equation}
+\begin{split}
+\left[\fr{\la\l+\mu\l}{r\s}\fr{\de}{\de r\s}+\fr{\mu\l'}{r\s}+\fr{2\la\l+4\mu\l}{r\s^2}\right]\fr{\de{u\l}_r}{\de \Q\s} + \fr{\la\l+2\mu\l}{r\s^2}\fr{\de}{\de \Q\s}L({u\l}_2) + \\
++ \left[\mu\l\fr{\de^2}{\de r\s^2} + \left(\mu\l'+\fr{2\mu\l}{r\s}\right)\fr{\de}{\de r\s} - \fr{\mu\l'}{r\s} + p\l\om^2\right]\left[\fr{\de {u\l}_2}{\de\Q\s} + \fr{1}{\sin\Q\s}\fr{\de{u\l}_3}{\de\f\s}\right]+\\
++ \fr{\mu\l}{r\s^2\sin\Q\s}\fr{\de}{\de\f\s}L({u\l}_3) = 0;
+\end{split}
+\end{equation}
+\begin{equation}
+\begin{split}
+\fr{1}{r\s\sin\Q\s}\left[\biggl(\la\l+\mu\l\biggr)\fr{\de}{\de r\s} + \mu\l' + \fr{2\la\l+4\mu\l}{r\s}\right]\fr{\de {u\l}_r}{\de\f\s} +\\
++ \left[\mu\l\fr{\de^2}{\de r\s^2} + \left(\mu\l'+\fr{2\mu\l}{r\s}\right)\fr{\de}{\de r\s} - \fr{\mu\l'}{r\s} + p\l\om^2\right]\left[\fr{1}{\sin\Q\s}\fr{\de {u\l}_2}{\de\f\s} - \fr{\de {u\l}_3}{\de\Q\s}\right] +\\
++ \fr{\la\l+2\mu\l}{r\s^2\sin\Q\s}\fr{\de}{\de \f\s}L({u\l}_2) -\fr{\mu\l}{r\s^2}\fr{\de}{\de\Q\s}L({u\l}_3) = 0,
+\end{split}
+\end{equation}
+где $L = \df{\de^2}{\de\Q\s^2} + \ctg\Q\s\df{\de}{\de\Q\s} + \df{1}{\sin^2\Q\s}\df{\de^2}{\de\f\s^2},\q\la\l' = \df{\diff\la\l}{\diff r\s},\q\mu\l' = \df{\diff\mu\l}{\diff r\s}.$
 \newpage
 \subsection{Решение краевой задачи для системы обыкновенных дифференциальных уравнений}
 
@@ -384,5 +418,3 @@ $$
 
 
 \end{document}
-\grid
-\grid
