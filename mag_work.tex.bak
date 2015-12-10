@@ -200,12 +200,23 @@ $\bar{\mathbf{x}}\s$~--- радиус-вектор, \\
 $\om$~--- круговая частота.
 
  Без~ограничения общности будем полагать, что волна распространяется в~направлении~$\Q\s = \Q\c = 0$. Тогда в~сферической системе координат \eqref{potential speed} запишется в~виде:
-\begin{equation}
+\begin{equation}\label{potential speed theta = 0}
 \P\o(r\s, \Q\s, t) = A\o \exp\left[i\left(k\en r\s\cos\Q\s - \om t\right)\right],
 \end{equation}
 В~дальнейшем временной множитель~$\exp(-i\om t)$ будем опускать.
 
-\todo{Добавить разложение в ряд}
+Разложим \eqref{potential speed theta = 0} в ряд по ортогональным функциям:
+\begin{equation}
+\P\o(r\s, \Q\s, f\s) = \sum\limits_{n=0}^\infty\sum\limits_{m=-n}^n \gamma_{mn}j_n(k\en r\s)P_n^m(\cos\Q\s)\e^{im\f\s},
+\end{equation}
+где $j_n(x)$~--- сферическая функция Бесселя порядка $n;$\\
+$P_n^m(x)$~--- присоединенный многочлен Лежандра степени $n$ порядка $m;$\\
+$\gamma_{mn} = 
+\begin{cases}
+A\o i^n(2n+1),& \text{при } m\ne0;\\
+0,& \text{при } m = 0.
+\end{cases}
+$
 
 Задача определения акустических полей вне~упругого тела и внутри его~полости в~установившемся режиме колебаний заключается в~нахождении решений уравнения Гельмгольца:
 \begin{align}
@@ -386,6 +397,17 @@ $$
 \end{split}
 \end{equation}
 где $L = \df{\de^2}{\de\Q\s^2} + \ctg\Q\s\df{\de}{\de\Q\s} + \df{1}{\sin^2\Q\s}\df{\de^2}{\de\f\s^2},\q\la\l' = \df{\diff\la\l}{\diff r\s},\q\mu\l' = \df{\diff\mu\l}{\diff r\s}.$
+
+
+Функции ${u\l}_r, {u\l}_2$ и ${u\l}_3$ будем искать в виде разложений:
+\begin{equation}
+\begin{split}
+{u\l}_r(r\s, \Q\s, \f\s) = \sum\limits_{n=0}^\infty\sum\limits_{m=-n}^n U_{1mn}(r\s)P_n^m(\cos\Q\s)\e^{im\f\s},\\
+{u\l}_2(r\s, \Q\s, \f\s) = \sum\limits_{n=0}^\infty\sum\limits_{m=-n}^n U_{2mn}(r\s)P_n^m(\cos\Q\s)\e^{im\f\s},\\
+{u\l}_3(r\s, \Q\s, \f\s) = \sum\limits_{n=0}^\infty\sum\limits_{m=-n}^n U_{3mn}(r\s)P_n^m(\cos\Q\s)\e^{im\f\s}.\\
+\end{split}
+\end{equation}
+
 \newpage
 \subsection{Решение краевой задачи для системы обыкновенных дифференциальных уравнений}
 
