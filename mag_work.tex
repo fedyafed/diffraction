@@ -249,12 +249,11 @@ $k\c = \df{\om}{c\c}$~--- волновое число находящейся в~
 \fr1{r\s^2}\fr\de{\de r\s}\left(r\s^2 \fr{\de\P\sc}{\de r\s}\right) + \fr1{r\s^2\sin^2\Q\s}\fr{\de\P\sc}{\de\f\s^2} &+ \fr1{r\s^2\sin\Q\s}\fr\de{\de\Q\s} \left(\sin\Q\s \fr{\de\P\sc}{\de\Q\s}\right) + k\en^2\P\sc = 0.
 \end{align}
 
-Звуковая волна в~полости тела~$\P\c$ должна удовлетворять условию ограниченности, а отраженная волна~$\P\sc$~--- условиям излучения на~бесконечности. Поэтому потенциалы $\P\sc$ и $\P\c$ будем искать в~виде 
-\begin{align}\P\sc(r\s, \Q\s, \f\s) = \sum\limits_{n = 0}^\infty \sum\limits_{m = 0}^n {A\sc}_{nm} h_n(k\en r\s) P_n^m(\cos\Q\s)\cos\bigl(m\f\s\bigr);\\
-\P\c(r\c, \Q\c, \f\c) = \sum\limits_{n = 0}^\infty \sum\limits_{m = 0}^n {B\c}_{nm} j_n(k\c r\c) P_n^m(\cos\Q\c)\cos\bigl(m\f\c\bigr),
+Звуковая волна в~полости тела~$\P\c$ должна удовлетворять условию ограниченности, а отраженная волна~$\P\sc$~--- условиям излучения на~бесконечности. Поэтому потенциалы $\P\sc$ и $\P\c$ будем искать в~виде рядов по сферическим функциям:
+\begin{align}\P\sc(r\s, \Q\s, \f\s) &= \sum\limits_{n = 0}^\infty \sum\limits_{m = 0}^n {A\sc}_{nm} h_n(k\en r\s) P_n^{\lvert m\rvert}(\cos\Q\s)\cos\bigl(m\f\s\bigr);\\
+\P\c(r\c, \Q\c, \f\c) &= \sum\limits_{n = 0}^\infty \sum\limits_{m = 0}^n {B\c}_{nm} j_n(k\c r\c) P_n^{\lvert m\rvert}(\cos\Q\c)\cos\bigl(m\f\c\bigr),
 \end{align}
-где $h_n(x)$ и $j_n(x)$~--- сферические функции Ханкеля первого рода и Бесселя соответственно; \\
-$P_n(x)$~--- многочлен Лежандра степени $n$.
+где $h_n(x)$~--- сферическая функции Ханкеля первого рода.
 
 Распространение малых возмущений в~упругом теле для~установившегося режима движения частиц тела описывается скалярным и векторным уравнением Гельмгольца:
 \begin{align}
@@ -274,7 +273,7 @@ $$
 
 Потенциал смещения $\P\s$ будем искать в~виде ряда по~двум локальным сферическим функциям:
 $$
-\P\s = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n {A\s}_{nm} h_n({k\s}_lr\c)P_n^m(\cos\Q\c)\e^{im\f\c} + {B\s}_{nm} j_n({k\s}_lr\s)P_n^m(\cos\Q\s)\e^{im\f\s}
+\P\s = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n {A\s}_{nm} h_n({k\s}_lr\c)P_n^{\lvert m\rvert}(\cos\Q\c)\e^{im\f\c} + {B\s}_{nm} j_n({k\s}_lr\s)P_n^{\lvert m\rvert}(\cos\Q\s)\e^{im\f\s}
 $$
 
 Векторный потенциал $\F\s$ может быть представлен в~виде суммы:
@@ -290,8 +289,8 @@ $$
 
 Функции $V$ и $W$ будем искать в~виде:
 \begin{align}
-V = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n {C\s}_{nm} h_n({k\s}_lr\c)P_n^m(\cos\Q\c)\e^{im\f\c} + {D\s}_{nm} j_n({k\s}_lr\s)P_n^m(\cos\Q\s)\e^{im\f\s},\\
-W = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n {E\s}_{nm} h_n({k\s}_lr\c)P_n^m(\cos\Q\c)\e^{im\f\c} + {F\s}_{nm} j_n({k\s}_lr\s)P_n^m(\cos\Q\s)\e^{im\f\s}.
+V = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n {C\s}_{nm} h_n({k\s}_lr\c)P_n^{\lvert m\rvert}(\cos\Q\c)\e^{im\f\c} + {D\s}_{nm} j_n({k\s}_lr\s)P_n^{\lvert m\rvert}(\cos\Q\s)\e^{im\f\s},\\
+W = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n {E\s}_{nm} h_n({k\s}_lr\c)P_n^{\lvert m\rvert}(\cos\Q\c)\e^{im\f\c} + {F\s}_{nm} j_n({k\s}_lr\s)P_n^{\lvert m\rvert}(\cos\Q\s)\e^{im\f\s}.
 \end{align}
 
 Коэффициенты разложений ${A\sc}_{nm}, {B\c}_{nm}, {A\s}_{nm}, {B\s}_{nm}, {C\s}_{nm}, {D\s}_{nm}, {E\s}_{nm}$ и $ {F\s}_{nm}$ подлежат определению из граничных условий, которые заключаются в равенстве нормальных скоростей частиц упругой среды и жидкости на внешней поверхности слоя и внутренней поверхности полого шара; равенстве на них нормального напряжения и акустического давления; отсутствии на этих поверхностях касательных напряжений. На внутренней поверхности слоя при переходе через границу раздела упругих сред должны быть непрерывны составляющие вектора смещения частиц, а также нормальные и тангенциальные напряжения. Имеем:
@@ -402,9 +401,9 @@ $$
 Функции ${u\l}_r, {u\l}_2$ и ${u\l}_3$ будем искать в виде разложений:
 \begin{equation}
 \begin{split}
-{u\l}_r(r\s, \Q\s, \f\s) = \sum\limits_{n=0}^\infty\sum\limits_{m=-n}^n U_{1mn}(r\s)P_n^m(\cos\Q\s)\e^{im\f\s},\\
-{u\l}_2(r\s, \Q\s, \f\s) = \sum\limits_{n=0}^\infty\sum\limits_{m=-n}^n U_{2mn}(r\s)P_n^m(\cos\Q\s)\e^{im\f\s},\\
-{u\l}_3(r\s, \Q\s, \f\s) = \sum\limits_{n=0}^\infty\sum\limits_{m=-n}^n U_{3mn}(r\s)P_n^m(\cos\Q\s)\e^{im\f\s}.\\
+{u\l}_r(r\s, \Q\s, \f\s) = \sum\limits_{n=0}^\infty\sum\limits_{m=-n}^n U_{1mn}(r\s)P_n^{\lvert m\rvert}(\cos\Q\s)\e^{im\f\s},\\
+{u\l}_2(r\s, \Q\s, \f\s) = \sum\limits_{n=0}^\infty\sum\limits_{m=-n}^n U_{2mn}(r\s)P_n^{\lvert m\rvert}(\cos\Q\s)\e^{im\f\s},\\
+{u\l}_3(r\s, \Q\s, \f\s) = \sum\limits_{n=0}^\infty\sum\limits_{m=-n}^n U_{3mn}(r\s)P_n^{\lvert m\rvert}(\cos\Q\s)\e^{im\f\s}.\\
 \end{split}
 \end{equation}
 

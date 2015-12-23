@@ -207,14 +207,14 @@ $\om$~--- круговая частота.
 
 Разложим \eqref{potential speed theta = 0} в ряд по ортогональным функциям:
 \begin{equation}
-\P\o(r\s, \Q\s, f\s) = \sum\limits_{n=0}^\infty\sum\limits_{m=-n}^n \gamma_{mn}j_n(k\en r\s)P_n^m(\cos\Q\s)\e^{im\f\s},
+\P\o(r\s, \Q\s, f\s) = \sum\limits_{n=0}^\infty\sum\limits_{m=-n}^n \gamma_{mn}j_n(k\en r\s)P_n^{\lvert m\rvert}(\cos\Q\s)\e^{im\f\s},
 \end{equation}
 где $j_n(x)$~--- сферическая функция Бесселя порядка $n;$\\
 $P_n^m(x)$~--- присоединенный многочлен Лежандра степени $n$ порядка $m;$\\
 $\gamma_{mn} = 
 \begin{cases}
-A\o i^n(2n+1),& \text{при } m\ne0;\\
-0,& \text{при } m = 0.
+A\o i^n(2n+1),& \text{при } m=0;\\
+0,& \text{при } m \ne 0.
 \end{cases}
 $
 
@@ -250,11 +250,10 @@ $k\c = \df{\om}{c\c}$~--- волновое число находящейся в~
 \end{align}
 
 Звуковая волна в~полости тела~$\P\c$ должна удовлетворять условию ограниченности, а отраженная волна~$\P\sc$~--- условиям излучения на~бесконечности. Поэтому потенциалы $\P\sc$ и $\P\c$ будем искать в~виде 
-\begin{align}\P\sc(r\s, \Q\s, \f\s) = \sum\limits_{n = 0}^\infty \sum\limits_{m = 0}^n {A\sc}_{nm} h_n(k\en r\s) P_n^m(\cos\Q\s)\cos\bigl(m\f\s\bigr);\\
-\P\c(r\c, \Q\c, \f\c) = \sum\limits_{n = 0}^\infty \sum\limits_{m = 0}^n {B\c}_{nm} j_n(k\c r\c) P_n^m(\cos\Q\c)\cos\bigl(m\f\c\bigr),
+\begin{align}\P\sc(r\s, \Q\s, \f\s) &= \sum\limits_{n = 0}^\infty \sum\limits_{m = 0}^n {A\sc}_{nm} h_n(k\en r\s) P_n^{\lvert m\rvert}(\cos\Q\s)\cos\bigl(m\f\s\bigr);\\
+\P\c(r\c, \Q\c, \f\c) &= \sum\limits_{n = 0}^\infty \sum\limits_{m = 0}^n {B\c}_{nm} j_n(k\c r\c) P_n^{\lvert m\rvert}(\cos\Q\c)\cos\bigl(m\f\c\bigr),
 \end{align}
-где $h_n(x)$ и $j_n(x)$~--- сферические функции Ханкеля первого рода и Бесселя соответственно; \\
-$P_n(x)$~--- многочлен Лежандра степени $n$.
+где $h_n(x)$~--- сферическая функции Ханкеля первого рода.
 
 Распространение малых возмущений в~упругом теле для~установившегося режима движения частиц тела описывается скалярным и векторным уравнением Гельмгольца:
 \begin{align}
