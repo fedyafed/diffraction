@@ -227,8 +227,8 @@ $
 $\P\c$~--- потенциал скоростей акустического поля в~полости тела;\\
 $k\c = \df{\om}{c\c}$~--- волновое число находящейся в~полости жидкости.\\ При~этом скорости частиц жидкости и акустическое давление вне~тела и внутри полости определяются по~следующим формулам соответственно:
 \begin{align}
-\bar{v}\en &= \grad\P\en; &\q P\en &= ip\en\om\P\en;\\
-\bar{v}\c &= \grad\P\c; &\q P\c &= ip\c\om\P\c.
+\bar{\mathbf v}\en &= \grad\P\en; &\q P\en &= ip\en\om\P\en;\label{eq_ven}\\
+\bar{\mathbf v}\c &= \grad\P\c; &\q P\c &= ip\c\om\P\c.\label{eq_vc}
 \end{align}
 
 
@@ -250,8 +250,8 @@ $k\c = \df{\om}{c\c}$~--- волновое число находящейся в~
 \end{align}
 
 Звуковая волна в~полости тела~$\P\c$ должна удовлетворять условию ограниченности, а отраженная волна~$\P\sc$~--- условиям излучения на~бесконечности. Поэтому потенциалы $\P\sc$ и $\P\c$ будем искать в~виде рядов по сферическим функциям:
-\begin{align}\P\sc(r\s, \Q\s, \f\s) &= \sum\limits_{n = 0}^\infty \sum\limits_{m = 0}^n {A\sc}_{nm} h_n(k\en r\s) P_n^{\lvert m\rvert}(\cos\Q\s)\cos\bigl(m\f\s\bigr);\\
-\P\c(r\c, \Q\c, \f\c) &= \sum\limits_{n = 0}^\infty \sum\limits_{m = 0}^n {B\c}_{nm} j_n(k\c r\c) P_n^{\lvert m\rvert}(\cos\Q\c)\cos\bigl(m\f\c\bigr),
+\begin{align}\P\sc(r\s, \Q\s, \f\s) &= \sum\limits_{n = 0}^\infty \sum\limits_{m = 0}^n {A\sc}_{nm} h_n(k\en r\s) P_n^{\lvert m\rvert}(\cos\Q\s)\cos\bigl(m\f\s\bigr);\label{eq_psc}\\
+\P\c(r\c, \Q\c, \f\c) &= \sum\limits_{n = 0}^\infty \sum\limits_{m = 0}^n {B\c}_{nm} j_n(k\c r\c) P_n^{\lvert m\rvert}(\cos\Q\c)\cos\bigl(m\f\c\bigr),\label{eq_pc}
 \end{align}
 где $h_n(x)$~--- сферическая функции Ханкеля первого рода.
 
@@ -272,9 +272,9 @@ $$
 $$
 
 Потенциал смещения $\P\s$ будем искать в~виде ряда по~двум локальным сферическим функциям:
-$$
+\begin{equation}\label{eq_ps}
 \P\s = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n {A\s}_{nm} h_n({k\s}_lr\c)P_n^{\lvert m\rvert}(\cos\Q\c)\e^{im\f\c} + {B\s}_{nm} j_n({k\s}_lr\s)P_n^{\lvert m\rvert}(\cos\Q\s)\e^{im\f\s}
-$$
+\end{equation}
 
 Векторный потенциал $\F\s$ может быть представлен в~виде суммы:
 $$
@@ -289,20 +289,11 @@ $$
 
 Функции $V$ и $W$ будем искать в~виде:
 \begin{align}
-V = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n {C\s}_{nm} h_n({k\s}_lr\c)P_n^{\lvert m\rvert}(\cos\Q\c)\e^{im\f\c} + {D\s}_{nm} j_n({k\s}_lr\s)P_n^{\lvert m\rvert}(\cos\Q\s)\e^{im\f\s},\\
-W = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n {E\s}_{nm} h_n({k\s}_lr\c)P_n^{\lvert m\rvert}(\cos\Q\c)\e^{im\f\c} + {F\s}_{nm} j_n({k\s}_lr\s)P_n^{\lvert m\rvert}(\cos\Q\s)\e^{im\f\s}.
+V = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n &{C\s}_{nm} h_n({k\s}_lr\c)P_n^{\lvert m\rvert}(\cos\Q\c)\e^{im\f\c} + \notag\\
++ &{D\s}_{nm} j_n({k\s}_lr\s)P_n^{\lvert m\rvert}(\cos\Q\s)\e^{im\f\s},\label{eq_v}\\
+W = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n &{E\s}_{nm} h_n({k\s}_lr\c)P_n^{\lvert m\rvert}(\cos\Q\c)\e^{im\f\c} + \notag\\
++ &{F\s}_{nm} j_n({k\s}_lr\s)P_n^{\lvert m\rvert}(\cos\Q\s)\e^{im\f\s}.\label{eq_w}
 \end{align}
-
-Коэффициенты разложений ${A\sc}_{nm}, {B\c}_{nm}, {A\s}_{nm}, {B\s}_{nm}, {C\s}_{nm}, {D\s}_{nm}, {E\s}_{nm}$ и $ {F\s}_{nm}$ подлежат определению из граничных условий, которые заключаются в равенстве нормальных скоростей частиц упругой среды и жидкости на внешней поверхности слоя и внутренней поверхности полого шара; равенстве на них нормального напряжения и акустического давления; отсутствии на этих поверхностях касательных напряжений. На внутренней поверхности слоя при переходе через границу раздела упругих сред должны быть непрерывны составляющие вектора смещения частиц, а также нормальные и тангенциальные напряжения. Имеем:
-\begin{equation*}
-\begin{aligned}
-\text{при }r\c &= R\c: \q  &  {\si\s}_{rr} &= -P\c,  &  {\si\s}_{r\Q} &= 0,  &  {\si\s}_{r\f} &= 0, &  -i\om {u\s}_r &= {v\c}_r;\\
-\text{при }r\s &= R\s: \q  &  {\si\s}_{rr} &= {\si\l}_{rr},  &  {\si\s}_{r\Q} &= {\si\l}_{r\Q},  &  {\si\s}_{r\f} &= {\si\l}_{r\f}, &&\\
-&&  {u\s}_r &= {u\l}_r, \q & {u\s}_\Q &= {u\l}_\Q, \q & {u\s}_\f &= {u\l}_\f;\\
-\text{при }r\s &= R\l: \q  &  {\si\l}_{rr} &= -P\en,  &  {\si\l}_{r\Q} &= 0,  &  {\si\l}_{r\f} &= 0, &  -i\om {u\l}_r &= {v\en}_{r},
-\end{aligned}
-\end{equation*} 
-где ${v\c}_r=\de\P\c/\de r, \q {v\en}_r=\de\P\en/\de r$~--- радиальная компонента скорости частиц в жидкости внутри полости и в окружающем пространстве соответственно.
 
 Распространение упругих волн в неоднородном слое описывается общими уравнениями движения упругой среды, которые для установившегося режима движения в сферической системе координат имеют следующий вид~\cite{Nowacki}:
 \begin{equation}\label{eq_moving}
@@ -369,26 +360,26 @@ ${\si\l}_{ij}$ --- компоненты тензора напряжений не
 \end{split}
 \end{equation*}
 Введем новые функции ${u\l}_2$ и ${u\l}_3$, связанные с ${u\l}_\Q$ и ${u\l}_\f$ следующими соотношениями:
-$$
-{u\l}_\Q = \df{\de {u\l}_2}{\de\Q\s} + \fr1{\sin\Q\s}\fr{\de {u\l}_3}{\de\f\s}, \qq {u\l}_\f = \df1{\sin\Q\s}\df{\de {u\l}_2}{\de\f\s} - \df{\de {u\l}_3}{\de\Q\s}
-$$
-и запишем уравнения движения через функции ${u\l}_r, {u\l}_2$ и ${u\l}_3:$
+\begin{equation}\label{eq_v2v3}
+{u\l}_\Q = \df{\de {u\l}_2}{\de\Q\s} + \fr1{\sin\Q\s}\fr{\de {u\l}_3}{\de\f\s}; \qq {u\l}_\f = \df1{\sin\Q\s}\df{\de {u\l}_2}{\de\f\s} - \df{\de {u\l}_3}{\de\Q\s},
+\end{equation}
+запишем уравнения движения через функции ${u\l}_r, {u\l}_2$ и ${u\l}_3$ и перенесем всё в левую часть:
 
-\begin{equation}
+\begin{equation}\label{eq_1.1}
 \begin{split}
 \biggl(\la\l+2\mu\l\biggr)\fr{\de^2 {u\l}_r}{\de r\s^2} + \left(\la\l'+2\mu\l'+\fr{2\la\l+4\mu\l}{r\s}\right)\fr{\de {u\l}_r}{\de r\s} + \fr{\mu\l}{r\s^2}L({u\l}_r) +\\
 + \left(\fr{2\la\l'}{r\s} - \fr{2\la\l+4\mu\l}{r\s^2} + p\l\om^2\right){u\l}_r +\\
 + \left[\fr{\la\l+\mu\l}{r\s}\fr{\de}{\de r\s} + \fr{\la\l'}{r\s} - \fr{\la\l+3\mu\l}{r\s}\right]L({u\l}_3) = 0;
 \end{split}
 \end{equation}
-\begin{equation}
+\begin{equation}\label{eq_2.1}
 \begin{split}
 \left[\fr{\la\l+\mu\l}{r\s}\fr{\de}{\de r\s}+\fr{\mu\l'}{r\s}+\fr{2\la\l+4\mu\l}{r\s^2}\right]\fr{\de{u\l}_r}{\de \Q\s} + \fr{\la\l+2\mu\l}{r\s^2}\fr{\de}{\de \Q\s}L({u\l}_2) + \\
 + \left[\mu\l\fr{\de^2}{\de r\s^2} + \left(\mu\l'+\fr{2\mu\l}{r\s}\right)\fr{\de}{\de r\s} - \fr{\mu\l'}{r\s} + p\l\om^2\right]\left[\fr{\de {u\l}_2}{\de\Q\s} + \fr{1}{\sin\Q\s}\fr{\de{u\l}_3}{\de\f\s}\right]+\\
 + \fr{\mu\l}{r\s^2\sin\Q\s}\fr{\de}{\de\f\s}L({u\l}_3) = 0;
 \end{split}
 \end{equation}
-\begin{equation}
+\begin{equation}\label{eq_3.1}
 \begin{split}
 \fr{1}{r\s\sin\Q\s}\left[\biggl(\la\l+\mu\l\biggr)\fr{\de}{\de r\s} + \mu\l' + \fr{2\la\l+4\mu\l}{r\s}\right]\fr{\de {u\l}_r}{\de\f\s} +\\
 + \left[\mu\l\fr{\de^2}{\de r\s^2} + \left(\mu\l'+\fr{2\mu\l}{r\s}\right)\fr{\de}{\de r\s} - \fr{\mu\l'}{r\s} + p\l\om^2\right]\left[\fr{1}{\sin\Q\s}\fr{\de {u\l}_2}{\de\f\s} - \fr{\de {u\l}_3}{\de\Q\s}\right] +\\
@@ -397,15 +388,53 @@ $$
 \end{equation}
 где $L = \df{\de^2}{\de\Q\s^2} + \ctg\Q\s\df{\de}{\de\Q\s} + \df{1}{\sin^2\Q\s}\df{\de^2}{\de\f\s^2},\q\la\l' = \df{\diff\la\l}{\diff r\s},\q\mu\l' = \df{\diff\mu\l}{\diff r\s}.$
 
+Сделаем преобразования уравнений. Уравнение \cref{eq_2.1} домножим на $\sin(\Q\s)$ и продифференцируем по $\Q\s$, а уравнение \cref{eq_3.1} продифференцируем по $\f\s.$ Сложим полученные уравнения и разделим на $\sin(\Q\s)$. Получим следующее уравнение:
+\begin{equation}\label{eq_2.2}
+\begin{split}
+\left[\fr{\la\l+\mu\l}{r\s}\fr{\de}{\de r\s} + \fr{\mu\l'}{r\s} + \fr{2\la\l+4\mu\l}{r\s^2}\right]&L({u\l}_r)+\\
+\left[\mu\l\fr{\de^2}{\de r\s^2} + \left(\mu\l'+\fr{2\mu\l}{r\s}\right)\fr{\de}{\de r\s} - \fr{\mu\l'}{r\s} + p\l\om^2\right]&L({u\l}_2) + \\
+ + \fr{\la\l+2\mu\l}{r\s^2}&L^2({u\l}_2) = 0,
+\end{split}
+\end{equation}
+не содержащее функцию ${u\l}_3.$ Затем продифференцируем уравнение \cref{eq_2.1} по $\f\s$ и вычтем уравнение \cref{eq_3.1}, предварительно умноженное на $\sin(\Q\s)$ и продифференцированное по $\Q\s,$ а затем всё разделим на $\sin(\Q\s).$ Получим следующее уравнение:
+\begin{equation}\label{eq_3.2}
+\begin{split}
+\left[\mu\fr{\de^2}{\de r\s^2} + \left(\mu\l' + \fr{2\mu\l}{r\s}\right)\fr{\de}{\de r\s} - \fr{\mu\l'}{r\s} + p\l\om^2\right]&L({u\l}_3) + \\
+\fr{\mu\l}{r\s^2}&L^2({u\l}_3) = 0,
+\end{split}
+\end{equation}
+в котором отсутствуют функции ${u\l}_r$ и ${u\l}_2.$
 
-Функции ${u\l}_r, {u\l}_2$ и ${u\l}_3$ будем искать в виде разложений:
-\begin{equation}
+В результате получили систему, состоящую из уравнений \cref{eq_1.1,eq_2.2,eq_3.2}.
+
+Функции ${u\l}_r, {u\l}_2$ и ${u\l}_3$ также будем искать в виде разложений по сферическим функциям:
+\begin{equation}\label{eq_uru2u3}
 \begin{split}
 {u\l}_r(r\s, \Q\s, \f\s) = \sum\limits_{n=0}^\infty\sum\limits_{m=-n}^n U_{1mn}(r\s)P_n^{\lvert m\rvert}(\cos\Q\s)\e^{im\f\s},\\
 {u\l}_2(r\s, \Q\s, \f\s) = \sum\limits_{n=0}^\infty\sum\limits_{m=-n}^n U_{2mn}(r\s)P_n^{\lvert m\rvert}(\cos\Q\s)\e^{im\f\s},\\
 {u\l}_3(r\s, \Q\s, \f\s) = \sum\limits_{n=0}^\infty\sum\limits_{m=-n}^n U_{3mn}(r\s)P_n^{\lvert m\rvert}(\cos\Q\s)\e^{im\f\s}.\\
 \end{split}
 \end{equation}
+
+Коэффициенты ${A\sc}_{nm}, {B\c}_{nm}, {A\s}_{nm}, {B\s}_{nm}, {C\s}_{nm}, {D\s}_{nm}, {E\s}_{nm}$ и $ {F\s}_{nm}$ разложений \cref{eq_psc,eq_ps,eq_pc,eq_v,eq_w}, а также функции $U_{1mn},U_{2mn}$ и $U_{3mn}$ из разложений \cref{eq_uru2u3} подлежат определению из граничных условий, которые заключаются в равенстве нормальных скоростей частиц упругой среды и жидкости на внешней поверхности слоя и внутренней поверхности полого шара; равенстве на них нормального напряжения и акустического давления; отсутствии на этих поверхностях касательных напряжений. На внутренней поверхности слоя при переходе через границу раздела упругих сред должны быть непрерывны составляющие вектора смещения частиц, а также нормальные и тангенциальные напряжения. Имеем:
+\begin{align}
+\text{при }r\c &= R\c: \q  &  {\si\s}_{rr} &= -P\c,  &  {\si\s}_{r\Q} &= 0,  &  {\si\s}_{r\f} &= 0, \notag\\
+&&  -i\om {u\s}_r &= {v\c}_r;\label{eq_border_1.1}\\
+\text{при }r\s &= R\s: \q  &  {\si\s}_{rr} &= {\si\l}_{rr},  &  {\si\s}_{r\Q} &= {\si\l}_{r\Q},  &  {\si\s}_{r\f} &= {\si\l}_{r\f}, &&\notag\\
+&&  {u\s}_r &= {u\l}_r, \q & {u\s}_\Q &= {u\l}_\Q, \q & {u\s}_\f &= {u\l}_\f;\label{eq_border_2.1}\\
+\text{при }r\s &= R\l: \q  &  {\si\l}_{rr} &= -P\en,  &  {\si\l}_{r\Q} &= 0,  &  {\si\l}_{r\f} &= 0, \notag\\
+&&  -i\om {u\l}_r &= {v\en}_{r},\label{eq_border_3.1}
+\end{align} 
+где ${v\c}_r=\de\P\c/\de r, \q {v\en}_r=\de\P\en/\de r$~--- радиальная компонента скорости частиц в жидкости внутри полости $\bar{\mathbf {v}}\c$ и в окружающем пространстве $\bar {\mathbf v}\en$ соответственно.
+
+Используя выражения \cref{eq_ven,tensor comp,eq_v2v3}, запишем граничные условия \cref{eq_border_1.1} через функции $\P\o, \P\sc, {u\l}_r, {u\l}_2$ и ${u\l}_3.$ Получим для $r\s = R\l:$
+\begin{align}
+-i\om{u\l}_r &= \fr{\de(\P\o+\P\sc)}{\de r\s} ;\label{eq_Rl.1}\\
+\biggl(\la\l+2\mu\l\biggr)\fr{\de {u\l}_r}{\de r\s} + \fr{2\la\l}{r\s}{u\l}_r + \fr{\la\l}{r\s}L({u\l}_r) &= ip\en\om\left(\P\o+\P\sc\right);\label{eq_Rl.2}\\
+\fr{\mu\l}{r\s}\fr{\de ({u\l}_r - {u\l}_2)}{\de \Q\s} + \mu\l\fr{\de^2 {u\l}_2}{\de r\s\de \Q\s} + \fr{\mu\l}{\sin\Q\s}\fr{\de}{\de \f\s}&\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right) = 0;\label{eq_Rl.3}\\
+\fr{\mu\l}{r\s\sin\Q\s}\fr{\de}{\de \f\s}\biggl({u\l}_r-{u\l}_2\biggr) + \fr{\mu\l}{\sin\Q\s}\fr{\de^2 {u\l}_2}{\de r\s \de \f\s} - \mu\l\fr{\de}{\de \Q\s}&\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r}\right) = 0.\label{eq_Rl.4}
+\end{align}
+
 
 \newpage
 \subsection{Решение краевой задачи для системы обыкновенных дифференциальных уравнений}
