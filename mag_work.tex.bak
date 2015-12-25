@@ -287,6 +287,14 @@ $$
 \Lap W &+ {k\s}_\t^2 W = 0.
 \end{align}
 
+Компоненты вектора $\mathbf u\s$ выражаются через функции $\P\s, V$ и $W$ следующим образом:
+\begin{equation}\label{eq_us}
+\begin{split}
+{u\s}_r = \fr{\de \P\s}{\de r\s} + {k\s}_\t^2&\left(\fr{\de^2}{\de r\s^2}\bigl(r\s W\bigr) + {k\s}_\t^2r\s W\right),\\
+{u\s}_\Q = \fr{1}{r\s}\fr{\de \P\s}{\de \Q\s} + \fr{{k\s}_\t^2}{r\s}&\left(\fr{{k\s}_\t r\s}{\sin \Q\s}\fr{\de V}{\de \f\s} + \fr{\de^2}{\de r\s \de \Q\s}\bigl(r\s W\bigr)\right),\\
+{u\s}_\f = \fr{1}{r\s \sin\Q\s}\fr{\de \P\s}{\de \f\s} + \fr{{k\s}_\t}{r\s}&\left(\fr{1}{\sin \Q\s}\fr{\de^2 }{\de r\s \de\f\s}\bigl(r\s W\bigr) + {k\s}_\t r\s\fr{\de V}{\de \Q\s}\right).
+\end{split}
+\end{equation}
 Функции $V$ и $W$ будем искать в~виде:
 \begin{align}
 V = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n &{C\s}_{nm} h_n({k\s}_lr\c)P_n^{\lvert m\rvert}(\cos\Q\c)\e^{im\f\c} + \notag\\
@@ -427,7 +435,7 @@ ${\si\l}_{ij}$ --- компоненты тензора напряжений не
 \end{align} 
 где ${v\c}_r=\de\P\c/\de r, \q {v\en}_r=\de\P\en/\de r$~--- радиальная компонента скорости частиц в жидкости внутри полости $\bar{\mathbf {v}}\c$ и в окружающем пространстве $\bar {\mathbf v}\en$ соответственно.
 
-Используя выражения \cref{eq_ven,tensor comp,eq_v2v3}, запишем граничные условия \cref{eq_border_1.1} через функции $\P\o, \P\sc, {u\l}_r, {u\l}_2$ и ${u\l}_3.$ Получим для $r\s = R\l:$
+Используя выражения \cref{eq_ven,tensor comp,eq_v2v3}, запишем граничные условия \cref{eq_border_3.1} через функции $\P\o, \P\sc, {u\l}_r, {u\l}_2$ и ${u\l}_3.$ Получим для $r\s = R\l:$
 \begin{align}
 -i\om{u\l}_r &= \fr{\de(\P\o+\P\sc)}{\de r\s} ;\label{eq_Rl.1}\\
 \biggl(\la\l+2\mu\l\biggr)\fr{\de {u\l}_r}{\de r\s} + \fr{2\la\l}{r\s}{u\l}_r + \fr{\la\l}{r\s}L({u\l}_r) &= ip\en\om\left(\P\o+\P\sc\right);\label{eq_Rl.2}\\
@@ -435,6 +443,10 @@ ${\si\l}_{ij}$ --- компоненты тензора напряжений не
 \fr{\mu\l}{r\s\sin\Q\s}\fr{\de}{\de \f\s}\biggl({u\l}_r-{u\l}_2\biggr) + \fr{\mu\l}{\sin\Q\s}\fr{\de^2 {u\l}_2}{\de r\s \de \f\s} - \mu\l\fr{\de}{\de \Q\s}&\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r}\right) = 0.\label{eq_Rl.4}
 \end{align}
 
+Аналогично, используя выражения \cref{eq_us,tensor comp,eq_v2v3}, запишем граничные условия \cref{eq_border_2.1} через функции ${u\s}_r, {u\s}_2, {u\s}_3, \P\s, V$ и $W,$ а граничные условия \cref{eq_border_1.1} через $\P\s, V$ и $W.$
+
+Подставив разложения \cref{eq_uru2u3} в уравнения \cref{eq_1.1,eq_2.2,eq_3.2}, воспользовавшись уравнением для присоединенных многочленов Лежандра и свойством ортогональности этих многочленов, получим для каждой пары индексов $m,n \q(n = 0,1,\ldots; \lvert m\rvert\leq n)$ систему линейных однородных обыкновенных дифференциальных уравнений второго порядка относительно неизвестных функций \\ $U_{1mn}(r\s), U_{mn}(r\s)$ и $U_{3mn}(r\s).$ А подставив разложения \cref{eq_uru2u3} в полученные граничные условия, найдем краевые условия и сможем решить  систему дифференциальных уравнений. После ее решения определим коэффициенты \\
+${A\sc}_{nm}, {B\c}_{nm}, {A\s}_{nm}, {B\s}_{nm}, {C\s}_{nm}, {D\s}_{nm}, {E\s}_{nm}$ и $ {F\s}_{nm}$ разложений  \cref{eq_psc,eq_ps,eq_pc,eq_v,eq_w} для каждой пары индексов $m,n,$ а зная коэффициенты ${A\sc}_{nm}$, по формуле \cref{eq_psc} найдем акустическое поле, рассеяное упругой сферой, имеющей произвольно расположенную полость и неоднородное покрытие.
 
 \newpage
 \subsection{Решение краевой задачи для системы обыкновенных дифференциальных уравнений}
