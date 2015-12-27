@@ -287,14 +287,16 @@ $$
 \Lap W &+ {k\s}_\t^2 W = 0.
 \end{align}
 
-Компоненты вектора $\mathbf u\s$ выражаются через функции $\P\s, V$ и $W$ следующим образом:
+Компоненты вектора $\bar{\mathbf u}\s$ выражаются через функции $\P\s, V$ и $W$ следующим образом:
 \begin{equation}\label{eq_us}
 \begin{split}
-{u\s}_r = \fr{\de \P\s}{\de r\s} + {k\s}_\t^2&\left(\fr{\de^2}{\de r\s^2}\bigl(r\s W\bigr) + {k\s}_\t^2r\s W\right),\\
-{u\s}_\Q = \fr{1}{r\s}\fr{\de \P\s}{\de \Q\s} + \fr{{k\s}_\t^2}{r\s}&\left(\fr{{k\s}_\t r\s}{\sin \Q\s}\fr{\de V}{\de \f\s} + \fr{\de^2}{\de r\s \de \Q\s}\bigl(r\s W\bigr)\right),\\
-{u\s}_\f = \fr{1}{r\s \sin\Q\s}\fr{\de \P\s}{\de \f\s} + \fr{{k\s}_\t}{r\s}&\left(\fr{1}{\sin \Q\s}\fr{\de^2 }{\de r\s \de\f\s}\bigl(r\s W\bigr) + {k\s}_\t r\s\fr{\de V}{\de \Q\s}\right).
+{u\s}_r &= \fr{\de \P\s}{\de r\s} - \fr{1}{r\s}L(W),\\
+{u\s}_\Q &= \fr{1}{r\s}\fr{\de \P\s}{\de \Q\s} + \fr{1}{r\s}\fr{\de}{\de r\s}\left(r\s\fr{\de W}{\de \Q\s}\right) + \fr{1}{\sin\Q\s}\fr{\de V}{\de\f\s},\\
+{u\s}_\f &= \fr{1}{r\s \sin\Q\s}\fr{\de \P\s}{\de \f\s} + \fr{1}{r\s\sin\Q\s}\fr{\de}{\de r\s}\left(r\s\fr{\de W}{\de \f\s}\right) - \fr{\de V}{\de \Q\s},
 \end{split}
 \end{equation}
+где $L = \df{\de^2}{\de\Q\s^2} + \ctg\Q\s\df{\de}{\de\Q\s} + \df{1}{\sin^2\Q\s}\df{\de^2}{\de\f\s^2}.$
+
 Функции $V$ и $W$ будем искать в~виде:
 \begin{align}
 V = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n &{C\s}_{nm} h_n({k\s}_lr\c)P_n^{\lvert m\rvert}(\cos\Q\c)\e^{im\f\c} + \notag\\
@@ -314,7 +316,7 @@ W = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n &{E\s}_{nm} h_n({k\s}_lr\c)P_n
 &+ \fr1{r\s}\biggl(3{\si\l}_{r\f}+2{\si\l}_{\Q\f}\ctg\Q\s\biggr)=-p\l\om^2{u\l}_\f,
 \end{split}
 \end{equation}
-где ${u\l}_r, {u\l}_\Q, {u\l}_\f$ --- компоненты вектора смещения $\mathbf{u\l}$;\\
+где ${u\l}_r, {u\l}_\Q, {u\l}_\f$ --- компоненты вектора смещения $\bar{\mathbf{u}}\l$;\\
 ${\si\l}_{ij}$ --- компоненты тензора напряжений неоднородной среды в сферической системе координат.
 
 Используя связь компонентов тензора напряжений с компонентами тензора деформаций (обобщенный закон Гука), а также выражения компонентов тензора деформаций через компоненты вектора смещения~\cite{Nowacki}, получаем в сферической системе координат следующие соотношения:
@@ -336,7 +338,7 @@ ${\si\l}_{ij}$ --- компоненты тензора напряжений не
     \end{gathered}
 \end{equation}
 
-Соотношения \eqref{tensor comp} справедливы как для однородной упругой среды, так и для неоднородного слоя. В первом случае в выражениях \eqref{tensor comp} компоненты вектора смещения и тензора напряжений, а также величины $\la\l$ и $\mu\l$ следует заменить на $\la\s$ и $\mu\s$ соответственно.
+Соотношения \eqref{tensor comp} справедливы как для однородной упругой среды, так и для неоднородного слоя. В первом случае в выражениях \eqref{tensor comp} компоненты вектора смещения $\bar{\mathbf{u}}\l$ и тензора напряжений $\si\l,$ а также величины $\la\l$ и $\mu\l$ следует заменить на $\bar{\mathbf{u}}\s, \si\s, \la\s$ и $\mu\s$ соответственно.
 
 Используя эти соотношения, запишем уравнения~\eqref{eq_moving} через компоненты вектора смещения $\mathbf{u\l}$:
 \begin{equation*}
@@ -394,7 +396,7 @@ ${\si\l}_{ij}$ --- компоненты тензора напряжений не
 + \fr{\la\l+2\mu\l}{r\s^2\sin\Q\s}\fr{\de}{\de \f\s}L({u\l}_2) -\fr{\mu\l}{r\s^2}\fr{\de}{\de\Q\s}L({u\l}_3) = 0,
 \end{split}
 \end{equation}
-где $L = \df{\de^2}{\de\Q\s^2} + \ctg\Q\s\df{\de}{\de\Q\s} + \df{1}{\sin^2\Q\s}\df{\de^2}{\de\f\s^2},\q\la\l' = \df{\diff\la\l}{\diff r\s},\q\mu\l' = \df{\diff\mu\l}{\diff r\s}.$
+где $\la\l' = \df{\diff\la\l}{\diff r\s},\q\mu\l' = \df{\diff\mu\l}{\diff r\s}.$
 
 Сделаем преобразования уравнений. Уравнение \cref{eq_2.1} домножим на $\sin(\Q\s)$ и продифференцируем по $\Q\s$, а уравнение \cref{eq_3.1} продифференцируем по $\f\s.$ Сложим полученные уравнения и разделим на $\sin(\Q\s)$. Получим следующее уравнение:
 \begin{equation}\label{eq_2.2}
