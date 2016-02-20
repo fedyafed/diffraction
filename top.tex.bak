@@ -85,8 +85,9 @@
 \newcommand{\n}{\eta}
 \renewcommand{\t}{\tau}
 \newcommand{\er}{\bar{e}_r}
-\newcommand{\F}{\mathbf{\Phi}}
-\newcommand{\hU}{\mathbf{\hat{U}}}
+\newcommand{\F}{\bar{\Phi}}
+\renewcommand{\v}{\bar{v}}
+\renewcommand{\u}{\bar{u}}
 \renewcommand{\P}{\Psi}
 \newcommand{\nab}{\nabla}
 \newcommand{\Lap}{\Delta}
