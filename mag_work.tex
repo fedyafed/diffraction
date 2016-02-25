@@ -451,8 +451,16 @@ ${\si\l}_{ij}$ --- компоненты тензора напряжений не
 
 Аналогично, используя выражения \cref{eq_us,tensor comp,eq_v2v3}, запишем граничные условия \cref{eq_border_2.1} через функции ${u\l}_r, {u\l}_2, {u\l}_3, \P\s, V$ и $W.$ Для $r\s = R\s$ получим:
 \begin{align}
-\biggl(\la\l+2\mu\l\biggr)\fr{\de {u\l}_r}{\de r\s} &+ \fr{2\la\l}{r\s}{u\l}_r + \fr{\la\l}{r\s}L({u\l}_r) = \\
-        &\text{\todo{Add right side}}\\
+\begin{split}
+&\biggl(\la\l+2\mu\l\biggr)\fr{\de {u\l}_r}{\de r\s} + \fr{2\la\l}{r\s}{u\l}_r + \fr{\la\l}{r\s}L({u\l}_r) = \\
+= &\text{\todo{Add right side}}
+\end{split}\\
+\begin{split}
+&\fr{\mu\l}{r\s}\fr{\de{u\s}_r}{\de \Q\s} - \fr{\mu\l}{r\s}\left( \df{\de {u\l}_2}{\de\Q\s} + \fr1{\sin\Q\s}\fr{\de {u\l}_3}{\de\f\s} \right) + \mu\l\fr{\de}{\de r\s} \left(\df{\de {u\l}_2}{\de\Q\s} + \fr1{\sin\Q\s}\fr{\de {u\l}_3}{\de\f\s}\right) = \\
+= &\text{\todo{Add right side}}
+\end{split}
+\end{align}\\
+\begin{align}
 {u\l}_r &= \fr{\de \P\s}{\de r\s} - \fr{1}{r\s}L(W),\\
 \df{\de {u\l}_2}{\de\Q\s} + \fr1{\sin\Q\s}\fr{\de {u\l}_3}{\de\f\s} &= \fr{1}{r\s}\fr{\de \P\s}{\de \Q\s} + \fr{1}{r\s}\fr{\de}{\de r\s}\left(r\s\fr{\de W}{\de \Q\s}\right) + \fr{1}{\sin\Q\s}\fr{\de V}{\de\f\s},\\
 \df1{\sin\Q\s}\df{\de {u\l}_2}{\de\f\s} - \df{\de {u\l}_3}{\de\Q\s} &= \fr{1}{r\s \sin\Q\s}\fr{\de \P\s}{\de \f\s} + \fr{1}{r\s\sin\Q\s}\fr{\de}{\de r\s}\left(r\s\fr{\de W}{\de \f\s}\right) - \fr{\de V}{\de \Q\s},
