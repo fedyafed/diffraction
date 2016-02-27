@@ -453,7 +453,7 @@ ${\si\l}_{ij}$ --- компоненты тензора напряжений не
 \begin{align}
 \begin{split}
 &\biggl(\la\l+2\mu\l\biggr)\fr{\de {u\l}_r}{\de r\s} + \fr{2\la\l}{r\s}{u\l}_r + \fr{\la\l}{r\s}L({u\l}_r) = \\
-= &\text{\todo{Add right side}}
+= \fr{\la\s}{r\s^2}&\left(\fr{\de}{\de r\s}\left(r\s^2\fr{\de\P\s}{\de r\s}\right)+L(\P\s)\right) + 2\mu\s\left(\fr{\de^2 \P\s}{\de r\s^2} - \fr{\de}{\de r\s}\left(\fr{1}{r\s}L(W)\right)\right);
 \end{split}\\
 \begin{split}
 &\fr{\mu\l}{r\s}\fr{\de{u\s}_r}{\de \Q\s} - \fr{\mu\l}{r\s}\left( \df{\de {u\l}_2}{\de\Q\s} + \fr1{\sin\Q\s}\fr{\de {u\l}_3}{\de\f\s} \right) + \mu\l\fr{\de}{\de r\s} \left(\df{\de {u\l}_2}{\de\Q\s} + \fr1{\sin\Q\s}\fr{\de {u\l}_3}{\de\f\s}\right) = \\
@@ -463,7 +463,7 @@ ${\si\l}_{ij}$ --- компоненты тензора напряжений не
 &\fr{\mu\l}{r\s\sin\Q\s} \fr{\de {u\l}_r}{\de\f} - \fr{\mu\l}{r\s}\left(\df1{\sin\Q\s}\df{\de {u\l}_2}{\de\f\s} - \df{\de {u\l}_3}{\de\Q\s}\right) + \mu\l\fr{\de}{\de r\s}\left(\df1{\sin\Q\s}\df{\de {u\l}_2}{\de\f\s} - \df{\de {u\l}_3}{\de\Q\s} \right) = \\
 = &\text{\todo{Add right side}}
 \end{split}
-\end{align}\\
+\end{align}
 \begin{align}
 {u\l}_r &= \fr{\de \P\s}{\de r\s} - \fr{1}{r\s}L(W),\\
 \df{\de {u\l}_2}{\de\Q\s} + \fr1{\sin\Q\s}\fr{\de {u\l}_3}{\de\f\s} &= \fr{1}{r\s}\fr{\de \P\s}{\de \Q\s} + \fr{1}{r\s}\fr{\de}{\de r\s}\left(r\s\fr{\de W}{\de \Q\s}\right) + \fr{1}{\sin\Q\s}\fr{\de V}{\de\f\s},\\

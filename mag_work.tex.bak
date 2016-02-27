@@ -460,9 +460,10 @@ ${\si\l}_{ij}$ --- компоненты тензора напряжений не
 = &\text{\todo{Add right side}}
 \end{split}\\
 \begin{split}
-&\left(\fr{\mu\l}{r\s\sin\Q\s} \fr{\de {u\l}_r}{\de\f} - \fr{\mu\l{u\l}_\f}{r\s} + \mu\l\fr{\de {u\l}_\f}{\de r\s}
+&\fr{\mu\l}{r\s\sin\Q\s} \fr{\de {u\l}_r}{\de\f} - \fr{\mu\l}{r\s}\left(\df1{\sin\Q\s}\df{\de {u\l}_2}{\de\f\s} - \df{\de {u\l}_3}{\de\Q\s}\right) + \mu\l\fr{\de}{\de r\s}\left(\df1{\sin\Q\s}\df{\de {u\l}_2}{\de\f\s} - \df{\de {u\l}_3}{\de\Q\s} \right) = \\
+= &\text{\todo{Add right side}}
 \end{split}
-\end{align}\\
+\end{align}
 \begin{align}
 {u\l}_r &= \fr{\de \P\s}{\de r\s} - \fr{1}{r\s}L(W),\\
 \df{\de {u\l}_2}{\de\Q\s} + \fr1{\sin\Q\s}\fr{\de {u\l}_3}{\de\f\s} &= \fr{1}{r\s}\fr{\de \P\s}{\de \Q\s} + \fr{1}{r\s}\fr{\de}{\de r\s}\left(r\s\fr{\de W}{\de \Q\s}\right) + \fr{1}{\sin\Q\s}\fr{\de V}{\de\f\s},\\
