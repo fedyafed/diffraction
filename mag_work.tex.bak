@@ -457,12 +457,12 @@ ${\si\l}_{ij}$ --- компоненты тензора напряжений не
 \end{split}\\
 \begin{split}
 \mu\l&\fr{\de}{\de \Q\s}\left(\fr{{u\l}_r-{u\l}_2}{r\s} + \fr{\de {u\l}_2}{\de r\s}\right) + \fr{\mu\l}{\sin\Q\s}\fr{\de}{\de \f\s}\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right) = \\
-= 2\mu\s&\fr{\de^2}{\de r\s\de\Q\s}\left(\fr{\P\s}{r\s}\right)+ \fr{\mu\s}{r\s^2}\fr{\de}{\de\Q\s}\left(r^2\fr{\de^2 W}{\de r^2} - L(W) - 2W\right) + \\
+= 2\mu\s&\fr{\de^2}{\de r\s\de\Q\s}\left(\fr{\P\s}{r\s}\right)+ \fr{\mu\s}{r\s^2}\fr{\de}{\de\Q\s}\left(r\s^2\fr{\de^2 W}{\de r\s^2} - L(W) - 2W\right) + \\
 + \fr{\mu\s r\s}{\sin\Q\s}&\fr{\de^2}{\de r\s\de\f\s}\left(\fr{V}{r\s}\right)
 \end{split}\\
 \begin{split}
 \fr{\mu\l}{\sin\Q\s}&\fr{\de}{\de \f\s}\left(\fr{{u\l}_r-{u\l}_2}{r\s} + \fr{\de {u\l}_2}{\de r\s}\right) - \mu\l\fr{\de}{\de \Q\s}\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right) = \\
-= \fr{2\mu\s}{\sin\Q\s}&\fr{\de^2}{\de r\s\de\f\s}\left(\fr{\P\s}{r\s}\right)+ \fr{\mu\s}{r\s^2\sin\Q\s}\fr{\de}{\de\f\s}\left(r^2\fr{\de^2 W}{\de r^2} - L(W) - 2W\right) - \\
+= \fr{2\mu\s}{\sin\Q\s}&\fr{\de^2}{\de r\s\de\f\s}\left(\fr{\P\s}{r\s}\right)+ \fr{\mu\s}{r\s^2\sin\Q\s}\fr{\de}{\de\f\s}\left(r\s^2\fr{\de^2 W}{\de r\s^2} - L(W) - 2W\right) - \\
 - \mu\s r\s&\fr{\de^2}{\de r\s\de\Q\s}\left(\fr{V}{r\s}\right)
 \end{split}
 \end{align}
@@ -472,14 +472,14 @@ ${\si\l}_{ij}$ --- компоненты тензора напряжений не
 \df1{\sin\Q\s}\df{\de {u\l}_2}{\de\f\s} - \df{\de {u\l}_3}{\de\Q\s} &= \fr{1}{r\s \sin\Q\s}\fr{\de \P\s}{\de \f\s} + \fr{1}{r\s\sin\Q\s}\fr{\de}{\de r\s}\left(r\s\fr{\de W}{\de \f\s}\right) - \fr{\de V}{\de \Q\s},
 \end{align}
 
-Запишем граничные условия \cref{eq_border_1.1} через $\P\c, \P\s, V$ и $W,$ используя выражения \cref{eq_vc}. Для $r\c=R\c$ получим:
+Запишем граничные условия \cref{eq_border_1.1} через $\P\c, \P\s, V$ и $W,$ используя выражения \cref{eq_vc,eq_us,tensor comp}. Для $r\c=R\c$ получим:
 \begin{align}
 \begin{split}
-\fr{\la\s}{r\s^2}&\left(\fr{\de}{\de r\s}\left(r\s^2\fr{\de\P\s}{\de r\s}\right)+L(\P\s)\right) + 2\mu\s\left(\fr{\de^2 \P\s}{\de r\s^2} - \fr{\de}{\de r\s}\left(\fr{L(W)}{r\s}\right)\right) = \\
+\fr{\la\s}{r\c^2}&\left(\fr{\de}{\de r\c}\left(r\c^2\fr{\de\P\s}{\de r\c}\right)+L(\P\s)\right) + 2\mu\s\left(\fr{\de^2 \P\s}{\de r\c^2} - \fr{\de}{\de r\c}\left(\fr{L(W)}{r\c}\right)\right) = \\
 & = - ip\c\om\P\c;
 \end{split}\\
 \begin{split}
-2\mu\s&\fr{\de^2}{\de r\s\de\Q\s}\left(\fr{\P\s}{r\s}\right)+ \fr{\mu\s}{r\s^2}\fr{\de}{\de\Q\s}\left(r^2\fr{\de^2 W}{\de r^2} - L(W) - 2W\right) + \\
+2\mu\s&\fr{\de^2}{\de r\c\de\Q\c}\left(\fr{\P\s}{r\c}\right)+ \fr{\mu\s}{r\c^2}\fr{\de}{\de\Q\c}\left(r\c^2\fr{\de^2 W}{\de r^2} - L(W) - 2W\right) + \\
 + \fr{\mu\s r\s}{\sin\Q\s}&\fr{\de^2}{\de r\s\de\f\s}\left(\fr{V}{r\s}\right) = 0;
 \end{split}\\
 \begin{split}
@@ -488,7 +488,7 @@ ${\si\l}_{ij}$ --- компоненты тензора напряжений не
 \end{split}
 \end{align}
 \begin{equation}
--i\om \left(\fr{\de \P\s}{\de r\s} - \fr{1}{r\s}L(W)\right) = \fr{\de \P\c}{\de r\c}
+-i\om \left(\fr{\de \P\s}{\de r\s} - \fr{1}{r\s}L(W)\right) = \fr{\de \P\c}{\de r\c}.
 \end{equation}
 
 Подставив разложения \cref{eq_uru2u3} в уравнения \cref{eq_1.1,eq_2.2,eq_3.2}, воспользовавшись уравнением для присоединенных многочленов Лежандра и свойством ортогональности этих многочленов, получим для каждой пары индексов $m,n \q(n = 0,1,\ldots; \lvert m\rvert\leq n)$ систему линейных однородных обыкновенных дифференциальных уравнений второго порядка относительно неизвестных функций \\ $U_{1mn}(r\s), U_{mn}(r\s)$ и $U_{3mn}(r\s).$ А подставив разложения \cref{eq_uru2u3} в полученные граничные условия, найдем краевые условия и сможем решить  систему дифференциальных уравнений. После ее решения определим коэффициенты \\
