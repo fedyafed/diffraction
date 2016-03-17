@@ -443,11 +443,25 @@ ${\si\l}_{ij}$ --- компоненты тензора напряжений не
 
 Используя выражения \cref{eq_ven,tensor comp,eq_v2v3}, запишем граничные условия \cref{eq_border_3.1} через функции $\P\o, \P\sc, {u\l}_r, {u\l}_2$ и ${u\l}_3.$ Получим для $r\s = R\l:$
 \begin{align}
-\biggl(\la\l+2\mu\l\biggr)\fr{\de {u\l}_r}{\de r\s} + \fr{2\la\l}{r\s}{u\l}_r + \fr{\la\l}{r\s}L({u\l}_r) &= ip\en\om\left(\P\o+\P\sc\right);\label{eq_Rl.2}\\
-\fr{\mu\l}{r\s}\fr{\de ({u\l}_r - {u\l}_2)}{\de \Q\s} + \mu\l\fr{\de^2 {u\l}_2}{\de r\s\de \Q\s} + \fr{\mu\l}{\sin\Q\s}\fr{\de}{\de \f\s}&\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right) = 0;\label{eq_Rl.3}\\
-\fr{\mu\l}{r\s\sin\Q\s}\fr{\de}{\de \f\s}\biggl({u\l}_r-{u\l}_2\biggr) + \fr{\mu\l}{\sin\Q\s}\fr{\de^2 {u\l}_2}{\de r\s \de \f\s} - \mu\l\fr{\de}{\de \Q\s}&\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r}\right) = 0;\label{eq_Rl.4}\\
--i\om{u\l}_r &= \fr{\de(\P\o+\P\sc)}{\de r\s} .\label{eq_Rl.1}
+&\biggl(\la\l+2\mu\l\biggr)\fr{\de {u\l}_r}{\de r\s} + \fr{2\la\l}{r\s}{u\l}_r + \fr{\la\l}{r\s}L({u\l}_r) = ip\en\om\left(\P\o+\P\sc\right);\label{eq_Rl.2}\\
+\mu\l&\fr{\de}{\de \Q\s}\left(\fr{{u\l}_r-{u\l}_2}{r\s} + \fr{\de {u\l}_2}{\de r\s}\right) + \fr{\mu\l}{\sin\Q\s}\fr{\de}{\de \f\s}\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right) = 0;\label{eq_Rl.3}\\
+\fr{\mu\l}{\sin\Q\s}&\fr{\de}{\de \f\s}\left(\fr{{u\l}_r-{u\l}_2}{r\s} + \fr{\de {u\l}_2}{\de r\s}\right) - \mu\l\fr{\de}{\de \Q\s}\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right) = 0;\label{eq_Rl.4}
 \end{align}
+\begin{equation}\label{eq_Rl.1}
+-i\om{u\l}_r = \fr{\de(\P\o+\P\sc)}{\de r\s} .
+\end{equation}
+
+Рассмотрим уравнения \cref{eq_Rl.3,eq_Rl.4}. Первое из них домножим на $\sin(\Q\s)$ и продифференцируем по $\Q\s,$ а второе --- продифференцируем по $\f\s,$ а результат сложим. Получим следующее уравнение:
+\begin{equation}\label{eq_Rl.3a}
+L\!\left(\fr{{u\l}_r-{u\l}_2}{r\s} + \fr{\de {u\l}_2}{\de r\s}\right)\Biggr|_{r\s = R\l} = 0.
+\end{equation}
+ 
+Теперь продифференцируем по $\f\s$ уравнение \cref{eq_Rl.3} и вычтем из полученного результата уравнение \cref{eq_Rl.4}, умноженное на $\sin(\Q\s)$ и продифференцированное по $\Q\s.$ Получим следующее уравнение:
+\begin{equation}\label{eq_Rl.4a}
+L\!\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right)\Biggr|_{r\s = R\l} = 0.
+\end{equation}
+
+Стоит отметить, что уравнение \cref{eq_Rl.3a} содержит только функции ${u\l}_r, {u\l}_2,$ а уравнение \cref{eq_Rl.4a} содержит только функцию ${u\l}_3.$
 
 Аналогично, используя выражения \cref{eq_us,tensor comp,eq_v2v3}, запишем граничные условия \cref{eq_border_2.1} через функции ${u\l}_r, {u\l}_2, {u\l}_3, \P\s, V$ и $W.$ Для $r\s = R\s$ получим:
 \begin{align}
@@ -483,7 +497,7 @@ ${\si\l}_{ij}$ --- компоненты тензора напряжений не
 + \fr{\mu\s r\c}{\sin\Q\c}&\fr{\de^2}{\de r\c\de\f\c}\left(\fr{V}{r\c}\right) = 0;
 \end{split}\\
 \begin{split}
-\fr{2\mu\c}{\sin\Q\c}&\fr{\de^2}{\de r\c\de\f\c}\left(\fr{\P\s}{r\c}\right)+ \fr{\mu\s}{r\c^2\sin\Q\c}\fr{\de}{\de\f\c}\left(r\c^2\fr{\de^2 W}{\de r\c^2} - L(W) - 2W\right) - \\
+\fr{2\mu\s}{\sin\Q\c}&\fr{\de^2}{\de r\c\de\f\c}\left(\fr{\P\s}{r\c}\right)+ \fr{\mu\s}{r\c^2\sin\Q\c}\fr{\de}{\de\f\c}\left(r\c^2\fr{\de^2 W}{\de r\c^2} - L(W) - 2W\right) - \\
 - \mu\s r\c&\fr{\de^2}{\de r\c\de\Q\c}\left(\fr{V}{r\c}\right) = 0;
 \end{split}
 \end{align}
