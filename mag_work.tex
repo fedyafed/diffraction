@@ -420,7 +420,7 @@ ${\si\l}_{ij}$ --- компоненты тензора напряжений не
 Так как $\Q\in [0,2\pi),$ в полученных уравнениях опускаем множитель $\sin\Q.$ 
 
 Таким образом, преобразование системы \cref{exaple_system} выглядит следующим образом:
-\begin{align}
+\begin{align}\label{eq_transform}
 \left\{\begin{aligned}
 \df{\de A}{\de \Q} + \df{1}{\sin\Q}\df{\de B}{\de\f} &= 0\\
 - \df{\de B}{\de\Q} + \df{1}{\sin\Q}\df{\de A}{\de \f} &= 0
@@ -433,22 +433,18 @@ L(B) &= 0
 \end{align}
 Данное преобразование уравнений позволяет устранить связь между функциями $A$ и $B.$
 
-Уравнение \cref{eq_2.1} домножим на $\sin(\Q\s)$ и продифференцируем по $\Q\s$, а уравнение \cref{eq_3.1} продифференцируем по $\f\s.$ Сложим полученные уравнения и разделим на $\sin(\Q\s)$. Получим следующее уравнение:
-\begin{equation}\label{eq_2.2}
+Применим преобразование \cref{eq_transform} к уравнениям \cref{eq_2.1,eq_3.1}. Получим следующие уравнения:
+\begin{align}
 \begin{split}
 \left[\fr{\la\l+\mu\l}{r\s}\fr{\de}{\de r\s} + \fr{\mu\l'}{r\s} + \fr{2\la\l+4\mu\l}{r\s^2}\right]&L({u\l}_r)+\\
 \left[\mu\l\fr{\de^2}{\de r\s^2} + \left(\mu\l'+\fr{2\mu\l}{r\s}\right)\fr{\de}{\de r\s} - \fr{\mu\l'}{r\s} + p\l\om^2\right]&L({u\l}_2) + \\
  + \fr{\la\l+2\mu\l}{r\s^2}&L^2({u\l}_2) = 0,
-\end{split}
-\end{equation}
-не содержащее функцию ${u\l}_3.$ Затем продифференцируем уравнение \cref{eq_2.1} по $\f\s$ и вычтем уравнение \cref{eq_3.1}, предварительно умноженное на $\sin(\Q\s)$ и продифференцированное по $\Q\s,$ а затем всё разделим на $\sin(\Q\s).$ Получим следующее уравнение:
-\begin{equation}\label{eq_3.2}
+\end{split}\label{eq_2.2}\\
 \begin{split}
 \left[\mu\fr{\de^2}{\de r\s^2} + \left(\mu\l' + \fr{2\mu\l}{r\s}\right)\fr{\de}{\de r\s} - \fr{\mu\l'}{r\s} + p\l\om^2\right]&L({u\l}_3) + \\
-\fr{\mu\l}{r\s^2}&L^2({u\l}_3) = 0,
+\fr{\mu\l}{r\s^2}&L^2({u\l}_3) = 0.\label{eq_3.2}
 \end{split}
-\end{equation}
-в котором отсутствуют функции ${u\l}_r$ и ${u\l}_2.$
+\end{align}
 
 В результате получили систему, состоящую из уравнений \cref{eq_1.1,eq_2.2,eq_3.2}.
 
@@ -482,17 +478,13 @@ L(B) &= 0
 -i\om{u\l}_r = \fr{\de(\P\o+\P\sc)}{\de r\s} .
 \end{equation}
 
-Рассмотрим уравнения \cref{eq_Rl.3,eq_Rl.4}. Первое из них домножим на $\sin(\Q\s)$ и продифференцируем по $\Q\s,$ а второе --- продифференцируем по $\f\s,$ а результат сложим. Получим следующее уравнение:
-\begin{equation}\label{eq_Rl.3a}
-L\!\left(\fr{{u\l}_r-{u\l}_2}{r\s} + \fr{\de {u\l}_2}{\de r\s}\right)\Biggr|_{r\s = R\l} = 0.
-\end{equation}
- 
-Теперь продифференцируем по $\f\s$ уравнение \cref{eq_Rl.3} и вычтем из полученного результата уравнение \cref{eq_Rl.4}, умноженное на $\sin(\Q\s)$ и продифференцированное по $\Q\s.$ Получим следующее уравнение:
-\begin{equation}\label{eq_Rl.4a}
-L\!\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right)\Biggr|_{r\s = R\l} = 0.
-\end{equation}
 
-Стоит отметить, что уравнение \cref{eq_Rl.3a} содержит только функции ${u\l}_r, {u\l}_2,$ а уравнение \cref{eq_Rl.4a} содержит только функцию ${u\l}_3.$
+Рассмотрим уравнения \cref{eq_Rl.3,eq_Rl.4}. Применим к ним преобразование \cref{eq_transform}. Получим следующие уравнения:
+\begin{align}
+L\!\left(\fr{{u\l}_r-{u\l}_2}{r\s} + \fr{\de {u\l}_2}{\de r\s}\right)&\Biggr|_{r\s = R\l} = 0.\label{eq_Rl.3a}\\
+L\!\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right)&\Biggr|_{r\s = R\l} = 0.\label{eq_Rl.4a}
+\end{align}
+
 
 Аналогично, используя выражения \cref{eq_us,tensor comp,eq_v2v3}, запишем граничные условия \cref{eq_border_2.1} через функции ${u\l}_r, {u\l}_2, {u\l}_3, \P\s, V$ и $W.$ Для $r\s = R\s$ получим:
 \begin{align}
