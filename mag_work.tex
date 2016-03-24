@@ -491,22 +491,28 @@ L\!\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right)&\Biggr|_{r\s = R\l
 \begin{split}
 &\biggl(\la\l+2\mu\l\biggr)\fr{\de {u\l}_r}{\de r\s} + \fr{2\la\l}{r\s}{u\l}_r + \fr{\la\l}{r\s}L({u\l}_2) = \\
 = \fr{\la\s}{r\s^2}&\left(\fr{\de}{\de r\s}\left(r\s^2\fr{\de\P\s}{\de r\s}\right)+L(\P\s)\right) + 2\mu\s\left(\fr{\de^2 \P\s}{\de r\s^2} - \fr{\de}{\de r\s}\left(\fr{L(W)}{r\s}\right)\right);
-\end{split}\\
+\end{split}\label{eq_Rs.1}\\
 \begin{split}
 \mu\l&\fr{\de}{\de \Q\s}\left(\fr{{u\l}_r-{u\l}_2}{r\s} + \fr{\de {u\l}_2}{\de r\s}\right) + \fr{\mu\l}{\sin\Q\s}\fr{\de}{\de \f\s}\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right) = \\
-= 2\mu\s&\fr{\de^2}{\de r\s\de\Q\s}\left(\fr{\P\s}{r\s}\right)+ \fr{\mu\s}{r\s^2}\fr{\de}{\de\Q\s}\left(r\s^2\fr{\de^2 W}{\de r\s^2} - L(W) - 2W\right) + \\
+= 2\mu\s&\fr{\de^2}{\de r\s\de\Q\s}\left(\fr{\P\s}{r\s}\right)+ \mu\s\fr{\de}{\de\Q\s}\left(\fr{\de^2 W}{\de r\s^2} - \fr{L(W) + 2W}{r\s^2} \right) + \\
 + \fr{\mu\s r\s}{\sin\Q\s}&\fr{\de^2}{\de r\s\de\f\s}\left(\fr{V}{r\s}\right)
-\end{split}\\
+\end{split}\label{eq_Rs.2}\\
 \begin{split}
 \fr{\mu\l}{\sin\Q\s}&\fr{\de}{\de \f\s}\left(\fr{{u\l}_r-{u\l}_2}{r\s} + \fr{\de {u\l}_2}{\de r\s}\right) - \mu\l\fr{\de}{\de \Q\s}\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right) = \\
-= \fr{2\mu\s}{\sin\Q\s}&\fr{\de^2}{\de r\s\de\f\s}\left(\fr{\P\s}{r\s}\right)+ \fr{\mu\s}{r\s^2\sin\Q\s}\fr{\de}{\de\f\s}\left(r\s^2\fr{\de^2 W}{\de r\s^2} - L(W) - 2W\right) - \\
+= \fr{2\mu\s}{\sin\Q\s}&\fr{\de^2}{\de r\s\de\f\s}\left(\fr{\P\s}{r\s}\right)+ \fr{\mu\s}{\sin\Q\s}\fr{\de}{\de\f\s}\left(\fr{\de^2 W}{\de r\s^2} - \fr{L(W) + 2W}{r\s^2} \right) - \\
 - \mu\s r\s&\fr{\de^2}{\de r\s\de\Q\s}\left(\fr{V}{r\s}\right)
-\end{split}
+\end{split}\label{eq_Rs.3}
 \end{align}
 \begin{align}
-{u\l}_r &= \fr{\de \P\s}{\de r\s} - \fr{1}{r\s}L(W),\\
-\df{\de {u\l}_2}{\de\Q\s} + \fr1{\sin\Q\s}\fr{\de {u\l}_3}{\de\f\s} &= \fr{1}{r\s}\fr{\de \P\s}{\de \Q\s} + \fr{1}{r\s}\fr{\de}{\de r\s}\left(r\s\fr{\de W}{\de \Q\s}\right) + \fr{1}{\sin\Q\s}\fr{\de V}{\de\f\s},\\
-\df1{\sin\Q\s}\df{\de {u\l}_2}{\de\f\s} - \df{\de {u\l}_3}{\de\Q\s} &= \fr{1}{r\s \sin\Q\s}\fr{\de \P\s}{\de \f\s} + \fr{1}{r\s\sin\Q\s}\fr{\de}{\de r\s}\left(r\s\fr{\de W}{\de \f\s}\right) - \fr{\de V}{\de \Q\s},
+{u\l}_r &= \fr{\de \P\s}{\de r\s} - \fr{1}{r\s}L(W),\label{eq_Rs.4}\\
+\df{\de {u\l}_2}{\de\Q\s} + \fr1{\sin\Q\s}\fr{\de {u\l}_3}{\de\f\s} &= \fr{1}{r\s}\fr{\de}{\de \Q\s} \left(\P\s + \fr{\de}{\de r\s}\biggl(r\s W\biggr)\right) + \fr{1}{\sin\Q\s}\fr{\de V}{\de\f\s},\label{eq_Rs.5}\\
+\df1{\sin\Q\s}\df{\de {u\l}_2}{\de\f\s} - \df{\de {u\l}_3}{\de\Q\s} &= \fr{1}{r\s \sin\Q\s}\fr{\de}{\de \f\s}\left(\P\s + \fr{\de}{\de r\s}\biggl(r\s W\biggr)\right) - \fr{\de V}{\de \Q\s},\label{eq_Rs.6}
+\end{align}
+
+Рассмотрим уравнения \cref{eq_Rs.2,eq_Rs.3}, а также уравнения \cref{eq_Rs.5,eq_Rs.6}. Применим к ним преобразование \cref{eq_transform}. Получим следующие уравнения:
+\begin{align}
+\mu\l L\!\left(\fr{{u\l}_r-{u\l}_2}{r\s} + \fr{\de {u\l}_2}{\de r\s}\right) &= \mu\s L\!\left(2\fr{\de}{\de r\s}\left(\fr{\P\s}{r\s}\right)+  \fr{\de^2 W}{\de r\s^2} - \fr{L(W) + 2W}{r\s^2} \right);\\
+\mu\l L\!\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right) &= \mu\s r\s\fr{\de}{\de r\s}L\!\left(\fr{V}{r\s}\right);
 \end{align}
 
 Запишем граничные условия \cref{eq_border_1.1} через $\P\c, \P\s, V$ и $W,$ используя выражения \cref{eq_vc,eq_us,tensor comp}. Для $r\c=R\c$ получим:
