@@ -512,7 +512,9 @@ L\!\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right)&\Biggr|_{r\s = R\l
 Рассмотрим уравнения \cref{eq_Rs.2,eq_Rs.3}, а также уравнения \cref{eq_Rs.5,eq_Rs.6}. Применим к ним преобразование \cref{eq_transform}. Получим следующие уравнения:
 \begin{align}
 \mu\l L\!\left(\fr{{u\l}_r-{u\l}_2}{r\s} + \fr{\de {u\l}_2}{\de r\s}\right) &= \mu\s L\!\left(2\fr{\de}{\de r\s}\left(\fr{\P\s}{r\s}\right)+  \fr{\de^2 W}{\de r\s^2} - \fr{L(W) + 2W}{r\s^2} \right);\\
-\mu\l L\!\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right) &= \mu\s r\s\fr{\de}{\de r\s}L\!\left(\fr{V}{r\s}\right);
+\mu\l L\!\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right) &= \mu\s r\s\fr{\de}{\de r\s}L\!\left(\fr{V}{r\s}\right);\\
+L({u\l}_2) &= \fr{1}{r\s}L\!\left(\P\s + \fr{\de}{\de r\s}\biggl(r\s W\biggr)\right);\\
+L({u\l}_3) &= L(V).
 \end{align}
 
 Запишем граничные условия \cref{eq_border_1.1} через $\P\c, \P\s, V$ и $W,$ используя выражения \cref{eq_vc,eq_us,tensor comp}. Для $r\c=R\c$ получим:
@@ -520,19 +522,25 @@ L\!\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right)&\Biggr|_{r\s = R\l
 \begin{split}
 \fr{\la\s}{r\c^2}&\left(\fr{\de}{\de r\c}\left(r\c^2\fr{\de\P\s}{\de r\c}\right)+L(\P\s)\right) + 2\mu\s\left(\fr{\de^2 \P\s}{\de r\c^2} - \fr{\de}{\de r\c}\left(\fr{L(W)}{r\c}\right)\right) = \\
 & = - ip\c\om\P\c;
-\end{split}\\
+\end{split}\label{eq_Rc.1}\\
 \begin{split}
-2\mu\s&\fr{\de^2}{\de r\c\de\Q\c}\left(\fr{\P\s}{r\c}\right)+ \fr{\mu\s}{r\c^2}\fr{\de}{\de\Q\c}\left(r\c^2\fr{\de^2 W}{\de r\c^2} - L(W) - 2W\right) + \\
+2\mu\s&\fr{\de^2}{\de r\c\de\Q\c}\left(\fr{\P\s}{r\c}\right)+ \mu\s\fr{\de}{\de\Q\c}\left(\fr{\de^2 W}{\de r\c^2} - \fr{L(W) + 2W}{r\c^2}\right) + \\
 + \fr{\mu\s r\c}{\sin\Q\c}&\fr{\de^2}{\de r\c\de\f\c}\left(\fr{V}{r\c}\right) = 0;
-\end{split}\\
+\end{split}\label{eq_Rc.2}\\
 \begin{split}
-\fr{2\mu\s}{\sin\Q\c}&\fr{\de^2}{\de r\c\de\f\c}\left(\fr{\P\s}{r\c}\right)+ \fr{\mu\s}{r\c^2\sin\Q\c}\fr{\de}{\de\f\c}\left(r\c^2\fr{\de^2 W}{\de r\c^2} - L(W) - 2W\right) - \\
+\fr{2\mu\s}{\sin\Q\c}&\fr{\de^2}{\de r\c\de\f\c}\left(\fr{\P\s}{r\c}\right)+ \fr{\mu\s}{\sin\Q\c}\fr{\de}{\de\f\c}\left(\fr{\de^2 W}{\de r\c^2} - \fr{L(W) + 2W}{r\c^2}\right) - \\
 - \mu\s r\c&\fr{\de^2}{\de r\c\de\Q\c}\left(\fr{V}{r\c}\right) = 0;
-\end{split}
+\end{split}\label{eq_Rc.3}
 \end{align}
-\begin{equation}
+\begin{equation}\label{eq_Rc.4}
 -i\om \left(\fr{\de \P\s}{\de r\c} - \fr{1}{r\c}L(W)\right) = \fr{\de \P\c}{\de r\c}.
 \end{equation}
+
+Рассмотрим уравнения \cref{eq_Rc.2,eq_Rc.3}. Применим к ним преобразование \cref{eq_transform}. Получим следующие уравнения:
+\begin{align}
+\mu\s L\!\left(2\fr{\de}{\de r\c}\left(\fr{\P\s}{r\c}\right) + \fr{\de^2 W}{\de r\c^2} - \fr{L(W) + 2W}{r\c^2}\right)&\Biggr|_{r\c=R\c}=0;\\
+\mu\s r\c\fr{\de}{\de r\c}L\!\left(\fr{V}{r\c}\right)&\Biggr|_{r\c=R\c} = 0
+\end{align}
 
 Подставив разложения \cref{eq_uru2u3} в уравнения \cref{eq_1.1,eq_2.2,eq_3.2}, воспользовавшись уравнением для присоединенных многочленов Лежандра и свойством ортогональности этих многочленов, получим для каждой пары индексов $m,n \q(n = 0,1,\ldots; \lvert m\rvert\leq n)$ систему линейных однородных обыкновенных дифференциальных уравнений второго порядка относительно неизвестных функций \\ $U_{1mn}(r\s), U_{mn}(r\s)$ и $U_{3mn}(r\s).$ А подставив разложения \cref{eq_uru2u3} в полученные граничные условия, найдем краевые условия и сможем решить  систему дифференциальных уравнений. После ее решения определим коэффициенты \\
 ${A\sc}_{nm}, {B\c}_{nm}, {A\s}_{nm}, {B\s}_{nm}, {C\s}_{nm}, {D\s}_{nm}, {E\s}_{nm}$ и $ {F\s}_{nm}$ разложений  \cref{eq_psc,eq_ps,eq_pc,eq_v,eq_w} для каждой пары индексов $m,n,$ а зная коэффициенты ${A\sc}_{nm}$, по формуле \cref{eq_psc} найдем акустическое поле, рассеяное упругой сферой, имеющей произвольно расположенную полость и неоднородное покрытие.
