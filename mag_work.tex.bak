@@ -250,8 +250,8 @@ $k\c = \df{\om}{c\c}$~--- волновое число находящейся в~
 \end{align}
 
 Звуковая волна в~полости тела~$\P\c$ должна удовлетворять условию ограниченности, а отраженная волна~$\P\sc$~--- условиям излучения на~бесконечности. Поэтому потенциалы $\P\sc$ и $\P\c$ будем искать в~виде рядов по сферическим функциям:
-\begin{align}\P\sc(r\s, \Q\s, \f\s) &= \sum\limits_{n = 0}^\infty \sum\limits_{m = 0}^n {A\sc}_{nm} h_n(k\en r\s) P_n^{\lvert m\rvert}(\cos\Q\s)\cos\bigl(m\f\s\bigr);\label{eq_psc}\\
-\P\c(r\c, \Q\c, \f\c) &= \sum\limits_{n = 0}^\infty \sum\limits_{m = 0}^n {B\c}_{nm} j_n(k\c r\c) P_n^{\lvert m\rvert}(\cos\Q\c)\cos\bigl(m\f\c\bigr),\label{eq_pc}
+\begin{align}\P\sc(r\s, \Q\s, \f\s) &= \sum\limits_{n = 0}^\infty \sum\limits_{m = 0}^n {A\sc}_{mn} h_n(k\en r\s) P_n^{\lvert m\rvert}(\cos\Q\s)\cos\bigl(m\f\s\bigr);\label{eq_psc}\\
+\P\c(r\c, \Q\c, \f\c) &= \sum\limits_{n = 0}^\infty \sum\limits_{m = 0}^n {B\c}_{mn} j_n(k\c r\c) P_n^{\lvert m\rvert}(\cos\Q\c)\cos\bigl(m\f\c\bigr),\label{eq_pc}
 \end{align}
 где $h_n(x)$~--- сферическая функции Ханкеля первого рода.
 
@@ -275,8 +275,8 @@ $$
 \begin{equation}\label{eq_ps}
 \begin{split}
 \P\s = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n 
-  &{A\s}_{nm} h_n({k\s}_lr\c)P_n^{\lvert m\rvert}(\cos\Q\c)\e^{im\f\c} +\\
-+ &{B\s}_{nm} j_n({k\s}_lr\s)P_n^{\lvert m\rvert}(\cos\Q\s)\e^{im\f\s}
+  &{A\s}_{mn} h_n({k\s}_lr\c)P_n^{\lvert m\rvert}(\cos\Q\c)\e^{im\f\c} +\\
++ &{B\s}_{mn} j_n({k\s}_lr\s)P_n^{\lvert m\rvert}(\cos\Q\s)\e^{im\f\s}
 \end{split}
 \end{equation}
 
@@ -287,8 +287,8 @@ $$
 где $\er$~--- орт координатной оси~$r\s$ сферической системы координат~$r\s, \Q\s, \f\s,$\\
 функции $V$ и $W$ удовлетворяют скалярным уравнениям Гельмгольца
 \begin{align}
-\Lap V &+ {k\s}_\t^2 V = 0,\\
-\Lap W &+ {k\s}_\t^2 W = 0.
+\Lap V &+ {k\s}_\t^2 V = 0,\label{eq_V}\\
+\Lap W &+ {k\s}_\t^2 W = 0.\label{eq_W}
 \end{align}
 
 Компоненты вектора $\u\s$ выражаются через функции $\P\s, V$ и $W$ следующим образом:
@@ -303,10 +303,10 @@ $$
 
 Функции $V$ и $W$ будем искать в~виде:
 \begin{align}
-V = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n &{C\s}_{nm} h_n({k\s}_lr\c)P_n^{\lvert m\rvert}(\cos\Q\c)\e^{im\f\c} + \notag\\
-+ &{D\s}_{nm} j_n({k\s}_lr\s)P_n^{\lvert m\rvert}(\cos\Q\s)\e^{im\f\s},\label{eq_v}\\
-W = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n &{E\s}_{nm} h_n({k\s}_lr\c)P_n^{\lvert m\rvert}(\cos\Q\c)\e^{im\f\c} + \notag\\
-+ &{F\s}_{nm} j_n({k\s}_lr\s)P_n^{\lvert m\rvert}(\cos\Q\s)\e^{im\f\s}.\label{eq_w}
+V = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n &{C\s}_{mn} h_n({k\s}_lr\c)P_n^{\lvert m\rvert}(\cos\Q\c)\e^{im\f\c} + \notag\\
++ &{D\s}_{mn} j_n({k\s}_lr\s)P_n^{\lvert m\rvert}(\cos\Q\s)\e^{im\f\s},\label{eq_v}\\
+W = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n &{E\s}_{mn} h_n({k\s}_lr\c)P_n^{\lvert m\rvert}(\cos\Q\c)\e^{im\f\c} + \notag\\
++ &{F\s}_{mn} j_n({k\s}_lr\s)P_n^{\lvert m\rvert}(\cos\Q\s)\e^{im\f\s}.\label{eq_w}
 \end{align}
 
 Распространение упругих волн в неоднородном слое описывается общими уравнениями движения упругой среды, которые для установившегося режима движения в сферической системе координат имеют следующий вид~\cite{Nowacki}:
@@ -411,13 +411,12 @@ ${\si\l}_{ij}$ --- компоненты тензора напряжений не
 \end{equation}
 Первое уравнение системы домножим на $\sin(\Q\s)$ и продифференцируем по $\Q\s$, а второе уравнение --- продифференцируем по $\f\s.$ Сложим полученные уравнения и разделим на $\sin(\Q\s)$. Получим следующее уравнение:
 \begin{equation*}
-\sin\Q \, L(A) = 0.
+L(A) = 0.
 \end{equation*}
 Теперь продифференцируем первое уравнение системы по $\f\s$ и вычтем второе уравнение, предварительно умноженное на $\sin(\Q\s)$ и продифференцированное по $\Q\s,$ а затем всё разделим на $\sin(\Q\s).$ Получим следующее уравнение:
 \begin{equation*}
-\sin\Q \, L(B) = 0.
+L(B) = 0.
 \end{equation*}
-Так как $\Q\in [0,2\pi),$ в полученных уравнениях опускаем множитель $\sin\Q.$ 
 
 Таким образом, преобразование системы \cref{exaple_system} выглядит следующим образом:
 \begin{align}\label{eq_transform}
@@ -457,7 +456,7 @@ L(B) &= 0
 \end{split}
 \end{equation}
 
-Коэффициенты ${A\sc}_{nm}, {B\c}_{nm}, {A\s}_{nm}, {B\s}_{nm}, {C\s}_{nm}, {D\s}_{nm}, {E\s}_{nm}$ и $ {F\s}_{nm}$ разложений \cref{eq_psc,eq_ps,eq_pc,eq_v,eq_w}, а также функции $U_{1mn},U_{2mn}$ и $U_{3mn}$ из разложений \cref{eq_uru2u3} подлежат определению из граничных условий, которые заключаются в равенстве нормальных скоростей частиц упругой среды и жидкости на внешней поверхности слоя и внутренней поверхности полого шара; равенстве на них нормального напряжения и акустического давления; отсутствии на этих поверхностях касательных напряжений. На внутренней поверхности слоя при переходе через границу раздела упругих сред должны быть непрерывны составляющие вектора смещения частиц, а также нормальные и тангенциальные напряжения. Имеем:
+Коэффициенты ${A\sc}_{mn}, {B\c}_{mn}, {A\s}_{mn}, {B\s}_{mn}, {C\s}_{mn}, {D\s}_{mn}, {E\s}_{mn}$ и $ {F\s}_{mn}$ разложений \cref{eq_psc,eq_ps,eq_pc,eq_v,eq_w}, а также функции $U_{1mn},U_{2mn}$ и $U_{3mn}$ из разложений \cref{eq_uru2u3} подлежат определению из граничных условий, которые заключаются в равенстве нормальных скоростей частиц упругой среды и жидкости на внешней поверхности слоя и внутренней поверхности полого шара; равенстве на них нормального напряжения и акустического давления; отсутствии на этих поверхностях касательных напряжений. На внутренней поверхности слоя при переходе через границу раздела упругих сред должны быть непрерывны составляющие вектора смещения частиц, а также нормальные и тангенциальные напряжения. Имеем:
 \begin{align}
 \text{при }r\c &= R\c: \q  &  {\si\s}_{rr} &= -P\c,  &  {\si\s}_{r\Q} &= 0,  &  {\si\s}_{r\f} &= 0, \notag\\
 &&  -i\om {u\s}_r &= {v\c}_r;\label{eq_border_1.1}\\
@@ -511,10 +510,10 @@ L\!\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right)&\Biggr|_{r\s = R\l
 
 Рассмотрим уравнения \cref{eq_Rs.2,eq_Rs.3}, а также уравнения \cref{eq_Rs.5,eq_Rs.6}. Применим к ним преобразование \cref{eq_transform}. Получим следующие уравнения:
 \begin{align}
-\mu\l L\!\left(\fr{{u\l}_r-{u\l}_2}{r\s} + \fr{\de {u\l}_2}{\de r\s}\right) &= \mu\s L\!\left(2\fr{\de}{\de r\s}\left(\fr{\P\s}{r\s}\right)+  \fr{\de^2 W}{\de r\s^2} - \fr{L(W) + 2W}{r\s^2} \right);\\
-\mu\l L\!\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right) &= \mu\s r\s\fr{\de}{\de r\s}L\!\left(\fr{V}{r\s}\right);\\
-L({u\l}_2) &= \fr{1}{r\s}L\!\left(\P\s + \fr{\de}{\de r\s}\biggl(r\s W\biggr)\right);\\
-L({u\l}_3) &= L(V).
+\mu\l L\!\left(\fr{{u\l}_r-{u\l}_2}{r\s} + \fr{\de {u\l}_2}{\de r\s}\right) &= \mu\s L\!\left(2\fr{\de}{\de r\s}\left(\fr{\P\s}{r\s}\right)+  \fr{\de^2 W}{\de r\s^2} - \fr{L(W) + 2W}{r\s^2} \right);\label{eq_Rs.2.2}\\
+\mu\l L\!\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right) &= \mu\s r\s\fr{\de}{\de r\s}L\!\left(\fr{V}{r\s}\right);\label{eq_Rs.3.2}\\
+L({u\l}_2) &= \fr{1}{r\s}L\!\left(\P\s + \fr{\de}{\de r\s}\biggl(r\s W\biggr)\right);\label{eq_Rs.5.2}\\
+L({u\l}_3) &= L(V).\label{eq_Rs.6.2}
 \end{align}
 
 Запишем граничные условия \cref{eq_border_1.1} через $\P\c, \P\s, V$ и $W,$ используя выражения \cref{eq_vc,eq_us,tensor comp}. Для $r\c=R\c$ получим:
@@ -538,8 +537,16 @@ L({u\l}_3) &= L(V).
 
 Рассмотрим уравнения \cref{eq_Rc.2,eq_Rc.3}. Применим к ним преобразование \cref{eq_transform}. Получим следующие уравнения:
 \begin{align}
-\mu\s&L\!\left(2\fr{\de}{\de r\c}\left(\fr{\P\s}{r\c}\right) + \fr{\de^2 W}{\de r\c^2} - \fr{L(W) + 2W}{r\c^2}\right)\Biggr|_{r\c=R\c}=0;
+\mu\s L\!\left(2\fr{\de}{\de r\c}\left(\fr{\P\s}{r\c}\right) + \fr{\de^2 W}{\de r\c^2} - \fr{L(W) + 2W}{r\c^2}\right)&\Biggr|_{r\c=R\c}=0;\label{eq_Rc.2.2}\\
+\mu\s r\c\fr{\de}{\de r\c}L\!\left(\fr{V}{r\c}\right)&\Biggr|_{r\c=R\c} = 0.\label{eq_Rc.3.2}
 \end{align}
+
+Анализ уравнений движения и граничных условий позволяют утверждать, что при ${u\l}_3 = V = 0$ будут удовлетворяться уравнения \cref{eq_V,eq_3.2}. а также граничные условия \cref{eq_Rl.4a,eq_Rs.3.2,eq_Rs.6.2,eq_Rc.3.2}, где присутствует эти функции.
+
+Таким образом, 
+$$
+{C\s}_{mn} = {D\s}_{mn} = U_{3mn} = 0.
+$$
 
 Подставив разложения \cref{eq_uru2u3} в уравнения \cref{eq_1.1,eq_2.2,eq_3.2}, воспользовавшись уравнением для присоединенных многочленов Лежандра и свойством ортогональности этих многочленов, получим для каждой пары индексов $m,n \q(n = 0,1,\ldots; \lvert m\rvert\leq n)$ систему линейных однородных обыкновенных дифференциальных уравнений второго порядка относительно неизвестных функций \\ $U_{1mn}(r\s), U_{mn}(r\s)$ и $U_{3mn}(r\s).$ А подставив разложения \cref{eq_uru2u3} в полученные граничные условия, найдем краевые условия и сможем решить  систему дифференциальных уравнений. После ее решения определим коэффициенты \\
 ${A\sc}_{nm}, {B\c}_{nm}, {A\s}_{nm}, {B\s}_{nm}, {C\s}_{nm}, {D\s}_{nm}, {E\s}_{nm}$ и $ {F\s}_{nm}$ разложений  \cref{eq_psc,eq_ps,eq_pc,eq_v,eq_w} для каждой пары индексов $m,n,$ а зная коэффициенты ${A\sc}_{nm}$, по формуле \cref{eq_psc} найдем акустическое поле, рассеяное упругой сферой, имеющей произвольно расположенную полость и неоднородное покрытие.
