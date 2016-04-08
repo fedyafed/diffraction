@@ -207,11 +207,11 @@ $\om$~--- круговая частота.
 
 Разложим \eqref{potential speed theta = 0} в ряд по ортогональным функциям:
 \begin{equation}
-\P\o(r\s, \Q\s, f\s) = \sum\limits_{n=0}^\infty\sum\limits_{m=-n}^n \gamma_{mn}j_n(k\en r\s)P_n^{\lvert m\rvert}(\cos\Q\s)\e^{im\f\s},
+\P\o(r\s, \Q\s, f\s) = \sum\limits_{n=0}^\infty\sum\limits_{m=-n}^n {A\o}_{mn}j_n(k\en r\s)P_n^{\lvert m\rvert}(\cos\Q\s)\e^{im\f\s},
 \end{equation}
 где $j_n(x)$~--- сферическая функция Бесселя порядка $n;$\\
 $P_n^m(x)$~--- присоединенный многочлен Лежандра степени $n$ порядка $m;$\\
-$\gamma_{mn} = 
+${A\o}_{mn} = 
 \begin{cases}
 A\o i^n(2n+1),& \text{при } m=0;\\
 0,& \text{при } m \ne 0.
@@ -250,8 +250,8 @@ $k\c = \df{\om}{c\c}$~--- волновое число находящейся в~
 \end{align}
 
 Звуковая волна в~полости тела~$\P\c$ должна удовлетворять условию ограниченности, а отраженная волна~$\P\sc$~--- условиям излучения на~бесконечности. Поэтому потенциалы $\P\sc$ и $\P\c$ будем искать в~виде рядов по сферическим функциям:
-\begin{align}\P\sc(r\s, \Q\s, \f\s) &= \sum\limits_{n = 0}^\infty \sum\limits_{m = 0}^n {A\sc}_{mn} h_n(k\en r\s) P_n^{\lvert m\rvert}(\cos\Q\s)\cos\bigl(m\f\s\bigr);\label{eq_psc}\\
-\P\c(r\c, \Q\c, \f\c) &= \sum\limits_{n = 0}^\infty \sum\limits_{m = 0}^n {B\c}_{mn} j_n(k\c r\c) P_n^{\lvert m\rvert}(\cos\Q\c)\cos\bigl(m\f\c\bigr),\label{eq_pc}
+\begin{align}\P\sc(r\s, \Q\s, \f\s) &= \sum\limits_{n = 0}^\infty \sum\limits_{m = -n}^n {A\sc}_{mn} h_n(k\en r\s) P_n^{\lvert m\rvert}(\cos\Q\s)\e^{im\f\s};\label{eq_psc}\\
+\P\c(r\c, \Q\c, \f\c) &= \sum\limits_{n = 0}^\infty \sum\limits_{m = -n}^n {B\c}_{mn} j_n(k\c r\c) P_n^{\lvert m\rvert}(\cos\Q\c)e^{im\f\c},\label{eq_pc}
 \end{align}
 где $h_n(x)$~--- сферическая функции Ханкеля первого рода.
 
@@ -383,7 +383,7 @@ ${\si\l}_{ij}$ --- компоненты тензора напряжений не
 \begin{split}
 \biggl(\la\l+2\mu\l\biggr)\fr{\de^2 {u\l}_r}{\de r\s^2} + \left(\la\l'+2\mu\l'+\fr{2\la\l+4\mu\l}{r\s}\right)\fr{\de {u\l}_r}{\de r\s} + \fr{\mu\l}{r\s^2}L({u\l}_r) +\\
 + \left(\fr{2\la\l'}{r\s} - \fr{2\la\l+4\mu\l}{r\s^2} + p\l\om^2\right){u\l}_r +\\
-+ \left[\fr{\la\l+\mu\l}{r\s}\fr{\de}{\de r\s} + \fr{\la\l'}{r\s} - \fr{\la\l+3\mu\l}{r\s}\right]L({u\l}_2) = 0;
++ \left[\fr{\la\l+\mu\l}{r\s}\fr{\de}{\de r\s} + \fr{\la\l'}{r\s} - \fr{\la\l+3\mu\l}{r\s^2}\right]L({u\l}_2) = 0;
 \end{split}
 \end{equation}
 \begin{equation}\label{eq_2.1}
