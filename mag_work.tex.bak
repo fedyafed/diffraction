@@ -469,7 +469,7 @@ L(B) &= 0
 
 Используя выражения \cref{eq_ven,tensor comp,eq_v2v3}, запишем граничные условия \cref{eq_border_3.1} через функции $\P\o, \P\sc, {u\l}_r, {u\l}_2$ и ${u\l}_3.$ Получим для $r\s = R\l:$
 \begin{align}
-&\biggl(\la\l+2\mu\l\biggr)\fr{\de {u\l}_r}{\de r\s} + \fr{2\la\l}{r\s}{u\l}_r + \fr{\la\l}{r\s}L({u\l}_r) = ip\en\om\left(\P\o+\P\sc\right);\label{eq_Rl.2}\\
+&\biggl(\la\l+2\mu\l\biggr)\fr{\de {u\l}_r}{\de r\s} + \fr{2\la\l}{r\s}{u\l}_r + \fr{\la\l}{r\s}L({u\l}_2) = -ip\en\om\left(\P\o+\P\sc\right);\label{eq_Rl.2}\\
 \mu\l&\fr{\de}{\de \Q\s}\left(\fr{{u\l}_r-{u\l}_2}{r\s} + \fr{\de {u\l}_2}{\de r\s}\right) + \fr{\mu\l}{\sin\Q\s}\fr{\de}{\de \f\s}\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right) = 0;\label{eq_Rl.3}\\
 \fr{\mu\l}{\sin\Q\s}&\fr{\de}{\de \f\s}\left(\fr{{u\l}_r-{u\l}_2}{r\s} + \fr{\de {u\l}_2}{\de r\s}\right) - \mu\l\fr{\de}{\de \Q\s}\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right) = 0;\label{eq_Rl.4}
 \end{align}
