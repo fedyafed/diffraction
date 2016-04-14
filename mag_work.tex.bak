@@ -480,8 +480,8 @@ L(B) &= 0
 
 Рассмотрим уравнения \cref{eq_Rl.3,eq_Rl.4}. Применим к ним преобразование \cref{eq_transform}. Получим следующие уравнения:
 \begin{align}
-L\!\left(\fr{{u\l}_r-{u\l}_2}{r\s} + \fr{\de {u\l}_2}{\de r\s}\right)&\Biggr|_{r\s = R\l} = 0.\label{eq_Rl.3a}\\
-L\!\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right)&\Biggr|_{r\s = R\l} = 0.\label{eq_Rl.4a}
+\mu\l \,L\!\left(\fr{{u\l}_r-{u\l}_2}{r\s} + \fr{\de {u\l}_2}{\de r\s}\right)&\Biggr|_{r\s = R\l} = 0.\label{eq_Rl.3a}\\
+\mu\l \,L\!\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right)&\Biggr|_{r\s = R\l} = 0.\label{eq_Rl.4a}
 \end{align}
 
 
@@ -548,8 +548,39 @@ $$
 {C\s}_{mn} = {D\s}_{mn} = U_{3mn} = 0.
 $$
 
-Подставив разложения \cref{eq_uru2u3} в уравнения \cref{eq_1.1,eq_2.2,eq_3.2}, воспользовавшись уравнением для присоединенных многочленов Лежандра и свойством ортогональности этих многочленов, получим для каждой пары индексов $m,n \q(n = 0,1,\ldots; \lvert m\rvert\leq n)$ систему линейных однородных обыкновенных дифференциальных уравнений второго порядка относительно неизвестных функций \\ $U_{1mn}(r\s), U_{mn}(r\s)$ и $U_{3mn}(r\s).$ А подставив разложения \cref{eq_uru2u3} в полученные граничные условия, найдем краевые условия и сможем решить  систему дифференциальных уравнений. После ее решения определим коэффициенты \\
-${A\sc}_{nm}, {B\c}_{nm}, {A\s}_{nm}, {B\s}_{nm}, {C\s}_{nm}, {D\s}_{nm}, {E\s}_{nm}$ и $ {F\s}_{nm}$ разложений  \cref{eq_psc,eq_ps,eq_pc,eq_v,eq_w} для каждой пары индексов $m,n,$ а зная коэффициенты ${A\sc}_{nm}$, по формуле \cref{eq_psc} найдем акустическое поле, рассеяное упругой сферой, имеющей произвольно расположенную полость и неоднородное покрытие.
+Подставив разложения \cref{eq_uru2u3} в уравнения \cref{eq_1.1,eq_2.2}, воспользовавшись уравнением для присоединенных многочленов Лежандра и свойством ортогональности этих многочленов, получим для каждой пары индексов $m,n \q(n = 0,1,\ldots; \lvert m\rvert\leq n)$ систему линейных однородных обыкновенных дифференциальных уравнений второго порядка относительно неизвестных функций \\ $U_{1mn}(r\s)$ и $ U_{2mn}(r\s):$ 
+\begin{align}
+\begin{split}
+&(\la\l + 2\mu\l)U_{1mn}'' + \\
++ &\left(\la\l'+2\mu\l' + \fr{2\la\l+4\mu\l}{r\s}\right)U_{1mn}' + \left(\fr{\la\l+\mu\l}{r\s}\right)\bigl(-n(n+1)\bigr)U_{2mn}' + \\
++ &\left(\fr{\mu\l}{r\s^2}\Bigl(-n(n+1)\Bigr) + \fr{2\la\l'}{r\s} - \fr{2\la\l + 4\mu\l}{r\s^2} + p\l\om^2\right)U_{1mn} + \\
++ &\left(\fr{\la\l'}{r\s} - \fr{\la\l+3\mu\l}{r\s^2}\right)\bigl(-n(n+1)\bigr)U_{2mn} = 0;
+\end{split}\\
+\begin{split}
+&\mu\l\bigl(-n(n+1)\bigr)U_{2mn}'' +\\
++ &\fr{\la\l+\mu\l}{r\s}\Bigl(-n(n+1)\Bigr)U_{1mn}' + \left(\mu\l'+\fr{2\mu\l}{r\s}\right)\bigl(-n(n+1)\bigr)U_{2mn}' + \\
++ &\left(\fr{\mu\l'}{r\s} + \fr{2\la\l+4\mu\l}{r\s^2}\right)\bigl(-n(n+1)\bigr)U_{1mn} + \\
++ &\left(\fr{\la\l+2\mu\l}{r\s^2}\Bigl(-n(n+1)\Bigr) - \fr{\mu\l'}{r\s} + p\l\om^2\right)\bigl(-n(n+1)\bigr)U_{2mn} = 0.
+\end{split}
+\end{align}
+
+Подставим разложения \cref{eq_psc,eq_pc,eq_uru2u3} в уравнение \cref{eq_Rl.1} и выразим ${A\sc}_{mn}:$
+\begin{equation}\label{eq_Psc_U1}
+{A\sc}_{mn} = -\fr{i\om U_{1mn}+k\en {A\o}_{mn}j_n'(k\en r\s)}{k\en h_n'(k\en r\s)}.
+\end{equation}
+Подставим разложения \cref{eq_psc,eq_pc,eq_uru2u3} в уравнения \cref{eq_Rl.2,eq_Rl.3a} с учетом найденного ${A\sc}_{mn}$ и значения вронскиана для сферических функций Бесселя $j_n(x)h_n'(x)-j_n'(x)h_n(x)=i/x^2:$
+\begin{align}
+\begin{split}
+&(\la\l+2\mu\l)U_{1mn}' + \left(\fr{2\la\l}{r\s} + \fr{p\en\om^2 h_n(k\en r\s)}{k\en h_n'(k\en r\s)}\right)U_{1mn} + \\
++& \fr{\la\l}{r\s}\bigl(-n(n+1)\bigr)U_{2mn} 
+= \fr{p\en\om {A\o}_{mn}}{(k\en r\s)^2 h_n'(k\en r\s)};
+\end{split}\\
+&\mu\l\bigl(-n(n+1)\bigr)\left(\fr{U_{1mn}-U_{2mn}}{r\s} + U_{2mn}'\right) = 0.
+\end{align}
+
+
+А используя теоремы сложения для сферических волновых функций и подставив разложения \cref{eq_uru2u3,eq_ps,eq_w} в граничные условия \cref{eq_Rs.1,eq_Rs.4,eq_Rs.2.2,eq_Rs.5.2}, найдем оставшиеся краевые условия и сможем решить  систему дифференциальных уравнений. После ее решения определим коэффициенты \\
+${A\sc}_{nm}, {B\c}_{nm}, {A\s}_{nm}, {B\s}_{nm}, {E\s}_{nm}, {F\s}_{nm}, {U}_{1nm}$ и ${U}_{2nm},$ разложений  \cref{eq_psc,eq_ps,eq_pc,eq_v,eq_w,eq_uru2u3} для каждой пары индексов $m,n,$ а зная коэффициенты ${A\sc}_{nm}$, по формуле \cref{eq_psc} найдем акустическое поле, рассеяное упругой сферой, имеющей произвольно расположенную полость и неоднородное покрытие.
 
 \newpage
 \subsection{Решение краевой задачи для системы обыкновенных дифференциальных уравнений}
