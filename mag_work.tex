@@ -578,6 +578,18 @@ $$
 &\mu\l\bigl(-n(n+1)\bigr)\left(\fr{U_{1mn}-U_{2mn}}{r\s} + U'_{2mn}\right) = 0.
 \end{align}
 
+Воспользуемся теоремы сложения для сферических волновых функций:
+\begin{align*}
+h_n(k\c r\c)P_n^m(\cos\Q\c)\e^{im\f\c} &= \sum_{p=0}^{\infty}\sum_{q=-p}^{p}R_{mnpq} h_p(k\c r\s)P_p^{m-q}(\cos\Q\s)\e^{i(m-q)\f\s};\\
+j_n({k\s}_l r\s)P_n^m(\cos\Q\s)\e^{im\f\s} &= \sum_{p=0}^{\infty}\sum_{q=-p}^{p}Q_{mnpq} j_p({k\s}_l r\c)P_p^{q}(\cos\Q\c)\e^{iq\f\c},\\
+\end{align*}
+где
+\begin{align*}
+R_{mnpq} = 2i^{p-n}&\sum_{s=\lvert p-m\rvert}^{p+n} i^s \fr{b_p^{(nmsq)}}{N_{qs}} j_s(k\c {r\c}\s)P_s^{q}(\cos{\Q\c}\s)\e^{iq{\f\c}\s};\\
+Q_{mnpq} = \fr{2i^{p-n}}{N_{qp}}&\sum_{s=\lvert p-m\rvert}^{p+n} i^s b_s^{(nmpq)} j_s({k\s}_l {r\s}\c)P_s^{m-q}(\cos{\Q\s}\c)\e^{i(m-q){\f\s}\c};\\
+N_{mn}=\fr{2}{2n+1}&\fr{(n+m)!}{(n-m)!}
+\end{align*}
+чтобы привести разложения к одной системе координат:
 
 А используя теоремы сложения для сферических волновых функций и подставив разложения \cref{eq_uru2u3,eq_ps,eq_w} в граничные условия \cref{eq_Rs.1,eq_Rs.4,eq_Rs.2.2,eq_Rs.5.2}, найдем оставшиеся краевые условия и сможем решить  систему дифференциальных уравнений \cref{eq_final_1,eq_final_2}. После ее решения определим коэффициенты \\
 ${A\sc}_{nm}, {B\c}_{nm}, {A\s}_{nm}, {B\s}_{nm}, {E\s}_{nm}, {F\s}_{nm}, {U}_{1nm}$ и ${U}_{2nm},$ разложений  \cref{eq_psc,eq_ps,eq_pc,eq_v,eq_w,eq_uru2u3} для каждой пары индексов $m,n,$ а зная коэффициенты ${A\sc}_{nm}$, по формуле \cref{eq_psc} найдем акустическое поле, рассеяное упругой сферой, имеющей произвольно расположенную полость и неоднородное покрытие.
