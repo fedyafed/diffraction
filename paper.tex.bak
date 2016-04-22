@@ -95,12 +95,12 @@
 
 Пусть из~внешнего пространства на~шар падает плоская звуковая волна. Потенциал скоростей гармонической падающей волны запишем в~виде:
 \begin{equation}\label{potential speed}
-\P\o(\bar{\mathbf{x}}\s, t) = A\o \exp\left[i\left(\bar{\mathbf{k}}\en\dotm\bar{\mathbf{x}}\s-\om t\right)\right],
+\P\o(\bar{x}\s, t) = A\o \exp\left[i\left(\bar{k}\en\dotm\bar{x}\s-\om t\right)\right],
 \end{equation}
 где $A\o$~--- амплитуда волны, \\
-$\bar{\mathbf{k}}_e$~--- волновой вектор в~окружающей жидкости,  \\
-$\lvert\bar{\mathbf{k}}\en\rvert = k\en = \om / c\en$~--- волновое число, \\
-$\bar{\mathbf{x}}\s$~--- радиус-вектор, \\
+$\bar{k}_e$~--- волновой вектор в~окружающей жидкости,  \\
+$\lvert\bar{k}\en\rvert = k\en = \om / c\en$~--- волновое число, \\
+$\bar{x}\s$~--- радиус-вектор, \\
 $\om$~--- круговая частота.
 
  Без~ограничения общности будем полагать, что волна распространяется в~направлении~$\Q\s = \Q\c = 0$. Тогда в~сферической системе координат \eqref{potential speed} запишется в~виде:
@@ -111,14 +111,14 @@ $\om$~--- круговая частота.
 
 Разложим \eqref{potential speed theta = 0} в ряд по ортогональным функциям:
 \begin{equation}
-\P\o(r\s, \Q\s, f\s) = \sum\limits_{n=0}^\infty\sum\limits_{m=-n}^n \gamma_{mn}j_n(k\en r\s)P_n^m(\cos\Q\s)\e^{im\f\s},
+\P\o(r\s, \Q\s, f\s) = \sum\limits_{n=0}^\infty\sum\limits_{m=-n}^n {A\o}_{mn}j_n(k\en r\s)P_n^m(\cos\Q\s)\e^{im\f\s},
 \end{equation}
 где $j_n(x)$~--- сферическая функция Бесселя порядка $n;$\\
 $P_n^m(x)$~--- присоединенный многочлен Лежандра степени $n$ порядка $m;$\\
-$\gamma_{mn} = 
+${A\o}_{mn} =
 \begin{cases}
-A\o i^n(2n+1),& \text{при } m\ne0;\\
-0,& \text{при } m = 0.
+A\o i^n(2n+1),& \text{при } m=0;\\
+0,& \text{при } m \ne 0.
 \end{cases}
 $
 
@@ -131,8 +131,8 @@ $
 $\P\c$~--- потенциал скоростей акустического поля в~полости тела;\\
 $k\c = \df{\om}{c\c}$~--- волновое число находящейся в~полости жидкости.\\ При~этом скорости частиц жидкости и акустическое давление вне~тела и внутри полости определяются по~следующим формулам соответственно:
 \begin{align}
-\bar{v}\en &= \grad\P\en; &\q P\en &= ip\en\om\P\en;\\
-\bar{v}\c &= \grad\P\c; &\q P\c &= ip\c\om\P\c.
+\v\en &= \grad\P\en; &\q P\en &= ip\en\om\P\en;\label{eq_ven}\\
+\v\c &= \grad\P\c; &\q P\c &= ip\c\om\P\c.\label{eq_vc}
 \end{align}
 
 
@@ -153,12 +153,11 @@ $k\c = \df{\om}{c\c}$~--- волновое число находящейся в~
 \fr1{r\s^2}\fr\de{\de r\s}\left(r\s^2 \fr{\de\P\sc}{\de r\s}\right) + \fr1{r\s^2\sin^2\Q\s}\fr{\de\P\sc}{\de\f\s^2} &+ \fr1{r\s^2\sin\Q\s}\fr\de{\de\Q\s} \left(\sin\Q\s \fr{\de\P\sc}{\de\Q\s}\right) + k\en^2\P\sc = 0.
 \end{align}
 
-Звуковая волна в~полости тела~$\P\c$ должна удовлетворять условию ограниченности, а отраженная волна~$\P\sc$~--- условиям излучения на~бесконечности. Поэтому потенциалы $\P\sc$ и $\P\c$ будем искать в~виде 
-\begin{align}\P\sc(r\s, \Q\s, \f\s) = \sum\limits_{n = 0}^\infty \sum\limits_{m = 0}^n {A\sc}_{nm} h_n(k\en r\s) P_n^m(\cos\Q\s)\cos\bigl(m\f\s\bigr);\\
-\P\c(r\c, \Q\c, \f\c) = \sum\limits_{n = 0}^\infty \sum\limits_{m = 0}^n {B\c}_{nm} j_n(k\c r\c) P_n^m(\cos\Q\c)\cos\bigl(m\f\c\bigr),
+Звуковая волна в~полости тела~$\P\c$ должна удовлетворять условию ограниченности, а отраженная волна~$\P\sc$~--- условиям излучения на~бесконечности. Поэтому потенциалы $\P\sc$ и $\P\c$ будем искать в~виде рядов по сферическим функциям:
+\begin{align}\P\sc(r\s, \Q\s, \f\s) &= \sum\limits_{n = 0}^\infty \sum\limits_{m = -n}^n {A\sc}_{mn} h_n(k\en r\s) P_n^m(\cos\Q\s)\e^{im\f\s};\label{eq_psc}\\
+\P\c(r\c, \Q\c, \f\c) &= \sum\limits_{n = 0}^\infty \sum\limits_{m = -n}^n {B\c}_{mn} j_n(k\c r\c) P_n^m(\cos\Q\c)e^{im\f\c},\label{eq_pc}
 \end{align}
-где $h_n(x)$ и $j_n(x)$~--- сферические функции Ханкеля первого рода и Бесселя соответственно; \\
-$P_n(x)$~--- многочлен Лежандра степени $n$.
+где $h_n(x)$~--- сферическая функции Ханкеля первого рода.
 
 Распространение малых возмущений в~упругом теле для~установившегося режима движения частиц тела описывается скалярным и векторным уравнением Гельмгольца:
 \begin{align}
@@ -171,15 +170,19 @@ ${k\s}_\t$~--- волновое число поперечных волн со~с
 ${c\s}_\t = \sqrt{\df{\mu\s}{p\s}}$;\\
 $\P\s$ и $\F\s$~--- скалярной и векторный потенциалы смещения соответственно.
 
-Вектор смещения $\mathbf{u}\s$ частиц упругого тела определяется по~формуле
+Вектор смещения $\u\s$ частиц упругого тела определяется по~формуле
 $$
-\mathbf{u}\s = \grad \P\s + \rot \F\s.
+\u\s = \grad \P\s + \rot \F\s.
 $$
 
 Потенциал смещения $\P\s$ будем искать в~виде ряда по~двум локальным сферическим функциям:
-$$
-\P\s = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n {A\s}_{nm} h_n({k\s}_lr\c)P_n^m(\cos\Q\c)\e^{im\f\c} + {B\s}_{nm} j_n({k\s}_lr\s)P_n^m(\cos\Q\s)\e^{im\f\s}
-$$
+\begin{equation}\label{eq_ps}
+\begin{split}
+\P\s = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n
+  &{A\s}_{mn} h_n({k\s}_lr\c)P_n^m(\cos\Q\c)\e^{im\f\c} +\\
++ &{B\s}_{mn} j_n({k\s}_lr\s)P_n^m(\cos\Q\s)\e^{im\f\s}
+\end{split}
+\end{equation}
 
 Векторный потенциал $\F\s$ может быть представлен в~виде суммы:
 $$
@@ -188,26 +191,27 @@ $$
 где $\er$~--- орт координатной оси~$r\s$ сферической системы координат~$r\s, \Q\s, \f\s,$\\
 функции $V$ и $W$ удовлетворяют скалярным уравнениям Гельмгольца
 \begin{align}
-\Lap V &+ {k\s}_\t^2 V = 0,\\
-\Lap W &+ {k\s}_\t^2 W = 0.
+\Lap V &+ {k\s}_\t^2 V = 0,\label{eq_V}\\
+\Lap W &+ {k\s}_\t^2 W = 0.\label{eq_W}
 \end{align}
+
+Компоненты вектора $\u\s$ выражаются через функции $\P\s, V$ и $W$ следующим образом:
+\begin{equation}\label{eq_us}
+\begin{split}
+{u\s}_r &= \fr{\de \P\s}{\de r\s} - \fr{1}{r\s}L(W),\\
+{u\s}_\Q &= \fr{1}{r\s}\fr{\de \P\s}{\de \Q\s} + \fr{1}{r\s}\fr{\de}{\de r\s}\left(r\s\fr{\de W}{\de \Q\s}\right) + \fr{1}{\sin\Q\s}\fr{\de V}{\de\f\s},\\
+{u\s}_\f &= \fr{1}{r\s \sin\Q\s}\fr{\de \P\s}{\de \f\s} + \fr{1}{r\s\sin\Q\s}\fr{\de}{\de r\s}\left(r\s\fr{\de W}{\de \f\s}\right) - \fr{\de V}{\de \Q\s},
+\end{split}
+\end{equation}
+где $L = \df{\de^2}{\de\Q\s^2} + \ctg\Q\s\df{\de}{\de\Q\s} + \df{1}{\sin^2\Q\s}\df{\de^2}{\de\f\s^2}.$
 
 Функции $V$ и $W$ будем искать в~виде:
 \begin{align}
-V = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n {C\s}_{nm} h_n({k\s}_lr\c)P_n^m(\cos\Q\c)\e^{im\f\c} + {D\s}_{nm} j_n({k\s}_lr\s)P_n^m(\cos\Q\s)\e^{im\f\s},\\
-W = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n {E\s}_{nm} h_n({k\s}_lr\c)P_n^m(\cos\Q\c)\e^{im\f\c} + {F\s}_{nm} j_n({k\s}_lr\s)P_n^m(\cos\Q\s)\e^{im\f\s}.
+V = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n &{C\s}_{mn} h_n({k\s}_\t r\c)P_n^m(\cos\Q\c)\e^{im\f\c} + \notag\\
++ &{D\s}_{mn} j_n({k\s}_\t r\s)P_n^m(\cos\Q\s)\e^{im\f\s},\label{eq_v}\\
+W = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n &{E\s}_{mn} h_n({k\s}_\t r\c)P_n^m(\cos\Q\c)\e^{im\f\c} + \notag\\
++ &{F\s}_{mn} j_n({k\s}_\t r\s)P_n^m(\cos\Q\s)\e^{im\f\s}.\label{eq_w}
 \end{align}
-
-Коэффициенты разложений ${A\sc}_{nm}, {B\c}_{nm}, {A\s}_{nm}, {B\s}_{nm}, {C\s}_{nm}, {D\s}_{nm}, {E\s}_{nm}$ и $ {F\s}_{nm}$ подлежат определению из граничных условий, которые заключаются в равенстве нормальных скоростей частиц упругой среды и жидкости на внешней поверхности слоя и внутренней поверхности полого шара; равенстве на них нормального напряжения и акустического давления; отсутствии на этих поверхностях касательных напряжений. На внутренней поверхности слоя при переходе через границу раздела упругих сред должны быть непрерывны составляющие вектора смещения частиц, а также нормальные и тангенциальные напряжения. Имеем:
-\begin{equation*}
-\begin{aligned}
-\text{при }r\c &= R\c: \q  &  {\si\s}_{rr} &= -P\c,  &  {\si\s}_{r\Q} &= 0,  &  {\si\s}_{r\f} &= 0, &  -i\om {u\s}_r &= {v\c}_r;\\
-\text{при }r\s &= R\s: \q  &  {\si\s}_{rr} &= {\si\l}_{rr},  &  {\si\s}_{r\Q} &= {\si\l}_{r\Q},  &  {\si\s}_{r\f} &= {\si\l}_{r\f}, &&\\
-&&  {u\s}_r &= {u\l}_r, \q & {u\s}_\Q &= {u\l}_\Q, \q & {u\s}_\f &= {u\l}_\f;\\
-\text{при }r\s &= R\l: \q  &  {\si\l}_{rr} &= -P\en,  &  {\si\l}_{r\Q} &= 0,  &  {\si\l}_{r\f} &= 0, &  -i\om {u\l}_r &= {v\en}_{r},
-\end{aligned}
-\end{equation*} 
-где ${v\c}_r=\de\P\c/\de r, \q {v\en}_r=\de\P\en/\de r$~--- радиальная компонента скорости частиц в жидкости внутри полости и в окружающем пространстве соответственно.
 
 Распространение упругих волн в неоднородном слое описывается общими уравнениями движения упругой среды, которые для установившегося режима движения в сферической системе координат имеют следующий вид:
 \begin{equation}\label{eq_moving}
@@ -220,7 +224,7 @@ W = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n {E\s}_{nm} h_n({k\s}_lr\c)P_n^
 &+ \fr1{r\s}\biggl(3{\si\l}_{r\f}+2{\si\l}_{\Q\f}\ctg\Q\s\biggr)=-p\l\om^2{u\l}_\f,
 \end{split}
 \end{equation}
-где ${u\l}_r, {u\l}_\Q, {u\l}_\f$ --- компоненты вектора смещения $\mathbf{u\l}$;\\
+где ${u\l}_r, {u\l}_\Q, {u\l}_\f$ --- компоненты вектора смещения $\u\l$;\\
 ${\si\l}_{ij}$ --- компоненты тензора напряжений неоднородной среды в сферической системе координат.
 
 Используя связь компонентов тензора напряжений с компонентами тензора деформаций (обобщенный закон Гука), а также выражения компонентов тензора деформаций через компоненты вектора смещения, получаем в сферической системе координат следующие соотношения:
@@ -242,78 +246,271 @@ ${\si\l}_{ij}$ --- компоненты тензора напряжений не
     \end{gathered}
 \end{equation}
 
-Соотношения \eqref{tensor comp} справедливы как для однородной упругой среды, так и для неоднородного слоя. В первом случае в выражениях \eqref{tensor comp} компоненты вектора смещения и тензора напряжений, а также величины $\la\l$ и $\mu\l$ следует заменить на $\la\s$ и $\mu\s$ соответственно.
+Соотношения \eqref{tensor comp} справедливы как для однородной упругой среды, так и для неоднородного слоя. В первом случае в выражениях \eqref{tensor comp} компоненты вектора смещения $\u\l$ и тензора напряжений $\si\l,$ а также величины $\la\l$ и $\mu\l$ следует заменить на $\u\s, \si\s, \la\s$ и $\mu\s$ соответственно.
 
-Используя эти соотношения, запишем уравнения~\eqref{eq_moving} через компоненты вектора смещения $\mathbf{u\l}$:
+Используя эти соотношения, запишем уравнения~\eqref{eq_moving} через компоненты вектора смещения $\u\l$:
 \begin{equation*}
 \begin{split}
 \biggl(\la\l+2\mu\l\biggr)\fr{\de^2 {u\l}_r}{\de r\s^2} + \fr{\mu\l}{r\s^2}\fr{\de^2 {u\l}_r}{\de\Q\s^2} +\fr{\mu\l}{r\s\sin\Q\s}\fr{\de^2 {u\l}_r}{\de\f\s^2} + \fr{\mu\l\ctg\Q\s}{r\s^2}\fr{\de {u\l}_r}{\de \Q\s} + \\
-+ \left(\la\l'+2\mu\l'+\fr{2\la\l+4\mu\l}{r\s}\right)\fr{\de{u\l}_r}{\de r\s} + \left(\fr{2\la\l'}{r\s} - \fr{2\la\l+4\mu\l}{r\s^2}\right){u\l}_r + \\
++ \left(\la'\l+2\mu'\l+\fr{2\la\l+4\mu\l}{r\s}\right)\fr{\de{u\l}_r}{\de r\s} + \left(\fr{2\la'\l}{r\s} - \fr{2\la\l+4\mu\l}{r\s^2}\right){u\l}_r + \\
 + \fr{\la\l+\mu\l}{r\s}\fr{\de^2 {u\l}_\Q}{\de r\s\de\Q\s} + \fr{(\la\l+\mu\l)\ctg\Q\s}{r\s}\fr{\de {u\l}_\Q}{\de r\s} + \\ 
-+ \left(\fr{\la\l'}{r\s} - \fr{\la\l+3\mu\l}{r\s^2}\right)\fr{\de {u\l}_\Q}{\de \Q\s} +\left(\fr{\la\l'\ctg\Q\s}{r\s} - \fr{(\la\l+3\mu\l)\ctg\Q\s}{r\s^2}\right){u\l}_\Q + \\
++ \left(\fr{\la'\l}{r\s} - \fr{\la\l+3\mu\l}{r\s^2}\right)\fr{\de {u\l}_\Q}{\de \Q\s} +\left(\fr{\la'\l\ctg\Q\s}{r\s} - \fr{(\la\l+3\mu\l)\ctg\Q\s}{r\s^2}\right){u\l}_\Q + \\
 +\fr{\la\l+\mu\l}{r\s\sin\Q\s}\fr{\de^2 {u\l}_\f}{\de r\s\de\f\s}
-+ \left(\fr{\la\l'}{r\s\sin\Q\s} - \fr{\la\s+3\mu\s}{r\s^2\sin\Q\s}\right)\fr{\de {u\l}_\f}{\de \f\s} = -p\l\om^2{u\l}_r;
++ \left(\fr{\la'\l}{r\s\sin\Q\s} - \fr{\la\s+3\mu\s}{r\s^2\sin\Q\s}\right)\fr{\de {u\l}_\f}{\de \f\s} = -p\l\om^2{u\l}_r;
 \end{split}
 \end{equation*}
 
 \begin{equation*}
 \begin{split}
-\fr{\la\l+\mu\l}{r\s}\fr{\de^2 {u\l}_r}{\de r\s \de \Q\s} + \left(\fr{\mu\l'}{r\s}+\fr{2\la\l+4\mu\l}{r\s^2}\right)\fr{\de {u\l}_r}{\de \Q\s} + \\
+\fr{\la\l+\mu\l}{r\s}\fr{\de^2 {u\l}_r}{\de r\s \de \Q\s} + \left(\fr{\mu'\l}{r\s}+\fr{2\la\l+4\mu\l}{r\s^2}\right)\fr{\de {u\l}_r}{\de \Q\s} + \\
 + \mu\l \fr{\de^2 {u\l}_\Q}{\de r\s^2} + \fr{\la\l+2\mu\l}{r\s^2}\fr{\de^2 {u\l}_\Q}{\de \Q\s^2} + \fr{\mu\l}{r\s^2\sin^2\Q\s} \fr{\de^2 {u\l}_\Q}{\de \f^2} + \\
-+ \left(\mu\l'+ \fr{2\mu\l}{r\s}\right)\fr{\de {u\l}_\Q}{\de r\s} + \fr{(\la\l+2\mu\l)\ctg\Q\s}{r\s^2}\fr{\de{u\l}_\Q}{\de \Q\s}-\left(\fr{\mu\l'}{r\s} + \fr{\la\l+2\mu\l}{r\s^2\sin^2\Q\s}\right){u\l}_\Q + \\
++ \left(\mu'\l+ \fr{2\mu\l}{r\s}\right)\fr{\de {u\l}_\Q}{\de r\s} + \fr{(\la\l+2\mu\l)\ctg\Q\s}{r\s^2}\fr{\de{u\l}_\Q}{\de \Q\s}-\left(\fr{\mu'\l}{r\s} + \fr{\la\l+2\mu\l}{r\s^2\sin^2\Q\s}\right){u\l}_\Q + \\
 + \fr{\la\l+\mu\l}{r\s^2\sin\Q\s}\fr{\de^2{u\l}_\f}{\de \Q\s \de \f\s} - \fr{(\la\l+3\mu\l)\ctg\Q\s}{r\s^2\sin\Q\s}\fr{\de {u\l}_\f}{\de \f\s}  = -p\l\om^2{u\l}_\Q;
 \end{split}
 \end{equation*}
 
 \begin{equation*}
 \begin{split}
-\fr{\la\l+\mu\l}{r\s\sin\Q\s} \fr{\de^2{u\l}_r}{\de r\s \de \f\s} + \left(\fr{\mu\l'}{r\s\sin\Q\s} + \fr{2\la\l+4\mu\l}{r\s^2\sin\Q\s} \right)\fr{\de {u\l}_r}{\de \f\s} +\\
+\fr{\la\l+\mu\l}{r\s\sin\Q\s} \fr{\de^2{u\l}_r}{\de r\s \de \f\s} + \left(\fr{\mu'\l}{r\s\sin\Q\s} + \fr{2\la\l+4\mu\l}{r\s^2\sin\Q\s} \right)\fr{\de {u\l}_r}{\de \f\s} +\\
 + \fr{\la\l+\mu\l}{r\s^2\sin\Q\s}\fr{\de^2 {u\l}_\Q}{\de \Q\s \de \f\s} + \fr{(\la\l+3\mu\l)\ctg\Q\s}{r\s^2\sin\Q\s}\fr{\de {u\l}_\Q}{\de \f\s} +\\
 + \mu\l \fr{\de^2 {u\l}_\f}{\de r\s^2} + \fr{\mu\l}{r\s^2}\fr{\de^2 {u\l}_\f}{\de \Q\s^2} + \fr{\la\l+2\mu\l}{r\s^2\sin^2\Q\s} \fr{\de^2 {u\l}_\f}{\de \f\s^2} + \\
-+ \left(\mu\l'+\fr{2\mu\l}{r\s}\right)\fr{\de {u\l}_\f}{\de r\s} + \fr{\mu\l\ctg\Q\s}{r\s^2}\fr{\de {u\l}_\f}{\de \Q\s} - \left(\fr{\mu\l'}{r\s} + \fr{\mu\l}{r\s^2\sin^2\Q\s}\right){u\l}_\f = - p\l\om^2{u\l}_\f.
++ \left(\mu'\l+\fr{2\mu\l}{r\s}\right)\fr{\de {u\l}_\f}{\de r\s} + \fr{\mu\l\ctg\Q\s}{r\s^2}\fr{\de {u\l}_\f}{\de \Q\s} - \left(\fr{\mu'\l}{r\s} + \fr{\mu\l}{r\s^2\sin^2\Q\s}\right){u\l}_\f = - p\l\om^2{u\l}_\f.
 \end{split}
 \end{equation*}
 Введем новые функции ${u\l}_2$ и ${u\l}_3$, связанные с ${u\l}_\Q$ и ${u\l}_\f$ следующими соотношениями:
-$$
-{u\l}_\Q = \df{\de {u\l}_2}{\de\Q\s} + \fr1{\sin\Q\s}\fr{\de {u\l}_3}{\de\f\s}, \qq {u\l}_\f = \df1{\sin\Q\s}\df{\de {u\l}_2}{\de\f\s} - \df{\de {u\l}_3}{\de\Q\s}
-$$
-и запишем уравнения движения через функции ${u\l}_r, {u\l}_2$ и ${u\l}_3:$
+\begin{equation}\label{eq_v2v3}
+{u\l}_\Q = \df{\de {u\l}_2}{\de\Q\s} + \fr1{\sin\Q\s}\fr{\de {u\l}_3}{\de\f\s}; \qq {u\l}_\f = \df1{\sin\Q\s}\df{\de {u\l}_2}{\de\f\s} - \df{\de {u\l}_3}{\de\Q\s},
+\end{equation}
+запишем уравнения движения через функции ${u\l}_r, {u\l}_2$ и ${u\l}_3$ и перенесем всё в левую часть:
 
-\begin{equation}
+\begin{equation}\label{eq_1.1}
 \begin{split}
-\biggl(\la\l+2\mu\l\biggr)\fr{\de^2 {u\l}_r}{\de r\s^2} + \left(\la\l'+2\mu\l'+\fr{2\la\l+4\mu\l}{r\s}\right)\fr{\de {u\l}_r}{\de r\s} + \fr{\mu\l}{r\s^2}L({u\l}_r) +\\
-+ \left(\fr{2\la\l'}{r\s} - \fr{2\la\l+4\mu\l}{r\s^2} + p\l\om^2\right){u\l}_r +\\
-+ \left[\fr{\la\l+\mu\l}{r\s}\fr{\de}{\de r\s} + \fr{\la\l'}{r\s} - \fr{\la\l+3\mu\l}{r\s}\right]L({u\l}_3) = 0;
+\biggl(\la\l+2\mu\l\biggr)\fr{\de^2 {u\l}_r}{\de r\s^2} + \left(\la'\l+2\mu'\l+\fr{2\la\l+4\mu\l}{r\s}\right)\fr{\de {u\l}_r}{\de r\s} + \fr{\mu\l}{r\s^2}L({u\l}_r) +\\
++ \left(\fr{2\la'\l}{r\s} - \fr{2\la\l+4\mu\l}{r\s^2} + p\l\om^2\right){u\l}_r +\\
++ \left[\fr{\la\l+\mu\l}{r\s}\fr{\de}{\de r\s} + \fr{\la'\l}{r\s} - \fr{\la\l+3\mu\l}{r\s^2}\right]L({u\l}_2) = 0;
 \end{split}
 \end{equation}
-\begin{equation}
+\begin{equation}\label{eq_2.1}
 \begin{split}
-\left[\fr{\la\l+\mu\l}{r\s}\fr{\de}{\de r\s}+\fr{\mu\l'}{r\s}+\fr{2\la\l+4\mu\l}{r\s^2}\right]\fr{\de{u\l}_r}{\de \Q\s} + \fr{\la\l+2\mu\l}{r\s^2}\fr{\de}{\de \Q\s}L({u\l}_2) + \\
-+ \left[\mu\l\fr{\de^2}{\de r\s^2} + \left(\mu\l'+\fr{2\mu\l}{r\s}\right)\fr{\de}{\de r\s} - \fr{\mu\l'}{r\s} + p\l\om^2\right]\left[\fr{\de {u\l}_2}{\de\Q\s} + \fr{1}{\sin\Q\s}\fr{\de{u\l}_3}{\de\f\s}\right]+\\
+\left[\fr{\la\l+\mu\l}{r\s}\fr{\de}{\de r\s}+\fr{\mu'\l}{r\s}+\fr{2\la\l+4\mu\l}{r\s^2}\right]\fr{\de{u\l}_r}{\de \Q\s} + \fr{\la\l+2\mu\l}{r\s^2}\fr{\de}{\de \Q\s}L({u\l}_2) + \\
++ \left[\mu\l\fr{\de^2}{\de r\s^2} + \left(\mu'\l+\fr{2\mu\l}{r\s}\right)\fr{\de}{\de r\s} - \fr{\mu'\l}{r\s} + p\l\om^2\right]\left[\fr{\de {u\l}_2}{\de\Q\s} + \fr{1}{\sin\Q\s}\fr{\de{u\l}_3}{\de\f\s}\right]+\\
 + \fr{\mu\l}{r\s^2\sin\Q\s}\fr{\de}{\de\f\s}L({u\l}_3) = 0;
 \end{split}
 \end{equation}
-\begin{equation}
+\begin{equation}\label{eq_3.1}
 \begin{split}
-\fr{1}{r\s\sin\Q\s}\left[\biggl(\la\l+\mu\l\biggr)\fr{\de}{\de r\s} + \mu\l' + \fr{2\la\l+4\mu\l}{r\s}\right]\fr{\de {u\l}_r}{\de\f\s} +\\
-+ \left[\mu\l\fr{\de^2}{\de r\s^2} + \left(\mu\l'+\fr{2\mu\l}{r\s}\right)\fr{\de}{\de r\s} - \fr{\mu\l'}{r\s} + p\l\om^2\right]\left[\fr{1}{\sin\Q\s}\fr{\de {u\l}_2}{\de\f\s} - \fr{\de {u\l}_3}{\de\Q\s}\right] +\\
+\fr{1}{r\s\sin\Q\s}\left[\biggl(\la\l+\mu\l\biggr)\fr{\de}{\de r\s} + \mu'\l + \fr{2\la\l+4\mu\l}{r\s}\right]\fr{\de {u\l}_r}{\de\f\s} +\\
++ \left[\mu\l\fr{\de^2}{\de r\s^2} + \left(\mu'\l+\fr{2\mu\l}{r\s}\right)\fr{\de}{\de r\s} - \fr{\mu'\l}{r\s} + p\l\om^2\right]\left[\fr{1}{\sin\Q\s}\fr{\de {u\l}_2}{\de\f\s} - \fr{\de {u\l}_3}{\de\Q\s}\right] +\\
 + \fr{\la\l+2\mu\l}{r\s^2\sin\Q\s}\fr{\de}{\de \f\s}L({u\l}_2) -\fr{\mu\l}{r\s^2}\fr{\de}{\de\Q\s}L({u\l}_3) = 0,
 \end{split}
 \end{equation}
-где $L = \df{\de^2}{\de\Q\s^2} + \ctg\Q\s\df{\de}{\de\Q\s} + \df{1}{\sin^2\Q\s}\df{\de^2}{\de\f\s^2},\q\la\l' = \df{\diff\la\l}{\diff r\s},\q\mu\l' = \df{\diff\mu\l}{\diff r\s}.$
+где $\la'\l = \df{\diff\la\l}{\diff r\s},\q\mu'\l = \df{\diff\mu\l}{\diff r\s}.$
  
- 
-Функции ${u\l}_r, {u\l}_2$ и ${u\l}_3$ будем искать в виде разложений:
-\begin{equation}
+Получим преобразование системы уравнений, имеющей специальный вид. Пусть система уравнений выглядит следующим образом:
+\begin{equation}\label{exaple_system}
+\begin{aligned}
+\fr{\de A}{\de \Q} + \fr{1}{\sin\Q}\fr{\de B}{\de\f} &= 0;\\
+- \fr{\de B}{\de\Q} + \fr{1}{\sin\Q}\fr{\de A}{\de \f}  &= 0,
+\end{aligned}
+\end{equation}
+Первое уравнение системы домножим на $\sin(\Q\s)$ и продифференцируем по $\Q\s$, а второе уравнение --- продифференцируем по $\f\s.$ Сложим полученные уравнения и разделим на $\sin(\Q\s)$. Получим следующее уравнение:
+\begin{equation*}
+L(A) = 0.
+\end{equation*}
+Теперь продифференцируем первое уравнение системы по $\f\s$ и вычтем второе уравнение, предварительно умноженное на $\sin(\Q\s)$ и продифференцированное по $\Q\s,$ а затем всё разделим на $\sin(\Q\s).$ Получим следующее уравнение:
+\begin{equation*}
+L(B) = 0.
+\end{equation*}
+
+Таким образом, преобразование системы \cref{exaple_system} выглядит следующим образом:
+\begin{align}\label{eq_transform}
+\left\{\begin{aligned}
+\df{\de A}{\de \Q} + \df{1}{\sin\Q}\df{\de B}{\de\f} &= 0\\
+- \df{\de B}{\de\Q} + \df{1}{\sin\Q}\df{\de A}{\de \f} &= 0
+\end{aligned}\right.
+&& \Rightarrow &&
+\left\{\begin{aligned}
+L(A) &= 0\\
+L(B) &= 0
+\end{aligned}\right.
+\end{align}
+Данное преобразование уравнений позволяет устранить связь между функциями $A$ и $B.$
+
+Применим преобразование \cref{eq_transform} к уравнениям \cref{eq_2.1,eq_3.1}. Получим следующие уравнения:
+\begin{align}
+\begin{split}
+\left[\fr{\la\l+\mu\l}{r\s}\fr{\de}{\de r\s} + \fr{\mu'\l}{r\s} + \fr{2\la\l+4\mu\l}{r\s^2}\right]&L({u\l}_r)+\\
+\left[\mu\l\fr{\de^2}{\de r\s^2} + \left(\mu'\l+\fr{2\mu\l}{r\s}\right)\fr{\de}{\de r\s} - \fr{\mu'\l}{r\s} + p\l\om^2\right]&L({u\l}_2) + \\
+ + \fr{\la\l+2\mu\l}{r\s^2}&L^2({u\l}_2) = 0,
+\end{split}\label{eq_2.2}\\
+\begin{split}
+\left[\mu\fr{\de^2}{\de r\s^2} + \left(\mu'\l + \fr{2\mu\l}{r\s}\right)\fr{\de}{\de r\s} - \fr{\mu'\l}{r\s} + p\l\om^2\right]&L({u\l}_3) + \\
+\fr{\mu\l}{r\s^2}&L^2({u\l}_3) = 0.\label{eq_3.2}
+\end{split}
+\end{align}
+
+В результате получили систему, состоящую из уравнений \cref{eq_1.1,eq_2.2,eq_3.2}.
+
+Функции ${u\l}_r, {u\l}_2$ и ${u\l}_3$ также будем искать в виде разложений по сферическим функциям:
+\begin{equation}\label{eq_uru2u3}
 \begin{split}
 {u\l}_r(r\s, \Q\s, \f\s) = \sum\limits_{n=0}^\infty\sum\limits_{m=-n}^n U_{1mn}(r\s)P_n^m(\cos\Q\s)\e^{im\f\s},\\
 {u\l}_2(r\s, \Q\s, \f\s) = \sum\limits_{n=0}^\infty\sum\limits_{m=-n}^n U_{2mn}(r\s)P_n^m(\cos\Q\s)\e^{im\f\s},\\
 {u\l}_3(r\s, \Q\s, \f\s) = \sum\limits_{n=0}^\infty\sum\limits_{m=-n}^n U_{3mn}(r\s)P_n^m(\cos\Q\s)\e^{im\f\s}.\\
 \end{split}
 \end{equation}
+
+Коэффициенты ${A\sc}_{mn}, {B\c}_{mn}, {A\s}_{mn}, {B\s}_{mn}, {C\s}_{mn}, {D\s}_{mn}, {E\s}_{mn}$ и $ {F\s}_{mn}$ разложений \cref{eq_psc,eq_ps,eq_pc,eq_v,eq_w}, а также функции $U_{1mn},U_{2mn}$ и $U_{3mn}$ из разложений \cref{eq_uru2u3} подлежат определению из граничных условий, которые заключаются в равенстве нормальных скоростей частиц упругой среды и жидкости на внешней поверхности слоя и внутренней поверхности полого шара; равенстве на них нормального напряжения и акустического давления; отсутствии на этих поверхностях касательных напряжений. На внутренней поверхности слоя при переходе через границу раздела упругих сред должны быть непрерывны составляющие вектора смещения частиц, а также нормальные и тангенциальные напряжения. Имеем:
+\begin{align}
+\text{при }r\c &= R\c: \q  &  {\si\s}_{rr} &= -P\c,  &  {\si\s}_{r\Q} &= 0,  &  {\si\s}_{r\f} &= 0, \notag\\
+&&  -i\om {u\s}_r &= {v\c}_r;\label{eq_border_1.1}\\
+\text{при }r\s &= R\s: \q  &  {\si\s}_{rr} &= {\si\l}_{rr},  &  {\si\s}_{r\Q} &= {\si\l}_{r\Q},  &  {\si\s}_{r\f} &= {\si\l}_{r\f}, &&\notag\\
+&&  {u\s}_r &= {u\l}_r, \q & {u\s}_\Q &= {u\l}_\Q, \q & {u\s}_\f &= {u\l}_\f;\label{eq_border_2.1}\\
+\text{при }r\s &= R\l: \q  &  {\si\l}_{rr} &= -P\en,  &  {\si\l}_{r\Q} &= 0,  &  {\si\l}_{r\f} &= 0, \notag\\
+&&  -i\om {u\l}_r &= {v\en}_{r},\label{eq_border_3.1}
+\end{align}
+где ${v\c}_r=\de\P\c/\de r, \q {v\en}_r=\de\P\en/\de r$~--- радиальная компонента скорости частиц в жидкости внутри полости $\v\c$ и в окружающем пространстве $\v\en$ соответственно.
+
+Используя выражения \cref{eq_ven,tensor comp,eq_v2v3}, запишем граничные условия \cref{eq_border_3.1} через функции $\P\o, \P\sc, {u\l}_r, {u\l}_2$ и ${u\l}_3.$ Получим для $r\s = R\l:$
+\begin{align}
+&\biggl(\la\l+2\mu\l\biggr)\fr{\de {u\l}_r}{\de r\s} + \fr{2\la\l}{r\s}{u\l}_r + \fr{\la\l}{r\s}L({u\l}_2) = -ip\en\om\left(\P\o+\P\sc\right);\label{eq_Rl.2}\\
+\mu\l&\fr{\de}{\de \Q\s}\left(\fr{{u\l}_r-{u\l}_2}{r\s} + \fr{\de {u\l}_2}{\de r\s}\right) + \fr{\mu\l}{\sin\Q\s}\fr{\de}{\de \f\s}\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right) = 0;\label{eq_Rl.3}\\
+\fr{\mu\l}{\sin\Q\s}&\fr{\de}{\de \f\s}\left(\fr{{u\l}_r-{u\l}_2}{r\s} + \fr{\de {u\l}_2}{\de r\s}\right) - \mu\l\fr{\de}{\de \Q\s}\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right) = 0;\label{eq_Rl.4}
+\end{align}
+\begin{equation}\label{eq_Rl.1}
+-i\om{u\l}_r = \fr{\de(\P\o+\P\sc)}{\de r\s} .
+\end{equation}
+
+
+Рассмотрим уравнения \cref{eq_Rl.3,eq_Rl.4}. Применим к ним преобразование \cref{eq_transform}. Получим следующие уравнения:
+\begin{align}
+\mu\l \,L\!\left(\fr{{u\l}_r-{u\l}_2}{r\s} + \fr{\de {u\l}_2}{\de r\s}\right)&\Biggr|_{r\s = R\l} = 0.\label{eq_Rl.3a}\\
+\mu\l \,L\!\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right)&\Biggr|_{r\s = R\l} = 0.\label{eq_Rl.4a}
+\end{align}
+
+
+Аналогично, используя выражения \cref{eq_us,tensor comp,eq_v2v3}, запишем граничные условия \cref{eq_border_2.1} через функции ${u\l}_r, {u\l}_2, {u\l}_3, \P\s, V$ и $W.$ Для $r\s = R\s$ получим:
+\begin{align}
+\begin{split}
+&\biggl(\la\l+2\mu\l\biggr)\fr{\de {u\l}_r}{\de r\s} + \fr{2\la\l}{r\s}{u\l}_r + \fr{\la\l}{r\s}L({u\l}_2) = \\
+= \fr{\la\s}{r\s^2}&\left(\fr{\de}{\de r\s}\left(r\s^2\fr{\de\P\s}{\de r\s}\right)+L(\P\s)\right) + 2\mu\s\left(\fr{\de^2 \P\s}{\de r\s^2} - \fr{\de}{\de r\s}\left(\fr{L(W)}{r\s}\right)\right);
+\end{split}\label{eq_Rs.1}\\
+\begin{split}
+\mu\l&\fr{\de}{\de \Q\s}\left(\fr{{u\l}_r-{u\l}_2}{r\s} + \fr{\de {u\l}_2}{\de r\s}\right) + \fr{\mu\l}{\sin\Q\s}\fr{\de}{\de \f\s}\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right) = \\
+= 2\mu\s&\fr{\de^2}{\de r\s\de\Q\s}\left(\fr{\P\s}{r\s}\right)+ \mu\s\fr{\de}{\de\Q\s}\left(\fr{\de^2 W}{\de r\s^2} - \fr{L(W) + 2W}{r\s^2} \right) + \\
++ \fr{\mu\s r\s}{\sin\Q\s}&\fr{\de^2}{\de r\s\de\f\s}\left(\fr{V}{r\s}\right)
+\end{split}\label{eq_Rs.2}\\
+\begin{split}
+\fr{\mu\l}{\sin\Q\s}&\fr{\de}{\de \f\s}\left(\fr{{u\l}_r-{u\l}_2}{r\s} + \fr{\de {u\l}_2}{\de r\s}\right) - \mu\l\fr{\de}{\de \Q\s}\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right) = \\
+= \fr{2\mu\s}{\sin\Q\s}&\fr{\de^2}{\de r\s\de\f\s}\left(\fr{\P\s}{r\s}\right)+ \fr{\mu\s}{\sin\Q\s}\fr{\de}{\de\f\s}\left(\fr{\de^2 W}{\de r\s^2} - \fr{L(W) + 2W}{r\s^2} \right) - \\
+- \mu\s r\s&\fr{\de^2}{\de r\s\de\Q\s}\left(\fr{V}{r\s}\right)
+\end{split}\label{eq_Rs.3}
+\end{align}
+\begin{align}
+{u\l}_r &= \fr{\de \P\s}{\de r\s} - \fr{1}{r\s}L(W),\label{eq_Rs.4}\\
+\df{\de {u\l}_2}{\de\Q\s} + \fr1{\sin\Q\s}\fr{\de {u\l}_3}{\de\f\s} &= \fr{1}{r\s}\fr{\de}{\de \Q\s} \left(\P\s + \fr{\de}{\de r\s}\biggl(r\s W\biggr)\right) + \fr{1}{\sin\Q\s}\fr{\de V}{\de\f\s},\label{eq_Rs.5}\\
+\df1{\sin\Q\s}\df{\de {u\l}_2}{\de\f\s} - \df{\de {u\l}_3}{\de\Q\s} &= \fr{1}{r\s \sin\Q\s}\fr{\de}{\de \f\s}\left(\P\s + \fr{\de}{\de r\s}\biggl(r\s W\biggr)\right) - \fr{\de V}{\de \Q\s},\label{eq_Rs.6}
+\end{align}
+
+Рассмотрим уравнения \cref{eq_Rs.2,eq_Rs.3}, а также уравнения \cref{eq_Rs.5,eq_Rs.6}. Применим к ним преобразование \cref{eq_transform}. Получим следующие уравнения:
+\begin{align}
+\mu\l L\!\left(\fr{{u\l}_r-{u\l}_2}{r\s} + \fr{\de {u\l}_2}{\de r\s}\right) &= \mu\s L\!\left(2\fr{\de}{\de r\s}\left(\fr{\P\s}{r\s}\right)+  \fr{\de^2 W}{\de r\s^2} - \fr{L(W) + 2W}{r\s^2} \right);\label{eq_Rs.2.2}\\
+\mu\l L\!\left(\fr{\de {u\l}_3}{\de r\s} - \fr{{u\l}_3}{r\s}\right) &= \mu\s r\s\fr{\de}{\de r\s}L\!\left(\fr{V}{r\s}\right);\label{eq_Rs.3.2}\\
+L({u\l}_2) &= \fr{1}{r\s}L\!\left(\P\s + \fr{\de}{\de r\s}\biggl(r\s W\biggr)\right);\label{eq_Rs.5.2}\\
+L({u\l}_3) &= L(V).\label{eq_Rs.6.2}
+\end{align}
+
+Запишем граничные условия \cref{eq_border_1.1} через $\P\c, \P\s, V$ и $W,$ используя выражения \cref{eq_vc,eq_us,tensor comp}. Для $r\c=R\c$ получим:
+\begin{align}
+\begin{split}
+\fr{\la\s}{r\c^2}&\left(\fr{\de}{\de r\c}\left(r\c^2\fr{\de\P\s}{\de r\c}\right)+L(\P\s)\right) + 2\mu\s\left(\fr{\de^2 \P\s}{\de r\c^2} - \fr{\de}{\de r\c}\left(\fr{L(W)}{r\c}\right)\right) = \\
+& = - ip\c\om\P\c;
+\end{split}\label{eq_Rc.1}\\
+\begin{split}
+2\mu\s&\fr{\de^2}{\de r\c\de\Q\c}\left(\fr{\P\s}{r\c}\right)+ \mu\s\fr{\de}{\de\Q\c}\left(\fr{\de^2 W}{\de r\c^2} - \fr{L(W) + 2W}{r\c^2}\right) + \\
++ \fr{\mu\s r\c}{\sin\Q\c}&\fr{\de^2}{\de r\c\de\f\c}\left(\fr{V}{r\c}\right) = 0;
+\end{split}\label{eq_Rc.2}\\
+\begin{split}
+\fr{2\mu\s}{\sin\Q\c}&\fr{\de^2}{\de r\c\de\f\c}\left(\fr{\P\s}{r\c}\right)+ \fr{\mu\s}{\sin\Q\c}\fr{\de}{\de\f\c}\left(\fr{\de^2 W}{\de r\c^2} - \fr{L(W) + 2W}{r\c^2}\right) - \\
+- \mu\s r\c&\fr{\de^2}{\de r\c\de\Q\c}\left(\fr{V}{r\c}\right) = 0;
+\end{split}\label{eq_Rc.3}
+\end{align}
+\begin{equation}\label{eq_Rc.4}
+-i\om \left(\fr{\de \P\s}{\de r\c} - \fr{1}{r\c}L(W)\right) = \fr{\de \P\c}{\de r\c}.
+\end{equation}
+
+Рассмотрим уравнения \cref{eq_Rc.2,eq_Rc.3}. Применим к ним преобразование \cref{eq_transform}. Получим следующие уравнения:
+\begin{align}
+\mu\s L\!\left(2\fr{\de}{\de r\c}\left(\fr{\P\s}{r\c}\right) + \fr{\de^2 W}{\de r\c^2} - \fr{L(W) + 2W}{r\c^2}\right)&\Biggr|_{r\c=R\c}=0;\label{eq_Rc.2.2}\\
+\mu\s r\c\fr{\de}{\de r\c}L\!\left(\fr{V}{r\c}\right)&\Biggr|_{r\c=R\c} = 0.\label{eq_Rc.3.2}
+\end{align}
+
+Анализ уравнений движения и граничных условий позволяют утверждать, что при ${u\l}_3 = V = 0$ будут удовлетворяться уравнения \cref{eq_V,eq_3.2}. а также граничные условия \cref{eq_Rl.4a,eq_Rs.3.2,eq_Rs.6.2,eq_Rc.3.2}, где присутствует эти функции.
+
+Таким образом,
+$$
+{C\s}_{mn} = {D\s}_{mn} = U_{3mn} = 0.
+$$
+
+Подставив разложения \cref{eq_uru2u3} в уравнения \cref{eq_1.1,eq_2.2}, воспользовавшись уравнением для присоединенных многочленов Лежандра и свойством ортогональности этих многочленов, получим для каждой пары индексов $m,n \q(n = 0,1,\ldots; \lvert m\rvert\leq n)$ систему линейных однородных обыкновенных дифференциальных уравнений второго порядка относительно неизвестных функций \\ $U_{1mn}(r\s)$ и $ U_{2mn}(r\s):$
+\begin{align}
+\begin{split}
+&(\la\l + 2\mu\l)U''_{1mn} + \\
++ &\left(\la'\l+2\mu'\l + \fr{2\la\l+4\mu\l}{r\s}\right)U'_{1mn} + \left(\fr{\la\l+\mu\l}{r\s}\right)\bigl(-n(n+1)\bigr)U'_{2mn} + \\
++ &\left(\fr{\mu\l}{r\s^2}\Bigl(-n(n+1)\Bigr) + \fr{2\la'\l}{r\s} - \fr{2\la\l + 4\mu\l}{r\s^2} + p\l\om^2\right)U_{1mn} + \\
++ &\left(\fr{\la'\l}{r\s} - \fr{\la\l+3\mu\l}{r\s^2}\right)\bigl(-n(n+1)\bigr)U_{2mn} = 0;
+\end{split}\label{eq_final_1}\\
+\begin{split}
+&\mu\l\bigl(-n(n+1)\bigr)U''_{2mn} +\\
++ &\fr{\la\l+\mu\l}{r\s}\Bigl(-n(n+1)\Bigr)U'_{1mn} + \left(\mu'\l+\fr{2\mu\l}{r\s}\right)\bigl(-n(n+1)\bigr)U'_{2mn} + \\
++ &\left(\fr{\mu'\l}{r\s} + \fr{2\la\l+4\mu\l}{r\s^2}\right)\bigl(-n(n+1)\bigr)U_{1mn} + \\
++ &\left(\fr{\la\l+2\mu\l}{r\s^2}\Bigl(-n(n+1)\Bigr) - \fr{\mu'\l}{r\s} + p\l\om^2\right)\bigl(-n(n+1)\bigr)U_{2mn} = 0.
+\end{split}\label{eq_final_2}
+\end{align}
+
+Подставим разложения \cref{eq_psc,eq_pc,eq_uru2u3} в уравнение \cref{eq_Rl.1} и выразим ${A\sc}_{mn}:$
+\begin{equation}\label{eq_Psc_U1}
+{A\sc}_{mn} = -\fr{i\om U_{1mn}+k\en {A\o}_{mn}j'_n(k\en r\s)}{k\en h'_n(k\en r\s)}.
+\end{equation}
+Подставим разложения \cref{eq_psc,eq_pc,eq_uru2u3} в уравнения \cref{eq_Rl.2,eq_Rl.3a} с учетом найденного ${A\sc}_{mn}$ и значения вронскиана для сферических функций Бесселя $j_n(x)h'_n(x)-j'_n(x)h_n(x)=i/x^2:$
+\begin{align}
+\begin{split}
+&(\la\l+2\mu\l)U'_{1mn} + \left(\fr{2\la\l}{r\s} + \fr{p\en\om^2 h_n(k\en r\s)}{k\en h'_n(k\en r\s)}\right)U_{1mn} + \\
++& \fr{\la\l}{r\s}\bigl(-n(n+1)\bigr)U_{2mn}
+= \fr{p\en\om {A\o}_{mn}}{(k\en r\s)^2 h'_n(k\en r\s)};
+\end{split}\\
+&\mu\l\bigl(-n(n+1)\bigr)\left(\fr{U_{1mn}-U_{2mn}}{r\s} + U'_{2mn}\right) = 0.
+\end{align}
+
+Воспользуемся теоремы сложения для сферических волновых функций:
+\begin{align*}
+h_n({k\s}_t r\c)P_n^m(\cos\Q\c)\e^{im\f\c} &= \sum_{p=0}^{\infty}\sum_{q=-p}^{p}R_{mnpqt} h_p({k\s}_t r\s)P_p^{m-q}(\cos\Q\s)\e^{i(m-q)\f\s};\\
+j_n(k\c r\s)P_n^m(\cos\Q\s)\e^{im\f\s} &= \sum_{p=0}^{\infty}\sum_{q=-p}^{p}Q_{mnpq} j_p(k\c r\c)P_p^{q}(\cos\Q\c)\e^{iq\f\c},\\
+\end{align*}
+где
+\begin{align*}
+R_{mnpqt} = 2i^{p-n}&\sum_{s=\lvert p-m\rvert}^{p+n} i^s \fr{b_p^{(nmsq)}}{N_{qs}} j_s({k\s}_t {r\c}\s)P_s^{q}(\cos{\Q\c}\s)\e^{iq{\f\c}\s};\\
+Q_{mnpq} = \fr{2i^{p-n}}{N_{qp}}&\sum_{s=\lvert p-m\rvert}^{p+n} i^s b_s^{(nmpq)} j_s(k\c {r\s}\c)P_s^{m-q}(\cos{\Q\s}\c)\e^{i(m-q){\f\s}\c};\\
+N_{mn}=\fr{2}{2n+1}&\fr{(n+m)!}{(n-m)!}
+\end{align*}
+чтобы привести разложения \cref{eq_ps,eq_w} к системе координат ($r\s,\Q\s, \f\s$) для граничных условий при $r\s=R\s:$
+\begin{align}
+\begin{split}
+\P\s = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n
+  &{A\s}_{mn} \sum_{p=0}^{\infty}\sum_{q=-p}^{p}R_{mnpql} h_p({k\s}_l r\s)P_p^{m-q}(\cos\Q\s)\e^{i(m-q)\f\s} +\\
++ &{B\s}_{mn} j_n({k\s}_lr\s)P_n^m(\cos\Q\s)\e^{im\f\s}
+\end{split}\label{eq_new_ps}\\
+\begin{split}
+W = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n &{E\s}_{mn} \sum_{p=0}^{\infty}\sum_{q=-p}^{p}R_{mnpq\t} h_p({k\s}_\t r\s)P_p^{m-q}(\cos\Q\s)\e^{i(m-q)\f\s} + \\
++ &{F\s}_{mn} j_n({k\s}_\t r\s)P_n^m(\cos\Q\s)\e^{im\f\s}.
+\end{split}\label{eq_new_w}
+\end{align}
+
+А подставив разложения \cref{eq_uru2u3,eq_new_ps,eq_new_w} в граничные условия \cref{eq_Rs.1,eq_Rs.4,eq_Rs.2.2,eq_Rs.5.2}, найдем оставшиеся краевые условия и сможем решить  систему дифференциальных уравнений \cref{eq_final_1,eq_final_2}. После ее решения определим коэффициенты \\
+${A\sc}_{nm}, {B\c}_{nm}, {A\s}_{nm}, {B\s}_{nm}, {E\s}_{nm}, {F\s}_{nm}, {U}_{1nm}$ и ${U}_{2nm},$ разложений  \cref{eq_psc,eq_ps,eq_pc,eq_v,eq_w,eq_uru2u3} для каждой пары индексов $m,n,$ а зная коэффициенты ${A\sc}_{nm}$, по формуле \cref{eq_psc} найдем акустическое поле, рассеяное упругой сферой, имеющей произвольно расположенную полость и неоднородное покрытие.
+
 \newpage
 \section*{ЗАКЛЮЧЕНИЕ}
 \addcontentsline{toc}{section}{ЗАКЛЮЧЕНИЕ}
-Была поставлена задача о~дифракции плоских звуковых волн на~упругой сфере, имеющей произвольно расположенную полость и неоднородное покрытие. В~данной работе приведены основные уравнения колебаний, а также разложения в~ряд искомых функций для~внешней среды сферы, а также полости тела.
-
+Была поставлена задача о~дифракции плоских звуковых волн на~упругой сфере, имеющей произвольно расположенную полость и неоднородное покрытие. В~данной работе приведены основные уравнения колебаний, а также разложения в~ряд искомых функций для~внешней среды сферы, а также полости тела, получено аналитическое описание акустического поля, рассеяного телом.
 \end{document}
