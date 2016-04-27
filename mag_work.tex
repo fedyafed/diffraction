@@ -580,26 +580,37 @@ $$
 
 Воспользуемся теоремы сложения для сферических волновых функций:
 \begin{align*}
-h_n({k\s}_t r\c)P_n^m(\cos\Q\c)\e^{im\f\c} &= \sum_{p=0}^{\infty}\sum_{q=-p}^{p}R_{mnpqt} h_p({k\s}_t r\s)P_p^{m-q}(\cos\Q\s)\e^{i(m-q)\f\s};\\
-j_n(k\c r\s)P_n^m(\cos\Q\s)\e^{im\f\s} &= \sum_{p=0}^{\infty}\sum_{q=-p}^{p}Q_{mnpq} j_p(k\c r\c)P_p^{q}(\cos\Q\c)\e^{iq\f\c},\\
+h_n({k\s}_t r\c)P_n^m(\cos\Q\c)\e^{im\f\c} &= \sum_{p=0}^{\infty}\sum_{q=-p}^{p}{R_t}_{mnpq} h_p({k\s}_t r\s)P_p^{m-q}(\cos\Q\s)\e^{i(m-q)\f\s};\\
+j_n({k\s}_t r\s)P_n^m(\cos\Q\s)\e^{im\f\s} &= \sum_{p=0}^{\infty}\sum_{q=-p}^{p}{Q_t}_{mnpq} j_p({k\s}_t r\c)P_p^{q}(\cos\Q\c)\e^{iq\f\c},\\
 \end{align*}
 где
 \begin{align*}
-R_{mnpqt} = 2i^{p-n}&\sum_{s=\lvert p-m\rvert}^{p+n} i^s \fr{b_p^{(nmsq)}}{N_{qs}} j_s({k\s}_t {r\c}\s)P_s^{q}(\cos{\Q\c}\s)\e^{iq{\f\c}\s};\\
-Q_{mnpq} = \fr{2i^{p-n}}{N_{qp}}&\sum_{s=\lvert p-m\rvert}^{p+n} i^s b_s^{(nmpq)} j_s(k\c {r\s}\c)P_s^{m-q}(\cos{\Q\s}\c)\e^{i(m-q){\f\s}\c};\\
+{R_t}_{mnpq} = 2i^{p-n}&\sum_{s=\lvert p-m\rvert}^{p+n} i^s \fr{b_p^{(nmsq)}}{N_{qs}} j_s({k\s}_t {r\c}\s)P_s^{q}(\cos{\Q\c}\s)\e^{iq{\f\c}\s};\\
+{Q_t}_{mnpq} = \fr{2i^{p-n}}{N_{qp}}&\sum_{s=\lvert p-m\rvert}^{p+n} i^s b_s^{(nmpq)} j_s({k\s}_t {r\s}\c)P_s^{m-q}(\cos{\Q\s}\c)\e^{i(m-q){\f\s}\c};\\
 N_{mn}=\fr{2}{2n+1}&\fr{(n+m)!}{(n-m)!}
 \end{align*}
 чтобы привести разложения \cref{eq_ps,eq_w} к системе координат ($r\s,\Q\s, \f\s$) для граничных условий при $r\s=R\s:$
 \begin{align}
 \begin{split}
 \P\s = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n 
-  &{A\s}_{mn} \sum_{p=0}^{\infty}\sum_{q=-p}^{p}R_{mnpql} h_p({k\s}_l r\s)P_p^{m-q}(\cos\Q\s)\e^{i(m-q)\f\s} +\\
-+ &{B\s}_{mn} j_n({k\s}_lr\s)P_n^m(\cos\Q\s)\e^{im\f\s}
-\end{split}\label{eq_new_ps}\\
+  &{A\s}_{mn} \sum_{p=0}^{\infty}\sum_{q=-p}^{p}{R_l}_{mnpq} h_p({k\s}_l r\s)P_p^{m-q}(\cos\Q\s)\e^{i(m-q)\f\s} +\\
++ &{B\s}_{mn} j_n({k\s}_lr\s)P_n^m(\cos\Q\s)\e^{im\f\s};
+\end{split}\label{eq_new_ps_s}\\
 \begin{split}
-W = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n &{E\s}_{mn} \sum_{p=0}^{\infty}\sum_{q=-p}^{p}R_{mnpq\t} h_p({k\s}_\t r\s)P_p^{m-q}(\cos\Q\s)\e^{i(m-q)\f\s} + \\
-+ &{F\s}_{mn} j_n({k\s}_\t r\s)P_n^m(\cos\Q\s)\e^{im\f\s}.
-\end{split}\label{eq_new_w}
+W = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n &{E\s}_{mn} \sum_{p=0}^{\infty}\sum_{q=-p}^{p}{R_\t}_{mnpq} h_p({k\s}_\t r\s)P_p^{m-q}(\cos\Q\s)\e^{i(m-q)\f\s} + \\
++ &{F\s}_{mn} j_n({k\s}_\t r\s)P_n^m(\cos\Q\s)\e^{im\f\s},
+\end{split}\label{eq_new_w_s}
+\end{align}
+а так же к системе координат ($r\c,\Q\c, \f\c$) для граничных условий при $r\c=R\c:$
+\begin{align}
+\begin{split}
+\P\s = &\sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n {A\s}_{mn} h_n({k\s}_lr\c)P_n^m(\cos\Q\c)\e^{im\f\c} +\\
+ + {B\s}_{mn} & \sum_{p=0}^{\infty}\sum_{q=-p}^{p}{Q_l}_{mnpq} j_p({k\s}_l r\c)P_p^{q}(\cos\Q\c)\e^{iq\f\c}
+\end{split}\label{eq_new_ps_c}\\
+\begin{split}
+W = &\sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n {E\s}_{mn} h_n({k\s}_\t r\c)P_n^m(\cos\Q\c)\e^{im\f\c} + \\
++ {F\s}_{mn} &\sum_{p=0}^{\infty}\sum_{q=-p}^{p}{Q_\t}_{mnpq} j_p({k\s}_\t r\c)P_p^{q}(\cos\Q\c)\e^{iq\f\c}
+\end{split}\label{eq_new_w_c}
 \end{align}
 
 А подставив разложения \cref{eq_uru2u3,eq_new_ps,eq_new_w} в граничные условия \cref{eq_Rs.1,eq_Rs.4,eq_Rs.2.2,eq_Rs.5.2}, найдем оставшиеся краевые условия и сможем решить  систему дифференциальных уравнений \cref{eq_final_1,eq_final_2}. После ее решения определим коэффициенты \\
