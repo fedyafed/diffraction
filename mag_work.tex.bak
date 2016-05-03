@@ -26,7 +26,6 @@
 \newpage
 \section{МАТЕМАТИЧЕСКОЕ МОДЕЛИРОВАНИЕ РАСПРОСТРАНЕНИЯ ЗВУКОВЫХ ВОЛН}
 
-\newpage
 \subsection{Распространение звука в идеальной жидкости}
 
 Для математического процесса моделирования распространения звука в~идеальной среде воспользуемся полной системой уравнений гидромеханики идеальной жидкости, описывающей любые движения идеальной жидкости. Эта система включает уравнение движения идеальной жидкости (уравнение Эйлера), уравнение неразрывности и~уравнение физического состояния.
@@ -157,7 +156,6 @@ $$
 \newpage
 \section{ДИФРАКЦИЯ ЗВУКОВЫХ ВОЛН НА УПРУГОЙ СФЕРЕ, ИМЕЮЩЕЙ ПРОИЗВОЛЬНО РАСПОЛОЖЕННУЮ ПОЛОСТЬ И НЕОДНОРОДНОЕ ПОКРЫТИЕ}
 
-\newpage
 \subsection{Обзор литературы по проблеме исследования}
 \todo{Известия ТулГУ №3 Ларин; статьи Толоконникова}
 
@@ -535,6 +533,14 @@ L({u\l}_3) &= L(V).\label{eq_Rs.6.2}
 -i\om \left(\fr{\de \P\s}{\de r\c} - \fr{1}{r\c}L(W)\right) = \fr{\de \P\c}{\de r\c}.
 \end{equation}
 
+Упростим уравнение \cref{eq_Rc.1}. Для этого уравнение \cref{eq_Rc.4} продифференцируем по $r\s$, умножим на $-2\mu\s i/\om$ и сложим с уравнением \cref{eq_Rc.1}. Получим следующее уравнение:
+\begin{equation}\label{eq_Rc.1.2}
+\begin{split}
+\fr{\la\s}{r\c^2}&\left(\fr{\de}{\de r\c}\left(r\c^2\fr{\de\P\s}{\de r\c}\right)+L(\P\s)\right) = -\fr{i}{\om} \left(2\mu\s \fr{\de^2 \P\c}{\de r\c^2} + p\c\om^2\P\c\right).
+\end{split}
+\end{equation}
+
+
 Рассмотрим уравнения \cref{eq_Rc.2,eq_Rc.3}. Применим к ним преобразование \cref{eq_transform}. Получим следующие уравнения:
 \begin{align}
 \mu\s L\!\left(2\fr{\de}{\de r\c}\left(\fr{\P\s}{r\c}\right) + \fr{\de^2 W}{\de r\c^2} - \fr{L(W) + 2W}{r\c^2}\right)&\Biggr|_{r\c=R\c}=0;\label{eq_Rc.2.2}\\
@@ -568,6 +574,7 @@ $$
 \begin{equation}\label{eq_Psc_U1}
 {A\sc}_{mn} = -\fr{i\om U_{1mn}+k\en {A\o}_{mn}j'_n(k\en r\s)}{k\en h'_n(k\en r\s)}.
 \end{equation}
+
 Подставим разложения \cref{eq_psc,eq_pc,eq_uru2u3} в уравнения \cref{eq_Rl.2,eq_Rl.3a} с учетом найденного ${A\sc}_{mn}$ и значения вронскиана для сферических функций Бесселя $j_n(x)h'_n(x)-j'_n(x)h_n(x)=i/x^2:$
 \begin{align}
 \begin{split}
@@ -580,24 +587,24 @@ $$
 
 Воспользуемся теоремы сложения для сферических волновых функций:
 \begin{align*}
-h_n({k\s}_t r\c)P_n^m(\cos\Q\c)\e^{im\f\c} &= \sum_{p=0}^{\infty}\sum_{q=-p}^{p}{R_t}_{mnpq} h_p({k\s}_t r\s)P_p^{m-q}(\cos\Q\s)\e^{i(m-q)\f\s};\\
-j_n({k\s}_t r\s)P_n^m(\cos\Q\s)\e^{im\f\s} &= \sum_{p=0}^{\infty}\sum_{q=-p}^{p}{Q_t}_{mnpq} j_p({k\s}_t r\c)P_p^{q}(\cos\Q\c)\e^{iq\f\c},\\
+h_n({k\s}_t r\c)P_n^m(\cos\Q\c)\e^{im\f\c} &= \sum_{q=0}^{\infty}\sum_{p=-q}^{q}{R_t}_{mnpq} h_q({k\s}_t r\s)P_q^{m-p}(\cos\Q\s)\e^{i(m-p)\f\s};\\
+j_n({k\s}_t r\s)P_n^m(\cos\Q\s)\e^{im\f\s} &= \sum_{q=0}^{\infty}\sum_{p=-q}^{q}{Q_t}_{mnpq} j_q({k\s}_t r\c)P_q^{p}(\cos\Q\c)\e^{ip\f\c},\\
 \end{align*}
 где
 \begin{align*}
-{R_t}_{mnpq} = 2i^{p-n}&\sum_{s=\lvert p-m\rvert}^{p+n} i^s \fr{b_p^{(nmsq)}}{N_{qs}} j_s({k\s}_t {r\c}\s)P_s^{q}(\cos{\Q\c}\s)\e^{iq{\f\c}\s};\\
-{Q_t}_{mnpq} = \fr{2i^{p-n}}{N_{qp}}&\sum_{s=\lvert p-m\rvert}^{p+n} i^s b_s^{(nmpq)} j_s({k\s}_t {r\s}\c)P_s^{m-q}(\cos{\Q\s}\c)\e^{i(m-q){\f\s}\c};\\
+{R_t}_{mnpq} = 2i^{q-n}&\sum_{s=\lvert q-n\rvert}^{q+n} i^s \fr{b_q^{(nmsp)}}{N_{ps}} j_s({k\s}_t {r\c}\s)P_s^{p}(\cos{\Q\c}\s)\e^{ip{\f\c}\s};\\
+{Q_t}_{mnpq} = \fr{2i^{q-n}}{N_{pq}}&\sum_{s=\lvert q-n\rvert}^{q+n} i^s b_s^{(nmqp)} j_s({k\s}_t {r\s}\c)P_s^{m-p}(\cos{\Q\s}\c)\e^{i(m-p){\f\s}\c};\\
 N_{mn}=\fr{2}{2n+1}&\fr{(n+m)!}{(n-m)!}
 \end{align*}
 чтобы привести разложения \cref{eq_ps,eq_w} к системе координат ($r\s,\Q\s, \f\s$) для граничных условий при $r\s=R\s:$
 \begin{align}
 \begin{split}
 \P\s = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n 
-  &{A\s}_{mn} \sum_{p=0}^{\infty}\sum_{q=-p}^{p}{R_l}_{mnpq} h_p({k\s}_l r\s)P_p^{m-q}(\cos\Q\s)\e^{i(m-q)\f\s} +\\
+  &{A\s}_{mn} \sum_{q=0}^{\infty}\sum_{p=-q}^{q}{R_l}_{mnpq} h_q({k\s}_l r\s)P_q^{m-p}(\cos\Q\s)\e^{i(m-p)\f\s} +\\
 + &{B\s}_{mn} j_n({k\s}_lr\s)P_n^m(\cos\Q\s)\e^{im\f\s};
 \end{split}\label{eq_new_ps_s}\\
 \begin{split}
-W = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n &{E\s}_{mn} \sum_{p=0}^{\infty}\sum_{q=-p}^{p}{R_\t}_{mnpq} h_p({k\s}_\t r\s)P_p^{m-q}(\cos\Q\s)\e^{i(m-q)\f\s} + \\
+W = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n &{E\s}_{mn} \sum_{q=0}^{\infty}\sum_{p=-q}^{q}{R_\t}_{mnpq} h_q({k\s}_\t r\s)P_q^{m-p}(\cos\Q\s)\e^{i(m-p)\f\s} + \\
 + &{F\s}_{mn} j_n({k\s}_\t r\s)P_n^m(\cos\Q\s)\e^{im\f\s},
 \end{split}\label{eq_new_w_s}
 \end{align}
@@ -605,16 +612,16 @@ W = \sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n &{E\s}_{mn} \sum_{p=0}^{\infty
 \begin{align}
 \begin{split}
 \P\s = &\sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n {A\s}_{mn} h_n({k\s}_lr\c)P_n^m(\cos\Q\c)\e^{im\f\c} +\\
- + {B\s}_{mn} & \sum_{p=0}^{\infty}\sum_{q=-p}^{p}{Q_l}_{mnpq} j_p({k\s}_l r\c)P_p^{q}(\cos\Q\c)\e^{iq\f\c}
+ + {B\s}_{mn} & \sum_{q=0}^{\infty}\sum_{p=-q}^{q}{Q_l}_{mnpq} j_q({k\s}_l r\c)P_q^{p}(\cos\Q\c)\e^{ip\f\c}
 \end{split}\label{eq_new_ps_c}\\
 \begin{split}
 W = &\sum\limits_{n=0}^\infty \sum\limits_{m=-n}^n {E\s}_{mn} h_n({k\s}_\t r\c)P_n^m(\cos\Q\c)\e^{im\f\c} + \\
-+ {F\s}_{mn} &\sum_{p=0}^{\infty}\sum_{q=-p}^{p}{Q_\t}_{mnpq} j_p({k\s}_\t r\c)P_p^{q}(\cos\Q\c)\e^{iq\f\c}
++ {F\s}_{mn} &\sum_{q=0}^{\infty}\sum_{p=-q}^{q}{Q_\t}_{mnpq} j_q({k\s}_\t r\c)P_q^{p}(\cos\Q\c)\e^{ip\f\c}
 \end{split}\label{eq_new_w_c}
 \end{align}
 
-А подставив разложения \cref{eq_uru2u3,eq_new_ps,eq_new_w} в граничные условия \cref{eq_Rs.1,eq_Rs.4,eq_Rs.2.2,eq_Rs.5.2}, найдем оставшиеся краевые условия и сможем решить  систему дифференциальных уравнений \cref{eq_final_1,eq_final_2}. После ее решения определим коэффициенты \\
-${A\sc}_{nm}, {B\c}_{nm}, {A\s}_{nm}, {B\s}_{nm}, {E\s}_{nm}, {F\s}_{nm}, {U}_{1nm}$ и ${U}_{2nm},$ разложений  \cref{eq_psc,eq_ps,eq_pc,eq_v,eq_w,eq_uru2u3} для каждой пары индексов $m,n,$ а зная коэффициенты ${A\sc}_{nm}$, по формуле \cref{eq_psc} найдем акустическое поле, рассеяное упругой сферой, имеющей произвольно расположенную полость и неоднородное покрытие.
+А подставив разложения \cref{eq_uru2u3,eq_new_ps_s,eq_new_w_s} в граничные условия \cref{eq_Rs.1,eq_Rs.4,eq_Rs.2.2,eq_Rs.5.2}, найдем оставшиеся краевые условия и сможем решить  систему дифференциальных уравнений \cref{eq_final_1,eq_final_2}. После ее решения определим коэффициенты \\
+${A\sc}_{mn}, {B\c}_{mn}, {A\s}_{mn}, {B\s}_{mn}, {E\s}_{mn}, {F\s}_{mn}, {U}_{1mn}$ и ${U}_{2mn},$ разложений  \cref{eq_psc,eq_ps,eq_pc,eq_v,eq_w,eq_uru2u3} для каждой пары индексов $m,n,$ а зная коэффициенты ${A\sc}_{mn}$, по формуле \cref{eq_psc} найдем акустическое поле, рассеяное упругой сферой, имеющей произвольно расположенную полость и неоднородное покрытие.
 
 \newpage
 \subsection{Решение краевой задачи для системы обыкновенных дифференциальных уравнений}
@@ -622,7 +629,6 @@ ${A\sc}_{nm}, {B\c}_{nm}, {A\s}_{nm}, {B\s}_{nm}, {E\s}_{nm}, {F\s}_{nm}, {U}_{1
 \newpage
 \section{ЧИСЛЕННЫЕ ИССЛЕДОВАНИЯ}
 
-\newpage
 \subsection{Диаграмма направленности}
 
 \newpage
