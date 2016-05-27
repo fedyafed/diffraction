@@ -574,13 +574,6 @@ L({u\l}_3) &= L(V).\label{eq_Rs.6.2}
 -i\om \left(\fr{\de \P\s}{\de r\c} - \fr{1}{r\c}L(W)\right) = \fr{\de \P\c}{\de r\c}.
 \end{equation}
 
-Упростим уравнение \cref{eq_Rc.1}. Для этого уравнение \cref{eq_Rc.4} продифференцируем по $r\s$, умножим на $-2\mu\s i/\om$ и сложим с уравнением \cref{eq_Rc.1}. Получим следующее уравнение:
-\begin{equation}\label{eq_Rc.1.2}
-\begin{split}
-\fr{\la\s}{r\c^2}&\left(\fr{\de}{\de r\c}\left(r\c^2\fr{\de\P\s}{\de r\c}\right)+L(\P\s)\right) = -\fr{i}{\om} \left(2\mu\s \fr{\de^2 \P\c}{\de r\c^2} + p\c\om^2\P\c\right).
-\end{split}
-\end{equation}
-
 
 Рассмотрим уравнения \cref{eq_Rc.2,eq_Rc.3}. Применим к ним преобразование \cref{eq_transform}. Получим следующие уравнения:
 \begin{align}
